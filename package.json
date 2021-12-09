@@ -1,23 +1,33 @@
 {
   "name": "folio",
   "version": "1.0.0",
-  "description": "Portfolio site",
+  "description": "Portfolio Website",
   "main": "index.html",
   "scripts": {
     "lite": "lite-server",
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pia007/Folio.git"
+  },
   "author": "Pia Torain",
   "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.6.1"
+  "bugs": {
+    "url": "https://github.com/Pia007/Folio/issues"
   },
+  "homepage": "https://github.com/Pia007/Folio#readme",
   "dependencies": {
     "bootstrap": "^4.5.2",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
+    "install": "^0.13.0",
     "jquery": "^3.5.1",
+    "npm": "^8.2.0",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
   }
 }

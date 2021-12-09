@@ -1,11 +1,34 @@
-:root {
-    --rubik: 'Rubik','open-sans', 'sans-serif';
+/* WEEK 1 */
+body {
+    font-family: "Open Sans", sans-serif;
 }
-
+h1,h2,h3 {
+    font-family: "Lobster", cursive;
+}
 h2 {
-    font-family: var(--rubik);
-    font-size: 1.5em;
-    font-weight: normal;
+    color: #3046C5;
+}
+header h2 {
+    color: #CEC8FF;
+}
+.site-footer {
+    background-image: linear-gradient(#CEC8FF, white);
+    padding: 20px 0;
+}
+.jumbotron {
+    /* WK2 add margin: 0 to remove spacing between header and nav  */
     margin: 0;
-    padding: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    color: white;
+}
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+ 
+/* WEEK 2 */
+.navbar {
+    background-color: #901CAD;
 }
