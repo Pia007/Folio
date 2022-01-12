@@ -1,3 +1,6 @@
 :root {
   --bg-darkly: #1a0933;
 }
+body {
+  background: var(--bg-darkly)
+}
