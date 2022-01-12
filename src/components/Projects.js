@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-const Projects = ({card}) => {
+const Projects = () => {
     return (
         <div>
             <h1>Projects</h1>

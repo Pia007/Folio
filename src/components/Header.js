@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <header>
+        <header className="container container-fluid">
             <h1>Pia Torain</h1>
         </header>
     )
