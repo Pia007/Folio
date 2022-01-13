@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-        <footer>
-            <h1>FOOTER</h1>
+        <footer className="d-flex justify-content-center">
+            <p className="col text-center ">Built with ReactJs</p>
         </footer>
     )
 }

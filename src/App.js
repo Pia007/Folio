@@ -11,7 +11,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid px-0">
       
       {/* <Header /> */}
       <Nav />

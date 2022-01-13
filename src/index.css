@@ -1,6 +1,17 @@
 :root {
   --bg-darkly: #d9e3f1;
+  --bs-gradient: linear-gradient(to right, #e83283, rgba(255, 255, 255, 0));
 }
 body {
-  background: var(--bg-darkly)
+  background: var(--bg-darkly);
+}
+.row-content {
+  padding: 20px 0;
+  /* border-bottom: 1px ridge; */
+  min-height: 200px; 
+}
+footer {
+  text-align: center;
+  bottom: 0;
+  /* position: fixed; */
 }
