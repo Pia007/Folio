@@ -1,10 +1,20 @@
 :root {
   --bg-darkly: #d9e3f1;
-  --bs-gradient: linear-gradient(to right, #e83283, rgba(255, 255, 255, 0));
+  --bs-gradient: linear-gradient(to right, #a84170, rgba(255, 255, 255, 0));
+  --nav-gradient: linear-gradient(to right, rgba(255, 255, 255, 0), #a84170);
 }
 body {
-  background: var(--bg-darkly);
+  /* background-image: var(--bg-darkly); */
+  /* color: #333; */
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
+/* .myNav {
+  background-image: var(--nav-gradient);
+} */
 .row-content {
   padding: 20px 0;
   /* border-bottom: 1px ridge; */

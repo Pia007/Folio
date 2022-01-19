@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../node_modules/bootswatch/dist/morph/bootstrap.min.css';
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Popper from '@popperjs/core';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
+import '../node_modules/bootswatch/dist/quartz/bootstrap.min.css';
+//import Popper from '@popperjs/core';
+//import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
-import App from './App';
+
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import App from './App';
 
 
 ReactDOM.render(
