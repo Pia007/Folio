@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/bootswatch/dist/quartz/bootstrap.min.css';
 //import Popper from '@popperjs/core';
-//import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';

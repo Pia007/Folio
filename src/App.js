@@ -1,5 +1,4 @@
-//import '../node_modules/bootswatch/dist/vapor/bootstrap.min.css'; 
-import Header from "./components/Header";
+
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";

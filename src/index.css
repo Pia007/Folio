@@ -2,15 +2,28 @@
   --bg-darkly: #d9e3f1;
   --bs-gradient: linear-gradient(to right, #a84170, rgba(255, 255, 255, 0));
   --nav-gradient: linear-gradient(to right, rgba(255, 255, 255, 0), #a84170);
+  --twitter: #1da1f2;
+  --linkedin: #0077b5;
+  --github: white;
+  --color-primary: #e83283;
+  --color-secondary: #a84170;
+  --color-success: #41da7a;
+  --color-indigo: #6610f2;
+  --color-info: #39cbfb;
+  --color-danger: #fd7e14;
+  --color-warning: #ffc107;
+  --input-background: rgb(179, 104, 248);
 }
 body {
-  /* background-image: var(--bg-darkly); */
-  /* color: #333; */
+  background: black;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0;
   padding: 0;
+}
+.nv-icon {
+  font-size: 30px;
 }
 /* .myNav {
   background-image: var(--nav-gradient);
@@ -20,8 +33,60 @@ body {
   /* border-bottom: 1px ridge; */
   min-height: 200px; 
 }
+/* Contact */
+.title {
+  padding: 20px 0;
+  text-shadow: transparent 0 0 0.5em;
+}
+/* .contactInput {
+  background: var(--input-background);
+} */
+.textBox {
+  background: transparent;
+}
+.contactText {
+  font-size: 16px;
+}
+.icons {
+  font-size: 30px;
+  
+}
+
+.phone {
+  font-size: 35px;
+}
+.social-ul li {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+.social-ul li a {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+.social-icons {
+  font-size: 25px;
+  margin-top: 12.5px;
+}
+.linkedin {
+  color: var(--linkedin);
+}
+.github {
+  color: var(--github);
+}
+.twitter {  
+  color: var(--twitter);
+}
 footer {
   text-align: center;
   bottom: 0;
   /* position: fixed; */
+}
+
+@media screen and (min-width: 992px) {
+  .title {
+    padding: 75px 0
+  }
 }
