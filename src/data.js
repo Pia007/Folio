@@ -1,0 +1,81 @@
+export const projects = [
+    {
+        title: "Tribute Page",
+        subtitle: "HTML/CSS",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/tribute.png",
+        link: "https://pia007.github.io/Tribute-Page_7Magic/",
+    },
+    {
+        title: "Social Media Dashboard",
+        subtitle: "HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/socialDash.png",
+        link: "https://pia007.github.io/SocialMediaDashBoard/",
+    },
+    {
+        title: "Jubilee",
+        subtitle: "HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/jubilee.png",
+        link: "https://pia007.github.io/Jubilee/",
+    },
+    {
+        title: "JavaScript Algorithms",
+        subtitle: "HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/jsAlgos.png",
+        link: "https://www.js-algorithms.com/",
+    },
+    {
+        title: "Social Media App One",
+        subtitle: "Open Source - HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/smaOne.png",
+        link: "",
+    },
+    {
+        title: "Social Media App Two",
+        subtitle: "Open Source - HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/smaTwo.png",
+        link: "",
+    },
+    {
+        title: "Social Media App Three",
+        subtitle: "Open Source - HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/smaThree.png",
+        link: "https://github.com/Pia007/SMA-Team-3/tree/dev",
+    },
+    {
+        title: "Quote & Color Generator",
+        subtitle: "HTML/CSS/JavaScript",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/quoteGen.png",
+        link: "https://pia007.github.io/RandomQuoteAndColorGenerator/",
+    },
+    {
+        title: "Sign Up Form",
+        subtitle: "React",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/signUpReact.png",
+        link: "",
+    },
+    {
+        title: "Pricing Component",
+        subtitle: "HTML/CSS/JavaScript", 
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/pricingToggle.png",
+        link: "https://pia007.github.io/PricingToggle/",
+    },
+    {
+        title: "Sample Survey",
+        subtitle: "HTML/CSS",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "./images/sampleSurvey.png",
+        link: "https://pia007.github.io/SampleSurveyForm/",
+    },
+
+
+];

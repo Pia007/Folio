@@ -15,8 +15,8 @@ const Nav = () => {
                     </span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarColor01">
-                    <ul className="navbar-nav mr-auto text-center ">
-                        <li className="nav-item">
+                    <ul className="navbar-nav ml-auto text-center ">
+                        <li className="nav-item active">
                             <Link className="nav-link text-info" to="/"> Home</Link>
                         </li>
                         <li className="nav-item">

@@ -1,13 +1,39 @@
-import { Form, FormGroup, Input, Button, ListGroup, ListGroupItem, List, ListInlineItem } from "reactstrap";
+import React, { useState } from 'react';
+import { Form, FormGroup, Input, Button, List, ListInlineItem } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
+
+    const [status, setStatus] = useState("Submit");
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus("Sending...");
+        const { name, email, subject, message } = e.target.elements;
+        let details = {
+            name: name.value,
+            email: email.value,
+            subject: subject.value,
+            message: message.value,
+        };
+        let response = await fetch("http://localhost:5000/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(details),
+        });
+        setStatus("Submit");
+        let result = await response.json();
+        alert(result.status);
+        e.target.reset();
+    };
+
+
     return (
         <div className="container">
             <div className="row">
@@ -61,7 +87,7 @@ const Contact = () => {
                 </div>
             
                 <div className="col-lg-8">
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
                         <div className="row">
                             <FormGroup className="col-md-4">
                                 <Input className="border border-danger" type="text"  id="name" name="name" placeholder="Name" required/>
@@ -76,14 +102,12 @@ const Contact = () => {
                                 <textarea className="form-control border border-danger textBox" type="text"  id="message" name="message" placeholder="Message..." rows="5" required></textarea>
                             </FormGroup>
                             <FormGroup >
-                                <Button type="submit" color="primary">Submit</Button>
+                                <Button type="submit" className="btn btn-primary">{status}</Button>
                             </FormGroup>
                         </div>
                     </Form>
                 </div>
             </div>
-            
-
         </div>
     )
 }

@@ -25,9 +25,64 @@ body {
 .nv-icon {
   font-size: 30px;
 }
+.navbar-nav > li > a {
+  border-top: .1875rem solid black;
+}
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+  border-top: .1875rem solid var(--color-primary);
+}
+.navbar-nav > li > a:hover {
+  border-top: .1875rem solid var(--color-primary);
+}
 /* .myNav {
   background-image: var(--nav-gradient);
 } */
+
+/* header */
+/* change this imge */
+/* .header-wrapper {
+  position: relative;
+  background: url(./images/jsAlgos.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+} */
+
+
+/* adding position absolute to main info text because particle.js will have a z-index */
+/* Now that it is absolute, center it by setting top, left, right and bottom to 0 */
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.typed-header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-success);
+  margin-bottom: 1rem;
+}
+/* Typed text */
+.typed-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-indigo);
+  text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
+}
+.contactMe:hover {
+  background: var(--color-success);
+  transition: .2s ease-in-out;
+  border: 1px solid var(--colo-success);
+
+}
 .row-content {
   padding: 20px 0;
   /* border-bottom: 1px ridge; */

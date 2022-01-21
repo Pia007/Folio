@@ -1,5 +1,6 @@
 
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -12,8 +13,9 @@ function App() {
   return (
     <div className="App container-fluid px-0">
       
-      {/* <Header /> */}
+      
       <Nav />
+      
       <Switch>
         <Route exact path='/' component={Home}  />
         <Route path='/About' component={About} />
@@ -21,7 +23,7 @@ function App() {
         <Route path='/Contact' component={Contact} />
         
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
       
     </div>
   );
