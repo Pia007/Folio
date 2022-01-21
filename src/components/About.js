@@ -18,12 +18,12 @@ const About = () => {
                         consequatur aspernatur!
                     </p>
                     <div className="">
-                        <Button className="btn btn-primary">
+                        <button className="btn btn-primary">
                             <Link to="/Contact">Contact</Link>
-                        </Button>
-                        <Button className="btn btn-primary">
+                        </button>
+                        <button className="btn btn-primary">
                             <Link to="/Projects">Portfolio</Link>
-                        </Button>
+                        </button>
                     </div>
                 </div>
                 <div className="row">
@@ -66,9 +66,9 @@ const About = () => {
                     </div>
                     
                 </div>
-                <Button className="col-2 btn btn-primary">
+                <button className="col-2 btn btn-primary">
                         Download CV
-                </Button>
+                </button>
             </div>
             
         </section>

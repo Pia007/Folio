@@ -26,14 +26,14 @@ body {
   font-size: 30px;
 }
 .navbar-nav > li > a {
-  border-top: .1875rem solid black;
+  border-bottom: .1875rem solid black;
 }
 .navbar-nav > li > a.active,
 .navbar-nav > li > a.active:focus {
-  border-top: .1875rem solid var(--color-primary);
+  border-bottom: .1875rem solid var(--color-primary);
 }
 .navbar-nav > li > a:hover {
-  border-top: .1875rem solid var(--color-primary);
+  border-bottom: .1875rem solid var(--color-primary);
 }
 /* .myNav {
   background-image: var(--nav-gradient);
@@ -93,9 +93,9 @@ body {
   padding: 20px 0;
   text-shadow: transparent 0 0 0.5em;
 }
-/* .contactInput {
-  background: var(--input-background);
-} */
+.contactInput {
+  border: 1px solid var(--color-danger);
+}
 .textBox {
   background: transparent;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../node_modules/bootswatch/dist/vapor/bootstrap.min.css';
+import '../node_modules/bootswatch/dist/quartz/bootstrap.min.css';
 //import Popper from '@popperjs/core';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
