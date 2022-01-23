@@ -1,5 +1,8 @@
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
-import { Form, FormGroup, Input, Button, List, ListInlineItem } from "reactstrap";
+import { useRef } from "react";
+import { Form, FormGroup, Input, List, ListInlineItem } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
@@ -7,8 +10,21 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const Contact = () => {
 
+const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_5okl2sw', 'template_2h8qlpo', form.current, 'user_KMa2QHJhjwfiOGxac6iEd')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+        });
+        e.target.reset();
+    }
 
     return (
         <div className="container">
@@ -63,25 +79,75 @@ const Contact = () => {
                 </div>
             
                 <div className="col-lg-8">
-                    <Form >
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className="row">
                             <FormGroup className="col-md-4">
-                                <Input className="border border-primary" type="text"  id="name" name="name" placeholder="Name" required/>
+                                <Input 
+                                    className="border border-primary" 
+                                    type="text"  
+                                    id="name" 
+                                    name="name" 
+                                    placeholder="Name" 
+                                    // value={name}
+                                    // onChange={(e) => setName(e.target.value)}   
+                                />
                             </FormGroup>
                             <FormGroup className="col-md-4">
-                                <Input className="border border-primary contactInput" type="text"  id="email" name="email" placeholder="Email" required/>
+                                <Input 
+                                    className="border 
+                                    border-primary contactInput" 
+                                    type="text"  
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="Email" 
+                                    // value={email}
+                                    // onChange={(e) => setEmail(e.target.value)}
+                                />
                             </FormGroup>
                             <FormGroup className="col-md-4">
-                                <Input className="border border-primary" type="text"  id="subject" name="subject" placeholder="Subject" required/>
+                                <Input 
+                                    className="border 
+                                    border-primary" 
+                                    type="text"  
+                                    id="subject" 
+                                    name="subject" 
+                                    placeholder="Subject" 
+                                    // value={subject}
+                                    // onChange={(e) => setSubject(e.target.value)}
+                                />
                             </FormGroup>
                             <FormGroup>
-                                <textarea className="form-control border border-primary textBox" type="text"  id="message" name="message" placeholder="Message..." rows="5" required></textarea>
+                                <textarea 
+                                    className="form-control border border-primary textBox" 
+                                    type="text"  
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="Message..." 
+                                    rows="5" 
+                                    // value={message}
+                                    // onChange={(e) => setMessage(e.target.value)}
+                                >
+                                </textarea>
                             </FormGroup>
                             <FormGroup >
-                                <button type="submit" className="btn btn-primary">Submit</button>
+                                <button 
+                                    type="submit" 
+                                    className="btn btn-primary submitBtn"
+                                    value="Send Email"
+                                >
+                                    Send Email
+                                </button>
+
+                            </FormGroup>
+                            <FormGroup>
+                                <span
+                                    className={sendEmail ? 'visible' : null}
+                                >
+                                    Thank you for contacting me! I will get back to you as soon as possible.
+                                </span>
                             </FormGroup>
                         </div>
-                    </Form>
+                    </form>
                 </div>
             </div>
         </div>
