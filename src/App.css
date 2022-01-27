@@ -1,0 +1,189 @@
+:root {
+    --bg-darkly: #d9e3f1;
+    --bs-gradient: linear-gradient(to right, #a84170, rgba(255, 255, 255, 0));
+    --nav-gradient: linear-gradient(to right, rgba(255, 255, 255, 0), #a84170);
+    --twitter: #1da1f2;
+    --linkedin: #0077b5;
+    --github: white;
+    --color-primary: #e83283;
+    --color-secondary: #a84170;
+    --color-success: #41da7a;
+    --color-indigo: #6610f2;
+    --color-info: #39cbfb;
+    --color-danger: #fd7e14;
+    --color-warning: #ffc107;
+    --input-background: rgb(59, 58, 58);
+}
+body {
+    background: #1a1919;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+.nv-icon {
+    font-size: 30px;
+}
+nav {
+    background: black;
+}
+.navbar-nav > li > a {
+    border-bottom: .1875rem solid black;
+}
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+    border-bottom: .1875rem solid var(--color-primary);
+}
+.navbar-nav > li > a:hover {
+    border-bottom: .1875rem solid var(--color-primary);
+}
+.navbar-toggler:active,
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    outline: none; 
+    border: none;
+    box-shadow: none;
+}
+/* .myNav {
+background-image: var(--nav-gradient);
+} */
+
+/* header */
+/* change this imge */
+/* .header-wrapper {
+position: relative;
+background: url(./images/jsAlgos.png) no-repeat;
+background-size: cover;
+background-position: center;
+height: 90vh;
+} */
+
+
+/* adding position absolute to main info text because particle.js will have a z-index */
+/* Now that it is absolute, center it by setting top, left, right and bottom to 0 */
+.main-info {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.navbar-toggler:active {
+    border: none;
+} 
+
+.intro-header {
+    margin: 30px 0;
+}
+.typed-header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-success);
+    margin-bottom: 1rem;
+}
+/* Typed text */
+.typed-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-indigo);
+    text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
+}
+.contactMe:hover {
+    background: var(--color-success);
+    transition: .2s ease-in-out;
+    border: 1px solid var(--colo-success);
+}
+.row-content {
+    padding: 20px 0;
+    /* border-bottom: 1px ridge; */
+    min-height: 200px; 
+}
+/* Contact */
+.title {
+    padding: 20px 0;
+    text-shadow: transparent 0 0 0.5em;
+}
+.input-group-text {
+    height: 50px;
+    background: none;
+    outline: none;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px 0 0 8px ;
+    border-right: none;
+    padding: 8px 15px;
+    font-size: 22px;
+}
+.inputAddon,
+.textBg {
+    background: black;
+}
+.inputAddon {
+    border-radius: 8px 0 0 8px;
+    border: 1px solid var(--color-primary);
+    border-right: none;
+}
+.contactInput,
+.contactInput:focus {
+    border: 1px solid var(--color-primary);
+    border-left: none;
+    background: black;
+    border-radius:0 8px 8px 0;
+    outline: none;
+}
+
+.addon-textBox {
+    height: 146px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px 0 0 8px ;
+    border-right: none;
+}
+
+.contactText {
+    font-size: 18px;
+}
+.icons {
+    font-size: 30px;
+}
+.social-ul {
+background: none;
+}
+
+.social-ul li a {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    background: black;
+}
+.social-icons {
+        margin-top: 15px;
+}
+.linkedin {
+color: var(--linkedin);
+}
+.github {
+        color: var(--github);
+}
+.twitter {  
+    color: var(--twitter);
+}
+.submitBtn {
+    font-size: 18px;
+}
+footer {
+    text-align: center;
+    bottom: 0;
+    /* position: fixed; */
+}
+
+@media screen and (min-width: 992px) {
+    .title {
+        padding: 75px 0
+    }
+}

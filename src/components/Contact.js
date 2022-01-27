@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 
 import { useRef } from "react";
-import { Form, FormGroup, Input, List, ListInlineItem } from "reactstrap";
+import { Form, FormGroup, Input, Label, ListGroup, ListGroupItem, Button, InputGroup, InputGroupAddon, InputGroupText} from "reactstrap";
 
 
 
@@ -36,7 +36,7 @@ const Contact = () => {
                     <div className="row">
                         <div className="d-flex">
                             <p className="">
-                            <i class="fa fa-envelope-o  mail text-primary"/> 
+                                <i className="fa fa-envelope-o fa large text-primary"/> 
                             </p>
                             <a className="px-1 py-1 mb-2 contactText" href="mailto:info@hostahealthcareheroes.org"> piatorain@yahoo.com </a>
                         </div>
@@ -44,94 +44,122 @@ const Contact = () => {
                     <div className="row">
                         <div className="d-flex">
                             <p className="">
-                            <i class="fa fa-phone phone text-primary"/>
+                                <i className="fa fa-phone fa-lg text-primary"/>
                             </p>
                             <a role="button" className="px-1 py-1 mb-2 contactText text-decoration-none" href="tel:+19084005335" >(908) 400-5335</a>
                             
                         </div>
                     </div>
+                    
                     <div className="row">
-                        <div className="social-holder">
-                            <ul className="horizonatal list-unstyled mb-4 mb-lg-1 social-ul">
-                                <li  className="mx-1">
-                                    <a className="btn btn-outline-primary social-link align-content-center p-0" title="LinkedIn"  href="https://www.linkedin.com/in/pia-torain-dev/"alt="LinkedIn" >
-                                    <i class="fa fa-linkedIn social-icons linkedin"/>
+                        <div className="col">
+                            <ListGroup horizontal className="d-flex d-inline-flex justify-content-between list-unstyled mb-3 mb-lg-1 shadow-none social-ul">
+                                <ListGroupItem className="p-0 px-1">
+                                    <a className="btn btn-outline-primary social-link align-content-center p-0" title="LinkedIn"  href="https://www.linkedin.com/in/pia-torain-dev/" alt="LinkedIn" >
+                                        <i className="fa fa-linkedin fa-lg social-icons linkedin"/>
                                     </a>
-                                </li>
-                                <li className="mx-1">
-                                    <a className="btn btn-outline-primary social-link align-content-center p-0" title="GitHub"  href="https://github.com/Pia007/Pia007 social github" alt="GitHub">
-                                    <i class="fa fa-github social-icons github"/>
+                                </ListGroupItem>
+                                <ListGroupItem className="p-0 px-1">
+                                    <a className="btn btn-outline-primary social-link align-content-center p-0 social github" title="GitHub"  href="https://github.com/Pia007/Pia007" alt="GitHub">
+                                        <i className="fa fa-github fa-lg social-icons github"/>
                                     </a>
-                                </li>
-                                <li className="mx-1">
-                                    <a className="btn btn-outline-primary social-link align-content-center p-0" title="Twitter" href="https://twitter.com/FeenixRizn social" alt="Twitter">
-                                    <i class="fa fa-twitter social-icons twitter"/>
+                                </ListGroupItem>
+                                <ListGroupItem className="p-0 px-1">
+                                    <a className="btn btn-outline-primary social-link align-content-center p-0 social twitter" title="Twitter" href="https://twitter.com/FeenixRizn" alt="Twitter">
+                                        <i className="fa fa-twitter fa-lg social-icons twitter"/>
                                     </a>
-                                </li>
-                            </ul>
+                                </ListGroupItem>
+                            </ListGroup>
                         </div>
                     </div>
                 </div>
             
                 <div className="col-lg-8">
-                    <form ref={form} onSubmit={sendEmail}>
+                    <Form ref={form} onSubmit={sendEmail}>
                         <div className="row">
-                            <FormGroup className="col-md-4">
-                                <Input 
-                                    className="border border-primary" 
-                                    type="text"  
-                                    id="name" 
-                                    name="name" 
-                                    placeholder="Name" 
-                                    // value={name}
-                                    // onChange={(e) => setName(e.target.value)}   
-                                />
+                            <FormGroup className="col-md-4 mb-3">
+                                <InputGroup >
+                                    <InputGroupAddon addonType="prepend" className="inputAddon">
+                                        <InputGroupText className="shadow-none border-0">
+                                            <i className="fa fa-user fa-lg text-primary"/>
+                                        </InputGroupText>
+                                    </InputGroupAddon>
+                                    <Input 
+                                        className="contactInput form-control-lg px-0 pr-1 border-left-0 border-primary" 
+                                        type="text"  
+                                        id="name" 
+                                        name="name" 
+                                        placeholder="Name" 
+                                        // value={name}
+                                        // onChange={(e) => setName(e.target.value)}   
+                                    />
+                                </InputGroup>
                             </FormGroup>
-                            <FormGroup className="col-md-4">
-                                <Input 
-                                    className="border 
-                                    border-primary contactInput" 
-                                    type="text"  
-                                    id="email" 
-                                    name="email" 
-                                    placeholder="Email" 
-                                    // value={email}
-                                    // onChange={(e) => setEmail(e.target.value)}
-                                />
+                            <FormGroup className="col-md-4 mb-3">
+                            <InputGroup >
+                                    <InputGroupAddon addonType="prepend" className="inputAddon">
+                                        <InputGroupText className="shadow-none border-0">
+                                            <i className="fa fa-envelope fa-sm text-primary"/>
+                                        </InputGroupText>
+                                    </InputGroupAddon>
+                                    <Input 
+                                        className="contactInput form-control-lg border-left-0 border-primary px-0 pr-1" 
+                                        type="text"  
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="Email" 
+                                        // value={email}
+                                        // onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                    </InputGroup>
                             </FormGroup>
-                            <FormGroup className="col-md-4">
-                                <Input 
-                                    className="border 
-                                    border-primary" 
-                                    type="text"  
-                                    id="subject" 
-                                    name="subject" 
-                                    placeholder="Subject" 
-                                    // value={subject}
-                                    // onChange={(e) => setSubject(e.target.value)}
-                                />
-                            </FormGroup>
-                            <FormGroup>
-                                <textarea 
-                                    className="form-control border border-primary textBox" 
-                                    type="text"  
-                                    id="message" 
-                                    name="message" 
-                                    placeholder="Message..." 
-                                    rows="5" 
-                                    // value={message}
-                                    // onChange={(e) => setMessage(e.target.value)}
-                                >
-                                </textarea>
+                            <FormGroup className="col-md-4 mb-3">
+                                <InputGroup >
+                                    <InputGroupAddon addonType="prepend" className="inputAddon">
+                                        <InputGroupText className="shadow-none border-0">
+                                            <i className="fa fa-question fa-lg text-primary"/>
+                                        </InputGroupText>
+                                    </InputGroupAddon>
+                                    <Input 
+                                        className="contactInput form-control-lg px-1 pr-1 border-left-0 border-primary" 
+                                        type="text"  
+                                        id="subject" 
+                                        name="subject" 
+                                        placeholder="Subject" 
+                                        // value={subject}
+                                        // onChange={(e) => setSubject(e.target.value)}
+                                    />
+                                </InputGroup>
+                            </FormGroup >
+                            <FormGroup className="mb-2 mb-3">
+                                <InputGroup >
+                                    <InputGroupAddon addonType="prepend" className="inputAddon addon-textBox">
+                                        <InputGroupText className="shadow-none border-0">
+                                            <i className="fa fa-pencil text-primary"/>
+                                        </InputGroupText>
+                                    </InputGroupAddon>
+                                    <textarea
+                                        className="form-control mb-3 border-left-0 border-primary px-0 pr-1 textBg" 
+                                        type="text"  
+                                        id="textara" 
+                                        name="message" 
+                                        placeholder="Message..." 
+                                        rows="5" 
+                                        // value={message}
+                                        // onChange={(e) => setMessage(e.target.value)}
+                                    > 
+                                    </textarea>
+                                </InputGroup>
                             </FormGroup>
                             <FormGroup >
-                                <button 
+                                <Button
+                                    color="primary"
                                     type="submit" 
-                                    className="btn btn-primary submitBtn"
+                                    className="btn"
                                     value="Send Email"
                                 >
                                     Send Email
-                                </button>
+                                </Button>
 
                             </FormGroup>
                             <FormGroup>
@@ -142,7 +170,7 @@ const Contact = () => {
                                 </span>
                             </FormGroup>
                         </div>
-                    </form>
+                    </Form>
                 </div>
             </div>
         </div>

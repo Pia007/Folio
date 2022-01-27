@@ -12,8 +12,9 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className="row row-content header-wrapper ">
-            <div className="main-info">
-                <h1><Typed 
+            <div className="col main-info">
+                <img src='assets/images/mypic.png' alt='logo' className='mb-3' height="200" width="200"/>
+                <h1 className='mb-3'><Typed 
                     className='typed-header'
                     strings={["Hi! I'm Pia Torain"]}
                     typeSpeed={60}
@@ -21,13 +22,14 @@ const Home = () => {
                     loop
                     />
                 </h1>
-                <Typed 
+                <p className='mb-2'><Typed 
                     className='typed-text'
                     strings={["Frontend Developer", "Web Designer"]}
                     typeSpeed={60}
                     backSpeed={40}
                     loop
                 />
+                </p>
                 <Link to="/Contact" className="btn btn-primary btn-lg contactMe">Contact Me</Link>
             </div>
         </div>
