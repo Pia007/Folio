@@ -3,12 +3,7 @@ import emailjs from "emailjs-com";
 
 import { useRef } from "react";
 import { Form, FormGroup, Input, List, ListInlineItem } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+
 
 
 const Contact = () => {
@@ -41,7 +36,7 @@ const Contact = () => {
                     <div className="row">
                         <div className="d-flex">
                             <p className="">
-                                <FontAwesomeIcon icon={faEnvelope} className="icons mail text-primary"/> 
+                            <i class="fa fa-envelope-o  mail text-primary"/> 
                             </p>
                             <a className="px-1 py-1 mb-2 contactText" href="mailto:info@hostahealthcareheroes.org"> piatorain@yahoo.com </a>
                         </div>
@@ -49,7 +44,7 @@ const Contact = () => {
                     <div className="row">
                         <div className="d-flex">
                             <p className="">
-                                <FontAwesomeIcon icon={faPhoneSquare} className="icons phone text-primary"/> 
+                            <i class="fa fa-phone phone text-primary"/>
                             </p>
                             <a role="button" className="px-1 py-1 mb-2 contactText text-decoration-none" href="tel:+19084005335" >(908) 400-5335</a>
                             
@@ -57,23 +52,23 @@ const Contact = () => {
                     </div>
                     <div className="row">
                         <div className="social-holder">
-                            <List className="horizonatal list-unstyled mb-4 mb-lg-1 social-ul">
-                                <ListInlineItem  className="mx-1">
+                            <ul className="horizonatal list-unstyled mb-4 mb-lg-1 social-ul">
+                                <li  className="mx-1">
                                     <a className="btn btn-outline-primary social-link align-content-center p-0" title="LinkedIn"  href="https://www.linkedin.com/in/pia-torain-dev/"alt="LinkedIn" >
-                                        <FontAwesomeIcon icon={faLinkedinIn} className="social-icons linkedin"/>
+                                    <i class="fa fa-linkedIn social-icons linkedin"/>
                                     </a>
-                                </ListInlineItem>
-                                <ListInlineItem  className="mx-1">
+                                </li>
+                                <li className="mx-1">
                                     <a className="btn btn-outline-primary social-link align-content-center p-0" title="GitHub"  href="https://github.com/Pia007/Pia007 social github" alt="GitHub">
-                                        <FontAwesomeIcon icon={faGithub} className="social-icons github"/> 
+                                    <i class="fa fa-github social-icons github"/>
                                     </a>
-                                </ListInlineItem>
-                                <ListInlineItem className="mx-1">
+                                </li>
+                                <li className="mx-1">
                                     <a className="btn btn-outline-primary social-link align-content-center p-0" title="Twitter" href="https://twitter.com/FeenixRizn social" alt="Twitter">
-                                        <FontAwesomeIcon icon={faTwitter} className="social-icons twitter"/>
+                                    <i class="fa fa-twitter social-icons twitter"/>
                                     </a>
-                                </ListInlineItem>
-                            </List>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

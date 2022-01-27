@@ -1,30 +1,37 @@
-import mypic from '../images/mypic.png';
-//import { Link } from 'react-router-dom';
-import Header from './Header';
-// Header should be imported here
+import React from 'react';
+import Typed from 'react-typed';
+import { Link } from 'react-router-dom';
+
+//import react typed text component after installing it via yarn add react-typed
+// the added the Typed component to the header component
+// gave the className  and added the string array with the strings that I want to see
+// typed text is moving to fast and its stops at the end. Want to loop through the text
+// added 30 as typeSpeed and 40 as backSpeed
+// then added the loop attribute to the Typed component
 
 const Home = () => {
     return (
-        <main>
-            <Header />
-            <div className="row row-content m-auto my-5">
-                <div className="col mx-auto p-0">
-                    <img src={mypic} alt=""
-                        className="img-fluid rounded-circle mx-auto d-block"
-                        style={{ width: '250px', height: '250px' }} 
+        <div className="row row-content header-wrapper ">
+            <div className="main-info">
+                <h1><Typed 
+                    className='typed-header'
+                    strings={["Hi! I'm Pia Torain"]}
+                    typeSpeed={60}
+                    backSpeed={40}
+                    loop
                     />
-                </div>
+                </h1>
+                <Typed 
+                    className='typed-text'
+                    strings={["Frontend Developer", "Web Designer"]}
+                    typeSpeed={60}
+                    backSpeed={40}
+                    loop
+                />
+                <Link to="/Contact" className="btn btn-primary btn-lg contactMe">Contact Me</Link>
             </div>
-            {/* <div className="row m-auto mt-5">
-                <div className="col-md-4 mx-auto p-0 text-center">
-                    <h6 className=" text-primary">Hello! </h6>
-                    <h1 className="">I'm Pia Torain</h1>
-                    <p className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id eos consequuntur beatae ducimus totam dicta ratione exercitationem, harum eveniet commodi ab impedit vel molestiae provident quae nam aspernatur quis. Voluptatibus veniam, minima, aspernatur vel nostrum natus repellat eos assumenda consectetur consequuntur expedita, molestiae nemo!</p>
-                </div>
-            </div>
-            <button className='btn btn-primary mx-auto d-block'><Link to="/About">About</Link></button> */}
-        </main>
-    )
-}
+        </div>
+    );
+};
 
-export default Home
+export default Home;
