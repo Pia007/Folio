@@ -1,45 +1,59 @@
-import { Nav, NavItem } from 'reactstrap';
+import { Component } from 'react';
+import { Navbar, Nav, NavItem, Collapse, NavbarToggler } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 
-const NavHead= () => {
+class NavHead extends Component {
+    constructor(props){
+        super(props);
+        this.toggleNav = this.toggleNav.bind(this);
+        this.closeNav = this.closeNav.bind(this);
+
+        this.state = {
+            isNavOpen: false
+        }
+    }
+    toggleNav() {
+        this.setState({
+            isNavOpen: !this.state.isNavOpen
+        });
+    }
+    closeNav() {
+        if (this.state.isNavOpen) {
+            this.setState({
+                isNavOpen: false
+            });
+        }
+    }
     
-    return (
-        
-        <nav className="navbar is-primary navbar-expand-lg navbar-dark sticky-top  text-light  myNav" >
-            <div className="container-fluid d-flex justify-content-end">
-                <button 
+    render () {
+        return (
+            <Navbar dark className="navbar navbar-expand-lg d-flex justify-content-center sticky-top text-light myNav" >
+                <div className="container container-fluid d-flex justify-content-end">
+                    <NavbarToggler onClick={this.toggleNav} className="border-0 btnToggler" >
+                        <i className="fa fa-bars text-primary nv-icon "/> 
+                    </NavbarToggler>
                     
-                    className="navbar-toggler border-0" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarColor01" 
-                    aria-controls="navbarColor01" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation"
-                    
-                > 
-                    <i className="fa fa-bars  text-primary nv-icon"/> 
-                </button>
-                <div className="collapse navbar-collapse justify-content-center" id="navbarColor01">
-                    <Nav className="navbar-nav ml-auto text-center">
-                        <NavItem nav-item >
-                            <NavLink className="nav-link text-info active"  to="/"> Home</NavLink>
-                        </NavItem>
-                        <NavItem nav-item>
-                            <NavLink className="nav-link text-primary" to="/About"> About</NavLink>
-                        </NavItem>
-                        <NavItem nav-item>
-                            <NavLink className="nav-link text-danger" to="/Projects"> Projects</NavLink>
-                        </NavItem>
-                        <NavItem nav-item>
-                            <NavLink className="nav-link text-warning" to="/Contact"> Contact</NavLink>
-                        </NavItem>
-                    </Nav>
+                    <Collapse isOpen={this.state.isNavOpen} navbar className=" justify-content-center"  >
+                        <Nav navbar className="ml-auto text-center">
+                            <NavItem className="nav-item">
+                                <NavLink onClick={this.closeNav} className="nav-link active text-info"  to="/" > Home</NavLink>
+                            </NavItem>
+                            <NavItem className="nav-item">
+                                <NavLink onClick={this.closeNav} className="nav-link text-primary" to="/About" > About</NavLink>
+                            </NavItem>
+                            <NavItem className="nav-item">
+                                <NavLink onClick={this.closeNav} className="nav-link text-danger" to="/Projects" > Projects</NavLink>
+                            </NavItem>
+                            <NavItem className="nav-item">
+                                <NavLink onClick={this.closeNav} className="nav-link text-warning" to="/Contact" > Contact</NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
                 </div>
-            </div>
-        </nav>
-    )
+            </Navbar>
+        );
+    }
 }
 
 export default NavHead

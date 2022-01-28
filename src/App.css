@@ -22,25 +22,33 @@ body {
     margin: 0;
     padding: 0;
 }
+span.navbar-toggler-icon {
+    color: var(--color-primary);
+}
 .nv-icon {
     font-size: 30px;
+    color: var(--color-primary);
 }
-nav {
+.nav-bar {
     background: black;
 }
-.navbar-nav > li > a {
+.nav-bar-nav > .nav-item > .nav-link {
     border-bottom: .1875rem solid black;
 }
-.navbar-nav > li > a.active,
-.navbar-nav > li > a.active:focus {
+.nav-bar-nav > .nav-item > .nav-link.active,
+.nav-bar-nav > .nav-item > .nav-link.active:focus {
     border-bottom: .1875rem solid var(--color-primary);
 }
-.navbar-nav > li > a:hover {
+.nav-bar-nav > .nav-item > .nav-link:hover {
     border-bottom: .1875rem solid var(--color-primary);
 }
-.navbar-toggler:active,
-.navbar-toggler:focus,
-.navbar-toggler:hover {
+.btnTogger {
+    height: 38px;
+}
+
+.btnToggler:active,
+.btnToggler:focus,
+.btnToggler:hover {
     outline: none; 
     border: none;
     box-shadow: none;
@@ -74,9 +82,6 @@ height: 90vh;
     align-items: center;
     text-align: center;
 }
-.navbar-toggler:active {
-    border: none;
-} 
 
 .intro-header {
     margin: 30px 0;
@@ -94,13 +99,20 @@ height: 90vh;
     color: var(--color-indigo);
     text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
 }
+
 .card-title {
     font-weight: 500;
     font-size: 1.25rem;
 }
-.card-img-overlay .card-title {
+.card-img-overlay  {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-img {
+    border-radius: 8px;
+}
+.p-card {
+    background: transparent;
 }
   
 .row-content {
@@ -108,11 +120,6 @@ height: 90vh;
     border-bottom: 1px ridge;
     min-height: 200px;
 }
-
-
-
-
-
 
 .contactMe:hover {
     background: var(--color-success);

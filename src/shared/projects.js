@@ -28,7 +28,7 @@ export const PROJECTS = [
         title: "JavaScript Algorithms",
         subtitle: "HTML/CSS/JavaScript",
         description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/algos.png",
+        image: "assets/images/jsAlgos.png",
         link: "https://www.js-algorithms.com/",
     },
     {
