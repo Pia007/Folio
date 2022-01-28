@@ -10,7 +10,7 @@ const NavHead= () => {
             <div className="container-fluid d-flex justify-content-end">
                 <button 
                     
-                    className="navbar-toggler " 
+                    className="navbar-toggler border-0" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#navbarColor01" 
