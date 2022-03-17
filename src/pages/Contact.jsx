@@ -1,10 +1,8 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
+
 
 import { useRef } from "react";
-import { Form, FormGroup, Input, Label, ListGroup, ListGroupItem, Button, InputGroup, InputGroupText} from "reactstrap";
-
-
+import emailjs from "emailjs-com";
+import { Form, FormGroup, Input, ListGroup, ListGroupItem, Button, InputGroup, InputGroupText} from "reactstrap";
 
 const Contact = () => {
     const form = useRef();
@@ -75,17 +73,17 @@ const Contact = () => {
                 </div>
             
                 <div className="col-lg-8">
-                    <Form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className="row">
                             <FormGroup className="col-md-4 mb-3">
                                 <InputGroup >
                                     {/* <InputGroupAddon addonType="prepend" className="inputAddon"> */}
-                                        <InputGroupText className="shadow-none inputAddon ">
+                                        <InputGroupText className="shadow-none border-left-0 bg-black">
                                             <i className="fa fa-user fa-lg text-primary"/>
                                         </InputGroupText>
                                     {/* </InputGroupAddon> */}
                                     <Input 
-                                        className="contactInput form-control-lg px-0 pr-1 border-left-0 border-primary shadow-none" 
+                                        className="contactInput form-control-lg px-0 pr-1 border-left-0 border-primary bg-black" 
                                         type="text"  
                                         id="name" 
                                         name="name" 
@@ -98,12 +96,12 @@ const Contact = () => {
                             <FormGroup className="col-md-4 mb-3">
                             <InputGroup >
                                     {/* <InputGroupAddon addonType="prepend" className="inputAddon"> */}
-                                        <InputGroupText className="shadow-none inputAddon">
+                                        <InputGroupText className="shadow-none border-left-0  bg-black">
                                             <i className="fa fa-envelope fa-sm text-primary"/>
                                         </InputGroupText>
                                     {/* </InputGroupAddon> */}
                                     <Input 
-                                        className="contactInput form-control-lg border-left-0 border-primary px-0 pr-1 shadow-none" 
+                                        className="contactInput form-control-lg border-left-0 border-primary px-0 pr-1 bg-black shadow-none" 
                                         type="text"  
                                         id="email" 
                                         name="email" 
@@ -116,12 +114,12 @@ const Contact = () => {
                             <FormGroup className="col-md-4 mb-3">
                                 <InputGroup >
                                     {/* <InputGroupAddon addonType="prepend" className="inputAddon"> */}
-                                        <InputGroupText className="shadow-none inputAddon">
-                                            <i className="fa fa-question fa-lg text-primary"/>
+                                        <InputGroupText className="shadow-none border-left-0  bg-black">
+                                            <i className="fa fa-sticky-note text-primary"/>
                                         </InputGroupText>
                                     {/* </InputGroupAddon> */}
                                     <Input 
-                                        className="contactInput form-control-lg px-1 pr-1 border-left-0 border-primary shadow-none" 
+                                        className="contactInput form-control-lg px-1 pr-1 border-left-0 border-primary bg-black shadow-none" 
                                         type="text"  
                                         id="subject" 
                                         name="subject" 
@@ -134,12 +132,12 @@ const Contact = () => {
                             <FormGroup className="mb-2 mb-3">
                                 <InputGroup >
                                     {/* <InputGroupAddon addonType="prepend" className="inputAddon addon-textBox"> */}
-                                        <InputGroupText className="shadow-none inputAddon addon-textBox">
+                                        <InputGroupText className="shadow-none border-left-0 bg-black addon-textBox">
                                             <i className="fa fa-pencil text-primary align-self-start"/>
                                         </InputGroupText>
                                     {/* </InputGroupAddon> */}
                                     <textarea
-                                        className="form-control mb-3 border-left-0 border-primary px-0 pr-1 textBg shadow-none" 
+                                        className="form-control mb-3 border-left-0 border-primary px-0 pr-1 textBg bg-black shadow-none" 
                                         type="text"  
                                         id="textara" 
                                         name="message" 
@@ -170,7 +168,7 @@ const Contact = () => {
                                 </span>
                             </FormGroup>
                         </div>
-                    </Form>
+                    </form>
                 </div>
             </div>
         </div>

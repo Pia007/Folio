@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div className="row row-content header-wrapper ">
+        <div className="row row-content ">
             <div className="col main-info">
                 <img src='assets/images/mypic.png' alt='logo' className='mb-3' height="200" width="200"/>
                 <h1 className='mb-3'><Typed 

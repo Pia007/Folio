@@ -12,10 +12,12 @@
     --color-info: #39cbfb;
     --color-danger: #fd7e14;
     --color-warning: #ffc107;
-    --input-background: rgb(59, 58, 58);
+    --background: #1a1919;
+    --bg: #090a11;
+    --bg-blue: #07070f;
 }
 body {
-    background: #1a1919;
+    background: #070305;
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -29,23 +31,29 @@ span.navbar-toggler-icon {
     font-size: 30px;
     color: var(--color-primary);
 }
-.nav-bar {
-    background: black;
-}
-.nav-bar-nav > .nav-item > .nav-link {
-    border-bottom: .1875rem solid black;
-}
-.nav-bar-nav > .nav-item > .nav-link.active,
-.nav-bar-nav > .nav-item > .nav-link.active:focus {
+
+
+/* .navbar > .nav-item > .nav-link.active,
+.navbar > .nav-item > .nav-link.active:focus {
     border-bottom: .1875rem solid var(--color-primary);
 }
-.nav-bar-nav > .nav-item > .nav-link:hover {
+.navbar > .nav-item > .nav-link:hover {
     border-bottom: .1875rem solid var(--color-primary);
+}  */
+.n-link.active,
+.n-link:hover,
+.n-link:focus {
+    color: var(--color-primary);
+}
+.nav-link:focus.inactive {
+    color: var(--color-secondary);
 }
 .btnTogger {
     height: 38px;
 }
-
+/* .nav-link.active {
+    color: var(--color-primary);
+} */
 .btnToggler:active,
 .btnToggler:focus,
 .btnToggler:hover {
@@ -53,9 +61,9 @@ span.navbar-toggler-icon {
     border: none;
     box-shadow: none;
 }
-/* .myNav {
-background-image: var(--nav-gradient);
-} */
+.myNav {
+    background: var(--bg-blue);
+}
 
 /* header */
 /* change this imge */
@@ -117,7 +125,7 @@ height: 90vh;
   
 .row-content {
     padding: 50px 0;
-    border-bottom: 1px ridge;
+    /* border-bottom: 1px ridge; */
     min-height: 200px;
 }
 
@@ -126,11 +134,10 @@ height: 90vh;
     transition: .2s ease-in-out;
     border: 1px solid var(--colo-success);
 }
-.row-content {
+/* .row-content {
     padding: 20px 0;
-    /* border-bottom: 1px ridge; */
     min-height: 200px; 
-}
+} */
 /* Contact */
 .title {
     padding: 20px 0;
@@ -146,27 +153,19 @@ height: 90vh;
     padding: 8px 15px;
     font-size: 22px;
 }
-.inputAddon,
-.textBg {
-    background: black;
-}
+
 .inputAddon {
     border-radius: 8px 0 0 8px;
-    border: 1px solid var(--color-primary);
-    border-right: none;
 }
 .contactInput,
 .contactInput:focus {
-    border: 1px solid var(--color-primary);
-    border-left: none;
-    background: black;
     border-radius:0 8px 8px 0;
     outline: none;
 }
 
 .addon-textBox {
     height: 146px;
-    border: 1px solid var(--color-primary);
+    /* border: 1px solid var(--color-primary); */
     border-radius: 8px 0 0 8px ;
     border-right: none;
 }
