@@ -87,6 +87,12 @@ export const PROJECTS = [
         image: "assets/images/sampleSurvey.png",
         link: "https://pia007.github.io/SampleSurveyForm/",
     },
-
-
+    {
+        id: 11,
+        title: "Host a Healthcare Hero",
+        subtitle: "React/Redux/Bootstraps",
+        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        image: "assets/images/host.png",
+        link: "https://hostahealtcarehero.netlify.app/",
+    }
 ];
