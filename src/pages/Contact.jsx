@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import emailjs from "emailjs-com";
-import { Form, FormGroup, Input, ListGroup, ListGroupItem, Button, InputGroup, InputGroupText} from "reactstrap";
+import { FormGroup, Input, ListGroupItem, Button} from "reactstrap";
 
 const Contact = () => {
     const form = useRef();
