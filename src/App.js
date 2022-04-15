@@ -1,26 +1,23 @@
+import React from 'react';
 
 import Main from "./components/Main";
-import NavHead from "./components/NavHead";
-//import Header from "./components/Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-//import Footer from "./components/Footer";
+import { BrowserRouter } from 'react-router-dom';
+import { SEO } from './components/SEO';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
-
-// require('dotenv').config()
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App container-fluid px-0">
-        <Main />
-      </div>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <HelmetProvider>
+                <div className="App">
+                    <SEO title={'Pia Torain'} description={'description'} content={'Fullstack Web Developer'} />
+                    <Main style={{maxWidth: '100vw', paddingX: '10'}} />
+                </div>
+            </HelmetProvider>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
-import { NavLink, useLocation  } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import HostHeader from './HostHeader';
 // import newLogo from '../images/new-logo.svg';
 
@@ -16,7 +16,7 @@ export const Header = () => {
 
     return (
         <React.Fragment>
-            <Navbar className="navbar navbar-expand-lg d-flex justify-content-around sticky-top text-light mynav" style={{zIndex: '5'}}>
+            <Navbar className="navbar navbar-expand-lg d-flex justify-content-center sticky-top text-light mynav" style={{zIndex: '5'}}>
                 <div className="container justify-content-between">
                     <div className='d-flex'>
                         {/* <NavLink tag='link' to="/home" 
@@ -28,7 +28,7 @@ export const Header = () => {
                     <NavbarToggler onClick={toggleNav} className="justify-content-end">
                         <i className="fa fa-bars fa-lg text-success nv-icon "/> 
                     </NavbarToggler>
-                    <Collapse isOpen={navigation} navbar className="justify-content-around">
+                    <Collapse isOpen={navigation} navbar className="justify-content-center">
                         <Nav navbar className="ml-auto text-center text-light ">
                             <NavItem>
                                 <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className="nav-link" to="/"> 

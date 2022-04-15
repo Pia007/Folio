@@ -1,11 +1,22 @@
-import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
+import { useNavigate } from "react-router-dom";
+import { SEO } from "../components/SEO";
+// import { Button } from "reactstrap";
 
 // Testing this just to do a commiit
 
 const About = () => {
+    let navigate = useNavigate();
+
+    const handleContactClick = () => {
+        navigate("/contact");
+    }
+    const handlePortfolioClick = () => {
+        navigate("/portfolio");
+    }
+
     return (
         <section id="aboutMe">
+            <SEO title='About | Pia Torain' description='description' content='About Pia Torain, Fullstack Web Developer' />
             <div className="container">
                 <div className="row">
                     <h1 className=""><span>About</span>Me
@@ -18,11 +29,11 @@ const About = () => {
                         consequatur aspernatur!
                     </p>
                     <div className="">
-                        <button className="btn btn-primary">
-                            <Link to="/Contact">Contact</Link>
+                        <button className="btn btn-primary" onClick={()=> handleContactClick()}>
+                            Contact
                         </button>
-                        <button className="btn btn-primary">
-                            <Link to="/Projects">Portfolio</Link>
+                        <button className="btn btn-primary" onClick={()=> handlePortfolioClick()}>
+                            Portfolio
                         </button>
                     </div>
                 </div>
