@@ -27,7 +27,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.quickToast {
+    border-radius: 12px;
+    border: 2px solid var(--color-success);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    color: white;
+}
 .navbar-toggler:hover,
 .navbar-toggler:focus,
 .navbar-toggler:active {
@@ -139,14 +146,7 @@ nav {
 .phone {
     font-size: 24px;
 }
-/* .socialGroup,
-.social-link {
-    background: none;
-    background: transparent;
-} */
-/* .icons {
-    font-size: 30px;
-} */
+
 .social-ul {
 background: transparent;
 }
@@ -164,20 +164,11 @@ background: transparent;
 #social-list {
     background: transparent;
 } 
-/* .linkedin {
-    font-size: 22px;
-} */
-/* .social-icons {
-    margin-top: 15px;
-} */
 .social-link {
     fill: white ;
     border: 1px solid white;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
 }
-.social-link:hover
-.sendBox:hover {
+.social:hover {
     background: var(--color-primary);
     box-shadow: inset 5px 5px 10px #b52766,
             inset -5px -5px 10px #ff3da0;
@@ -190,6 +181,7 @@ background: transparent;
 }
 .linkedin:hover {
     color: var(--linkedin);
+    
 }
 .github:hover {
     color: var(--github);
@@ -204,26 +196,18 @@ background: transparent;
 
 .sendBtn:hover {
     background: var(--color-primary);
-    box-shadow: -5px -5px 20px #b52766,
-        -5px -5px 20px rgba(255, 255, 255, 0.18);
+    box-shadow: inset -25px -5px 20px #b52766,
+        inset -55px -5px 20px rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px double rgba(255, 255, 255, 0.18);
     -webkit-transition: all 1s ease;
     transition: all .45s ease;
-    /* font-size: 115%; */
+    font-size: 105%;
 }
-.sendBox:hover {
-    background: var(--color-primary);
-    box-shadow: inset 5px 5px 20px #b52766,
-        inset 5px 5px 20px rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(5px);
-    -webkit-transition: all 1s ease;
-    transition: all .45s ease;
-    /* font-size: 115%; */
-}
-/* Projects */.modal-backdrop {
+
+/* Projects */
+.modal-backdrop {
     background-color: transparent;
 }
 

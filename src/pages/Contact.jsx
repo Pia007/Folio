@@ -1,7 +1,7 @@
 import PageTitle from "../components/PageTitle";
 import ContactInfo from "../components/ContactInfo";
-import ContactForm from "../components/ContactForm";
-import { Row } from "reactstrap";
+import ContactMe from "../components/ContactMe";
+import { Row, Col } from "reactstrap";
 
 const Contact = () => {
     
@@ -14,8 +14,12 @@ const Contact = () => {
             
             <div className="container px-2">
                 <Row className="formHolder">
-                    <ContactInfo />
-                    <ContactForm />
+                    <Col lg={4} >
+                        <ContactInfo />
+                    </Col>
+                    <Col lg={8}>
+                        <ContactMe />
+                    </Col>
                 </Row>
             </div>
         </div>
