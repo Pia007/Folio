@@ -140,12 +140,12 @@ nav {
 .contactText {
     font-size: 18px;
 }
-.envelope {
+/* .envelope {
     font-size: 22px;
 }
 .phone {
     font-size: 24px;
-}
+} */
 
 .social-ul {
 background: transparent;
@@ -153,8 +153,8 @@ background: transparent;
 
 .social-ul li a {
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     margin: 0;
     background: none;
 }
@@ -166,8 +166,11 @@ background: transparent;
 } 
 .social-link {
     fill: white ;
-    border: 1px solid white;
+    
 }
+/* .social {
+    padding: 10px 0px;
+} */
 .social:hover {
     background: var(--color-primary);
     box-shadow: inset 5px 5px 10px #b52766,
@@ -177,11 +180,11 @@ background: transparent;
     /* border: 1px double rgba(255, 255, 255, 0.18); */
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-    font-size: 120%;
+    transform: rotate(45deg);
+    font-size: 125%;
 }
 .linkedin:hover {
     color: var(--linkedin);
-    
 }
 .github:hover {
     color: var(--github);
@@ -208,9 +211,19 @@ background: transparent;
 
 /* Projects */
 .modal-backdrop {
-    background-color: transparent;
+    /* background-color: transparent; */
+    backdrop-filter: blur(10px);
 }
-
+.modal-content {
+    /* border: 1px solid rgba(233, 233, 232, .5); */
+    border: 1px solid rgba(233, 233, 232, 0.404);
+}
+/* .modalImg {
+    background: var(--color-primary);
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 20%), 
+    inset -1px -1px rgba(255, 255, 255, 10%), 
+    1px 3px 24px -1px rgba(0, 0, 0, 15%);
+} */
 
 footer {
     /* position: absolute; */

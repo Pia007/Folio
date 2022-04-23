@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Skills from '../components/Icons';
 
 export const Intro = () => {
     let navigate = useNavigate();
@@ -18,7 +17,6 @@ export const Intro = () => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quas, quasi, molestias inventore omnis labore dignissimos quod illum culpa, nemo enim in provident sint ratione laboriosam cumque nesciunt. Atque dicta, sit mollitia consequuntur ut molestias nulla nostrum tenetur magni corporis et ad repudiandae dolor eos quas? Officiis magnam dolore neque?
                 </h2>
                 <button onClick={() => handleContactClick()} className='text-center btn btn-lg btn-outline-success'> Contact Me </button> 
-                <Skills />
             </div>
         </div>
     );

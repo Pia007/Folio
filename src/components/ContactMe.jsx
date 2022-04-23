@@ -162,9 +162,9 @@ const ContactMe = () => {
     const messageError = enteredMessage.trim() === '' ? 'Please enter a message' : '';
 
     return (
-        <div className="container">
+        <div className="container  p-0 md-px-0">
             
-            <Col  className="">
+            <Col className="">
                 <form ref={form} onSubmit={sendEmail}>
                     <Row className="p-2">
                         <FormGroup className="col-md-4 mb-3 py-1">

@@ -18,26 +18,27 @@ const ProjectCard = ({ project }) => {
 
             <Modal centered scrollable isOpen={modal} toggle={toggleModal} className='' >
                 <ModalHeader toggle={toggleModal} className='bg-success text-primary'>{project.title}</ModalHeader>
-                <ModalBody>
-                    <p>{project.title}</p>
-                    <p>{project.description}</p>
+                <ModalBody className=''>
+                    <img className='img-fluid modalImg' src={project.image} alt={project.title} style={{borderRadius: '10px'}}/>
+                    <p className='my-3'>{project.subtitle}</p>
+                    <p className=''>{project.description}</p>
                 </ModalBody>
-                <ModalFooter>
-                    <a 
+                <ModalFooter className='p-2'>
+                    <a classNamee='p-1'
                         href={project.live}
                         alt={project.title}
                         target='_blank'
                         rel='noreferrer'
                     >
-                        <i className="fa fa-solid fa-link" />
+                        <i className="fa fa-solid fa-link fa-2x" />
                     </a>
-                    <a className="text-primary"
+                    <a className='p-1'
                         href={project.repo}
                         alt={project.title}
                         target='_blank'
                         rel='noreferrer'
                     >
-                        <i className="fa fa-github-square text-light" />
+                        <i className="fa fa-github fa-2x " />
                     </a>
                 </ModalFooter>
             </Modal>
