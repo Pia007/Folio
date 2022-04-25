@@ -1,108 +1,59 @@
 export const PROJECTS = [
     {
         id: 0,
-        title: "Tribute Page",
-        subtitle: "HTML/CSS",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/tribute.png",
-        live: "https://pia007.github.io/Tribute-Page_7Magic/",
-        repo: "https://github.com/Pia007/Tribute-Page_7Magic"
+        title: "Nucamp Coding Bootcamp",
+        date: 'November 2021 to April 2022',
+        course: 'Full Stack Web Development',
+        description: 'Nucamp is a 12-week, immersive, online coding bootcamp for software developers. Students learn to code by building real-world web applications from scratch.',
+        logo: "",
+        certificate: "",
+        website: "https://nucamp.com/",
+        type: 'software development'
     },
     {
         id: 1,
-        title: "Social Media Dashboard",
-        subtitle: "HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/socialDash.png",
-        live: "https://pia007.github.io/SocialMediaDashBoard/",
-        repo: "https://github.com/Pia007/SocialMediaDashBoard" 
+        title: "Reskill Americans",
+        date: 'March 2021 to October 2021',
+        course: 'Frontend Web Developer',
+        description:" Reskill Americans is a nonprofit organization that provides technical training to underserved youth in the United States. The organization's mission is to empower youth to become self-sufficient developers.",
+        logo: "",
+        certificate: "",
+        website: "https://reskillamericans.org/",
+        type: 'software development'
     },
     {
         id: 2,
-        title: "Jubilee",
-        subtitle: "HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/jubilee.png",
-        live: "https://pia007.github.io/Jubilee/",
-        repo: "https://github.com/Pia007/Jubilee"
+        title: 'Pharmaceutical Product Development',
+        role: 'Clinical Laboratory Research Technician',
+        date: 'October 2020 to March 2022',
+        type: 'Other'
     },
     {
         id: 3,
-        title: "JavaScript Algorithms",
-        subtitle: "HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/jsAlgos.png",
-        live: "https://www.js-algorithms.com/",
-        repo: "https://github.com/Pia007/Javascript-Algos"
+        title: "Validated Claims Support",
+        role: 'Clinical Research Technician',
+        date: ' July 2019 to August 2020',
+        type: 'Other'
     },
     {
         id: 4,
-        title: "Social Media App One",
-        subtitle: "Open Source - HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/smaOne.png",
-        live: "",
-        repo: ""
+        title: "RWJ Fitness & Wellness Center",
+        role: ' Personal Trainer',
+        date: 'February 2019 to June 2019',
+        type: 'Other'
     },
     {
         id: 5,
-        title: "Social Media App Two",
-        subtitle: "Open Source - HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/smaTwo.png",
-        live: "",
-        repo: ""
+        title: "Symbotic",
+        role: 'Automations Control Operator',
+        date: 'May 2018 to December 2018',
+        type: 'Other'
     },
     {
         id: 6,
-        title: "Social Media App Three",
-        subtitle: "Open Source - HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/smaThree.png",
-        live: "https://github.com/Pia007/SMA-Team-3/tree/dev",
-        repo: ""
-    },
-    {
-        id: 7,
-        title: "Quote & Color Generator",
-        subtitle: "HTML/CSS/JavaScript",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/quoteGen.png",
-        live: "https://pia007.github.io/RandomQuoteAndColorGenerator/",
-        repo: "https://github.com/Pia007/RandomQuoteAndColorGenerator"
-    },
-    {
-        id: 8,
-        title: "Sign Up Form",
-        subtitle: "React",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/signUpReact.png",
-        live: "",
-    },
-    {
-        id: 9,
-        title: "Pricing Component",
-        subtitle: "HTML/CSS/JavaScript", 
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/priceToggle.png",
-        live: "https://pia007.github.io/PricingToggle/",
-    },
-    {
-        id: 10,
-        title: "Sample Survey",
-        subtitle: "HTML/CSS",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/sampleSurvey.png",
-        live: "https://pia007.github.io/SampleSurveyForm/",
-        repo: "https://github.com/Pia007/SampleSurveyForm"
-    },
-    {
-        id: 11,
-        title: "Host a Healthcare Hero",
-        subtitle: "React/Redux/Bootstrap",
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        image: "assets/images/hero.png",
-        live: "https://hostahealtcarehero.netlify.app/",
-        repo: "https://github.com/Pia007/Hero"
+        title: "Amazon",
+        role: "Control Center Process Assistant",
+        date: 'January 2017 to March 2018',
+        type: 'Other'
     }
 ];

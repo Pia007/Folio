@@ -21,9 +21,9 @@ const Home = () => {
     return (
         <div className='container' style={{overflowX: 'hidden'}}>
             <SEO title='Landing Page | Pia Torain' description="Landing page of Pia Torain's portfolio website" />
-            <div className="m-0 p-auto align-self-center" style={{height: '90vh'}}>
+            <div className="m-0 p-auto align-self-center" style={{height: '90vh', border: '3px solid white'}}>
                 <Intro />
-                <Skills />
+                {/* <Skills /> */}
             </div>
         </div>
     );

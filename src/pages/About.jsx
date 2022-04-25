@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { SEO } from "../components/SEO";
+import { SEO } from '../components/SEO';
+import PageTitle from '../components/PageTitle';
+import Info from '../components/Info';
 // import { Button } from "reactstrap";
 
 // Testing this just to do a commiit
@@ -15,10 +17,12 @@ const About = () => {
     }
 
     return (
-        <section id="aboutMe">
+        <div className='container'>
             <SEO title='About | Pia Torain' description='description' content='About Pia Torain, Fullstack Web Developer' />
+            <PageTitle regText="ABOUT" colorText="ME"/>
             <div className="container">
                 <div className="row">
+                    <Info />
                     <h1 className=""><span>About</span>Me
                         <br className="" /> Lorem ipsum dolor sit amet.
                     </h1>
@@ -37,52 +41,18 @@ const About = () => {
                         </button>
                     </div>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-md-6">
                         <h3>About Me</h3>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-4">
-                        <ul className="">
-                            <li className="list-item">
-                                <span className="">Name: </span>
-                                <span className="">Pia Torain</span>   
-                            </li>
-                            <li className="list-item">
-                                <span className="">Language: </span>  
-                                <span className="">English</span> 
-                            </li>
-                            <li className="list-item">
-                                <span className="">Availability: </span>  
-                                <span className="">For Hire</span> 
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="col-md-4">
-                        <ul className="">
-                            <li className="list-item">
-                                <span className="">Location: </span>
-                                <span className="">Las Vegas, NV</span>   
-                            </li>
-                            <li className="list-item">
-                                <span className="">Phone: </span>  
-                                <span className="">(908) 400-5335</span> 
-                            </li>
-                            <li className="list-item">
-                                <span className="">Email: </span>  
-                                <span className="">PiaTorain@yahoo.com</span> 
-                            </li>
-                        </ul>
-                    </div>
-                    
-                </div>
+                </div> */}
+                
                 <button className="col-2 btn btn-primary">
                         Download CV
                 </button>
             </div>
             
-        </section>
+        </div>
     )
 }
 
