@@ -15,7 +15,7 @@ export const Header = () => {
     // }
 
     return (
-        <React.Fragment>
+        <div className=''>
             <Navbar className="navbar navbar-expand-lg d-flex justify-content-center sticky-top text-light mynav" style={{zIndex: '5'}}>
                 <div className="container justify-content-between">
                     <div className='d-flex'>
@@ -54,7 +54,7 @@ export const Header = () => {
                     </Collapse>
                 </div>
             </Navbar>
-        </React.Fragment>
+        </div>
     );
 }
 
