@@ -13,7 +13,7 @@ const NavHead = () => {
         <Navbar className="navbar navbar-expand-lg d-flex justify-content-center sticky-top text-light myNav" >
             <div className="container container-fluid d-flex justify-content-end">
                     <div className='d-flex'>
-                        <NavLink tag='link' to='/home' cla
+                        <NavLink tag='link' to='/home' className='nav-link text-light'
                                 onClick={toggleNav}> PT
                                 {/* <img src={newLogo}  alt='logo' className='text-lg nav-logo mt-1' /> */}
                         </NavLink>

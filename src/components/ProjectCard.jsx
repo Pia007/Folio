@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
                         target='_blank'
                         rel='noreferrer'
                     >
-                        <i className="fa fa-solid fa-link fa-2x" />
+                        <i className="fa fa-external-link fa-2x" />
                     </a>
                     <a className='p-1'
                         href={project.repo}

@@ -45,10 +45,12 @@ body {
 }
 .quickToast {
     border-radius: 12px;
-    border: 2px solid var(--color-success);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    border: none;
+    /* border: 2px solid var(--color-success); */
+    background: transparent;
+    /* backdrop-filter: blur(12px); */
+    backdrop-filter: none;
+    /* box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1); */
     color: white;
 }
 .navbar-toggler:hover,
@@ -107,6 +109,22 @@ nav {
     font-weight: bold;
     color: var(--color-indigo);
     text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
+}
+/* About */
+.accordion-icon {
+    transition: 0.2s ease-in-out;
+    transform-origin: center;
+    margin: auto 0;
+    font-size: 25px;
+}
+.description {
+    text-align: left;
+    /* box-shadow: 0 9px 25px 0 rgba(31, 38, 135, 0.37); */
+    
+    outline: none;
+}
+.abtBtn {
+    border: none;
 }
 
 .card-title {

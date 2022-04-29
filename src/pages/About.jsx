@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { SEO } from '../components/SEO';
 import PageTitle from '../components/PageTitle';
-import Info from '../components/Info';
-import Skills from "../components/Icons";
 import { Row, Col } from "reactstrap";
+import Info from '../components/Info';
 
 // import { Button } from "reactstrap";
 
@@ -27,16 +26,7 @@ const About = () => {
                 <Row className="row-content">
                     <Info />
                 </Row>
-                <Row>
-                    <h1 className=""><span>Skills & Technologies</span>
-        
-                    </h1>
-                </Row>
-                <Row className="justify-content-center">
-                    <Skills />
-                    
-                </Row>
-                <Row className="row-content">
+                {/* <Row className="row-content">
                     <Col>
                         <button className="btn btn-primary">
                             Resume
@@ -52,7 +42,7 @@ const About = () => {
                             Portfolio
                         </button>
                     </Col>
-                </Row>
+                </Row> */}
             </div>
             
         </div>

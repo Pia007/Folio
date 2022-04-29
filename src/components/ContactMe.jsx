@@ -111,8 +111,8 @@ const ContactMe = () => {
     };
 
     const showToast = () => {
-        toast.success(`${enteredName}, your message has been sent! We will get back to you shortly.`, {
-            position: toast.POSITION.BOTTOM_CENTER,
+        toast.success(`Hi, ${enteredName}! I will get back to you shortly.`, {
+            // position: toast.POSITION.BOTTOM_CENTER,
             toastId: contactToastId,
         });
         
@@ -243,15 +243,20 @@ const ContactMe = () => {
                                 type="submit" 
                                 className="btn btn-outline-secondary text-light sendBtn"
                             >
-                                Send Email
+                                Submit
                             </Button>
                             <ToastContainer 
+                                position="bottom-left"
                                 theme='dark' 
                                 transition={Zoom} 
                                 autoClose={5000} 
-                                //bodyClassName='quickToast'
+                                hideProgressBar={true}
+                                bodyClassName='quickToast'
                                 toastClassName='quickToast' 
-                                // className: applied to the container
+                                // className='bg-none'
+                                // style={{
+                                //     backgroundColor: 'none'
+                                // }}
                                 // toastClassName: applied on the toast wrapper
                                 // bodyClassName: applied on the toast body
                                 // progressClassName: applied on the progress bar
