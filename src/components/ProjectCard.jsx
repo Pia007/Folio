@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
                     <p className=''>{project.description}</p>
                 </ModalBody>
                 <ModalFooter className='p-2'>
-                    <a classNamee='p-1'
+                    <a className='p-1'
                         href={project.live}
                         alt={project.title}
                         target='_blank'

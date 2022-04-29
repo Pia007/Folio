@@ -2,6 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { SEO } from '../components/SEO';
 import PageTitle from '../components/PageTitle';
 import Info from '../components/Info';
+import Skills from "../components/Icons";
+import { Row, Col } from "reactstrap";
+
 // import { Button } from "reactstrap";
 
 // Testing this just to do a commiit
@@ -21,35 +24,35 @@ const About = () => {
             <SEO title='About | Pia Torain' description='description' content='About Pia Torain, Fullstack Web Developer' />
             <PageTitle regText="ABOUT" colorText="ME"/>
             <div className="container">
-                <div className="row">
+                <Row className="row-content">
                     <Info />
-                    <h1 className=""><span>About</span>Me
-                        <br className="" /> Lorem ipsum dolor sit amet.
+                </Row>
+                <Row>
+                    <h1 className=""><span>Skills & Technologies</span>
+        
                     </h1>
-                    <p className="">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Soluta accusamus expedita similique maiores vitae molestias 
-                        voluptatem? Totam quos fuga illum ipsum mollitia voluptas 
-                        consequatur aspernatur!
-                    </p>
-                    <div className="">
+                </Row>
+                <Row className="justify-content-center">
+                    <Skills />
+                    
+                </Row>
+                <Row className="row-content">
+                    <Col>
+                        <button className="btn btn-primary">
+                            Resume
+                        </button>
+                    </Col>
+                    <Col>
                         <button className="btn btn-primary" onClick={()=> handleContactClick()}>
                             Contact
                         </button>
+                    </Col>
+                    <Col>
                         <button className="btn btn-primary" onClick={()=> handlePortfolioClick()}>
                             Portfolio
                         </button>
-                    </div>
-                </div>
-                {/* <div className="row">
-                    <div className="col-md-6">
-                        <h3>About Me</h3>
-                    </div>
-                </div> */}
-                
-                <button className="col-2 btn btn-primary">
-                        Download CV
-                </button>
+                    </Col>
+                </Row>
             </div>
             
         </div>

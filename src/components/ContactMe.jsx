@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+// import 'dotenv/config';
 import emailjs from 'emailjs-com';
 import { validateEmail, validateName, validateSubject, validateMessage } from './Validate';
 import { Row, Col, FormGroup, Input, FormFeedback, Button} from "reactstrap";
@@ -142,7 +143,12 @@ const ContactMe = () => {
             return;
         }
 
-        emailjs.sendForm('service_5okl2sw', 'template_2h8qlpo', form.current, 'user_KMa2QHJhjwfiOGxac6iEd')
+        emailjs.sendForm(
+            process.env.REACT_APP_SERVICE_ID || '', 
+            process.env.REACT_APP_TEMPLATE_ID || '',
+            form.current, 
+            process.env.REACT_APP_USER_ID || ''
+            )
         .then((result) => {
             console.log(result.text);
             showToast();
@@ -162,8 +168,7 @@ const ContactMe = () => {
     const messageError = enteredMessage.trim() === '' ? 'Please enter a message' : '';
 
     return (
-        <div className="container  p-0 md-px-0">
-            
+        <div className="container p-0 md-px-0">
             <Col className="">
                 <form ref={form} onSubmit={sendEmail}>
                     <Row className="p-2">
