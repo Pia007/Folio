@@ -1,35 +1,29 @@
 import React, { useState } from 'react';
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-// import HostHeader from './HostHeader';
-// import newLogo from '../images/new-logo.svg';
+import myLogo from '../images/ptlogo.svg'
+import menu from '../images/menu.svg';
 
 
 export const Header = () => {
     const [navigation, setNavigation] = useState(false);
     const toggleNav = () => setNavigation(!navigation);
     
-    // const RenderHostHeader= () => {
-    //     const location = useLocation();
-    //     return location.pathname === '/home' ? null : <HostHeader />;
-    // }
-
     return (
-        <div className=''>
-            <Navbar className="navbar navbar-expand-lg d-flex justify-content-center sticky-top text-light mynav" style={{zIndex: '5'}}>
+        <React.Fragment>
+            <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light mynav" style={{zIndex: '5'}}>
                 <div className="container justify-content-between">
-                    <div className='d-flex'>
-                        {/* <NavLink tag='link' to="/home" 
-                            onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
-                                <img src={newLogo}  alt="logo" className=" text-lg nav-logo mt-1" />
-                        </NavLink> */}
-                        {/* <RenderHostHeader /> */}
-                    </div>
-                    <NavbarToggler onClick={toggleNav} className="justify-content-end">
-                        <i className="fa fa-bars fa-lg text-success nv-icon "/> 
+                        <div className='d-flex'>
+                            <NavLink tag='link' to="/" 
+                                onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
+                                    <img src={myLogo}  alt="logo" className="text-primary mt-1" />
+                            </NavLink>
+                        </div>
+                    <NavbarToggler onClick={toggleNav} className="align-self-center justify-content-end">
+                        <img src={menu}  alt='menu' className="text-success"/> 
                     </NavbarToggler>
-                    <Collapse isOpen={navigation} navbar className="justify-content-center">
-                        <Nav navbar className="ml-auto text-center text-light ">
+                    <Collapse isOpen={navigation} navbar className="justify-content-end">
+                        <Nav navbar className="ms-auto text-center text-light ">
                             <NavItem>
                                 <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className="nav-link" to="/"> 
                                     Home
@@ -54,7 +48,7 @@ export const Header = () => {
                     </Collapse>
                 </div>
             </Navbar>
-        </div>
+        </React.Fragment>
     );
 }
 
