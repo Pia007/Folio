@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div className='container' style={{overflowX: 'hidden'}}>
             <SEO title='Landing Page | Pia Torain' description="Landing page of Pia Torain's portfolio website" />
-            <div>
+            <div >
                 <Intro/>
             </div>
         </div>

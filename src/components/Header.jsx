@@ -8,10 +8,10 @@ import menu from '../images/menu.svg';
 export const Header = () => {
     const [navigation, setNavigation] = useState(false);
     const toggleNav = () => setNavigation(!navigation);
-    
+
     return (
         <React.Fragment>
-            <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light mynav" style={{zIndex: '5'}}>
+            <Navbar className="navbar navbar-expand-lg p-1 d-flex justify-content-end sticky-top text-light mynav" style={{zIndex: '5'}}>
                 <div className="container justify-content-between">
                         <div className='d-flex'>
                             <NavLink tag='link' to="/" 

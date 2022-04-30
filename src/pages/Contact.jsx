@@ -1,7 +1,7 @@
 import PageTitle from "../components/PageTitle";
 import ContactInfo from "../components/ContactInfo";
-import ContactMe from "../components/ContactMe";
 import { Row, Col } from "reactstrap";
+import ContactMe from "../components/ContactMe";
 
 const Contact = () => {
     
@@ -12,13 +12,13 @@ const Contact = () => {
                 <h1 className="title text-center">LET'S <span className="text-primary ">CHAT</span></h1>
             </Row> */}
             
-            <div className="container px-2">
-                <Row className="formHolder">
-                    <Col lg={4} >
+            <div className="container p-2 formHolder">
+                <Row className="">
+                    <Col lg={5} className='mb-2 mb-lg-0'>
                         <ContactInfo />
                     </Col>
-                    <Col lg={8}>
-                        <ContactMe />
+                    <Col lg={7} >
+                        <ContactMe/>
                     </Col>
                 </Row>
             </div>

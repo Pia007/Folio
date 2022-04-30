@@ -1,5 +1,6 @@
 :root {
     --bg-darkly: #d9e3f1;
+    --bg-new: #1a0e3a;
     --bs-gradient: linear-gradient(to right, #5460b5, #44adad);
     --bb-gradient: linear-gradient(to right, #58819b, #9d6ed4, #1c7a7a);
     /* --bb-gradient: linear-gradient(to right, #586d9b, #9d6ed4, #1c7a7a); */
@@ -10,6 +11,10 @@
     --linkedin: #0077b5;
     --github: white;
     --color-primary: #e83283;
+    --color-alt-primary: #f5dce6;
+    /* --color-alt-secondary: #c38ca5; */
+    --color-standard: #cda7b8;
+    /* --color-standard: #d8b0c2; */
     --color-secondary: #a84170;
     --color-success: #41da7a;
     --color-indigo: #6610f2;
@@ -29,9 +34,10 @@
 html,
 body {
     /* background: #ffffff; */
-    background: var(--bc-color);
-    background: var(--bb-gradient);
+    /* background: var(--bc-color); */
+    background: var(--bg-new);
     /* background: #070305; */
+    /* background: var(--bs-gradient); */
     height: 100vh;
     width: 100%;
     font-family: "Open Sans", sans-serif;
@@ -44,14 +50,14 @@ body {
     position: relative!important;
 }
 .quickToast {
-    border-radius: 12px;
     border: none;
-    /* border: 2px solid var(--color-success); */
-    background: transparent;
-    /* backdrop-filter: blur(12px); */
+    border: 1px solid var(--color-primary); 
+    background: var(--bg-new);
     backdrop-filter: none;
-    /* box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1); */
-    color: white;
+    color: var(--color-success);
+}
+.navbar-toggler {
+    position: relative;
 }
 .navbar-toggler:hover,
 .navbar-toggler:focus,
@@ -64,6 +70,9 @@ body {
     font-size: 30px;
     color: var(--color-primary);
 }
+/* .nav-logo {
+    background: transparent;
+} */
 nav {
     /* background: linear-gradient(to right, #00f260, #0575e6, #00f260);  */
     background: none
@@ -72,7 +81,7 @@ nav {
     animation: gradient 12s ease infinite; */
 }
 .nav-link {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600 ;
     color: white ;
     margin: 0 8px;
@@ -83,33 +92,47 @@ nav {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-    /* background: rgba(251, 251, 251, 0.582); */
-    box-shadow: 0 18px 50px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 10px;
+    color: var(--color-primary);
 }
-
 .myNav {
     background: var(--bg-blue);
 }
-
-.intro-header {
-    margin: 30px 0;
+/* LANDING PAGE */
+.pre-text {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
 }
-.typed-header {
+.intro-text {
+    font-size: 2.5em;
+    color: var(--color-alt-primary);
+    margin-bottom: 1em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.sub-text {
+    font-size: 2.5em;
+    color: var(--color-standard);
+}
+.text {
+    font-size: 1.1em;
+    color: var(--color-standard);
+}
+/* .intro-header {
+    margin: 30px 0;
+} */
+/* .typed-header {
     font-size: 3rem;
     font-weight: bold;
     color: var(--color-success);
     margin-bottom: 1rem;
-}
+} */
 /* Typed text */
-.typed-text {
+/* .typed-text {
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-indigo);
     text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
-}
+} */
 /* About */
 .accordion-icon {
     transition: 0.2s ease-in-out;
@@ -149,9 +172,14 @@ nav {
 }
 .formHolder {
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: none;
+    /* backdrop-filter: blur(12px); */
+    box-shadow: 8px 8px 14px #160c30,
+        -8px -8px 14px #1e1044;
+}
+.form {
+    background: none;
 }
 
 .contactMe:hover {
@@ -171,6 +199,13 @@ nav {
     border-radius: 5px;
     outline: none;
 }
+.form-control:valid {
+    color: var(--color-success)!important;
+}
+
+input:not(:placeholder-shown) {
+    background:  none!important;
+}
 
 .contactText {
     font-size: 18px;
@@ -189,9 +224,10 @@ nav {
     margin: 0 .5rem;
     background: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    /* backdrop-filter: blur(5px); */
+    box-shadow: 9px 9px 18px #140b2d,
+        9px -9px 18px #201147;
 }
 .list-group-item {
     background: transparent;
@@ -208,8 +244,8 @@ nav {
 } */
 .social:hover {
     background: var(--color-primary);
-    box-shadow:  10px 10px 10px rgba(255, 255, 255, 0.1)
-            -10px -10px 10px rgba(0, 0, 0, 0.1);;
+    box-shadow: 7px 7px 14px #130a2a,
+        -7px -7px 14px #21124a;
     /* backdrop-filter: blur(3px); */
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -226,16 +262,20 @@ nav {
 }
 .sendBtn {
     /* font-size: 16px; */
-    background: transparent;
+    /* background: transparent; */
+    background: rgba(255, 255, 255, 0.04);
+    /* backdrop-filter: blur(5px); */
+    box-shadow:  10px 10px 20px #130a2a,
+        -10px -10px 20px #21124a;
 }
 
-.sendBtn:hover {
-    background: var(--color-primary);
-    box-shadow: inset -25px -5px 20px #b52766,
-        inset -55px -5px 20px rgba(255, 255, 255, 0.18);
+.sendBtn:hover,
+.sendBtn:focus,
+.sendBtn:active {
+    background: linear-gradient(145deg, #f8368c, #d12d76);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px double rgba(255, 255, 255, 0.18);
+    border: none;
+    outline:none;
     -webkit-transition: all 1s ease;
     transition: all .45s ease;
     font-size: 105%;
@@ -267,8 +307,37 @@ footer {
     /* position: fixed; */
 }
 
+
+
+@media screen and (min-width: 576px) {
+    
+    .intro-text, 
+    .sub-text {
+        font-size: 2.9em;
+        
+    }
+    .text {
+        font-size: 1.25em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .intro-text, 
+    .sub-text {
+        font-size: 3.2em;
+        
+    }
+}
 @media screen and (min-width: 992px) {
-    .title {
-        padding: 75px 0
+    .intro-text, 
+    .sub-text {
+        font-size: 3.7em;
+        
+    }
+}
+@media screen and (min-width: 1200px) {
+    .intro-text, 
+    .sub-text {
+        font-size: 4.0em;
+        
     }
 }
