@@ -1,12 +1,13 @@
 import React from 'react'
 import { Row, Col, ListGroupItem } from 'reactstrap';
+
 import polyworkIcon from '../images/polywork.svg';
 
 const Socials = () => {
     return (
         <>
-            <Row className="">
-                <Col className="py-0 mb-0">
+            <Row className="p-0 my-2">
+                <Col className="p-0 mb-0">
                     <Col className="d-flex d-inline-flex justify-content-between list-unstyled mb-0 py-1 shadow-none social-ul">
                         <ListGroupItem className="p-0 social-holder">
                             <a 
