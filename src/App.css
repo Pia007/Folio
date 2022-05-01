@@ -95,7 +95,7 @@ nav {
     color: var(--color-primary);
 }
 .myNav {
-    background: var(--bg-blue);
+    background: var(--bg-new);
 }
 /* LANDING PAGE */
 .pre-text {
@@ -261,6 +261,11 @@ input:not(:placeholder-shown) {
     color: var(--twitter);
 }
 .sendBtn {
+    width: 98.5px;
+    height: 50px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
     /* font-size: 16px; */
     /* background: transparent; */
     background: rgba(255, 255, 255, 0.04);
@@ -273,9 +278,9 @@ input:not(:placeholder-shown) {
 .sendBtn:focus,
 .sendBtn:active {
     background: linear-gradient(145deg, #f8368c, #d12d76);
-    backdrop-filter: blur(10px);
-    border: none;
-    outline:none;
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid var(--color-primary);
+    outline: none;
     -webkit-transition: all 1s ease;
     transition: all .45s ease;
     font-size: 105%;

@@ -111,7 +111,7 @@ const ContactMe = () => {
     };
 
     const showToast = () => {
-        toast.success(`Hi, ${enteredName}! I will get back to you shortly.`, {
+        toast.success(`${enteredName}, your message has been sent! We will get back to you shortly.`, {
             // position: toast.POSITION.BOTTOM_CENTER,
             toastId: contactToastId,
         });
@@ -201,6 +201,7 @@ const ContactMe = () => {
                                 invalid={emailInputIsValid}
                                 onChange={changeEmailHandler}
                                 onBlur={emailInputBlurHandler}
+                                
                             />
                             <FormFeedback>{emailError}</FormFeedback>
                         </FormGroup>
@@ -238,20 +239,20 @@ const ContactMe = () => {
                             <FormFeedback>{messageError}</FormFeedback>
                         </FormGroup>
                         <FormGroup className="d-flex justify-content-end py-1">
-                            <Button
+                            <button
                                 color=""
                                 type="submit" 
-                                className="btn btn-outline-secondary text-light sendBtn"
+                                className="text-light sendBtn"
                             >
                                 Submit
-                            </Button>
+                            </button>
                             <ToastContainer 
-                                position="bottom-left"
+                                position="top-right"
                                 theme='dark' 
                                 transition={Zoom} 
                                 autoClose={5000} 
                                 hideProgressBar={true}
-                                bodyClassName='quickToast'
+                                // bodyClassName='quickToast'
                                 toastClassName='quickToast' 
                                 // className='bg-none'
                                 // style={{
