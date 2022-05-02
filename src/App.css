@@ -175,8 +175,8 @@ nav {
     /* background: rgba(255, 255, 255, 0.1); */
     background: none;
     /* backdrop-filter: blur(12px); */
-    box-shadow: 8px 8px 14px #160c30,
-        -8px -8px 14px #1e1044;
+    box-shadow: 9px 9px 16px #160c32,
+    -9px -9px 16px #1e1042;
 }
 .form {
     background: none;
@@ -273,7 +273,12 @@ input:not(:placeholder-shown) {
     box-shadow:  10px 10px 20px #130a2a,
         -10px -10px 20px #21124a;
 }
-
+.contact-input {
+    border: 1px solid var(--color-primary);
+    outline: none;
+    box-shadow: 10px 10px 25px #130a2a,
+        -10px -10px 25px #21124a;
+}
 .sendBtn:hover,
 .sendBtn:focus,
 .sendBtn:active {
@@ -291,6 +296,10 @@ input:not(:placeholder-shown) {
     /* background-color: transparent; */
     backdrop-filter: blur(10px);
 }
+.modal-info {
+    color: var(--bg-new);
+}
+
 .modal-content {
     /* border: 1px solid rgba(233, 233, 232, .5); */
     border: 1px solid rgba(233, 233, 232, 0.404);

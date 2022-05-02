@@ -1,16 +1,9 @@
-import { useState } from "react";
 import PageTitle from "../components/PageTitle";
 import ContactInfo from "../components/ContactInfo";
 import { Row, Col } from "reactstrap";
-import ContactMe from "../components/ContactMe";
 import ContactForm from "../components/ContactForm";
-import ConForm from "../components/ConForm";
 
 const Contact = () => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    function submitForm() {
-        setIsSubmitted(true);
-    }
     return (
         <div className="container">
             <PageTitle regText="LET'S" colorText="CHAT"/>
@@ -20,13 +13,11 @@ const Contact = () => {
             
             <div className="container p-2 formHolder">
                 <Row className="">
-                    <Col lg={5} className='mb-2 mb-lg-0'>
+                    <Col lg={4} className='mb-2 mb-lg-0'>
                         <ContactInfo />
                     </Col>
-                    <Col lg={7} >
-                        <ContactForm submitForm={submitForm}/> 
-                        {/* <ContactMe /> */}
-                        {/* <ConForm /> */}
+                    <Col lg={8} >
+                        <ContactForm /> 
                     </Col>
                 </Row>
             </div>

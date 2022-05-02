@@ -17,11 +17,11 @@ const ProjectCard = ({ project }) => {
             </Card>
 
             <Modal centered scrollable isOpen={modal} toggle={toggleModal} className='' >
-                <ModalHeader toggle={toggleModal} className='bg-success text-primary'>{project.title}</ModalHeader>
+                <ModalHeader toggle={toggleModal} className='bg-info text-primary'>{project.title}</ModalHeader>
                 <ModalBody className=''>
                     <img className='img-fluid modalImg' src={project.image} alt={project.title} style={{borderRadius: '10px'}}/>
-                    <p className='my-3'>{project.subtitle}</p>
-                    <p className=''>{project.description}</p>
+                    <p className='my-3 text-info'>{project.subtitle}</p>
+                    <p className=' modal-info'>{project.description}</p>
                 </ModalBody>
                 <ModalFooter className='p-2'>
                     <a className='p-1'

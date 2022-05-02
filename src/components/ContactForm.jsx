@@ -1,94 +1,161 @@
-import {UseContact} from "./UseContact";
-import ValidateInfo from "./ValidateInfo";
-import { Row, Col, FormGroup, Input, FormFeedback, Button} from "reactstrap";
+import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 
+const contactToastId = 'contact-toast-id';
+
 export default function ContactInfo({ submitForm }) {
-    const { handleChange, handleClick, values, handleSubmit, errors } = UseContact(
-        submitForm,
-        ValidateInfo
-    );
+    const { 
+        register, 
+        handleSubmit, 
+        reset, 
+        formState: { errors } 
+    } = useForm();
+
+    const showToast = () => {
+        toast.success(`Thanks for reaching out! I will get back to you shortly.`, {
+            position: toast.POSITION.BOTTOM_CENTER,
+            toastId: contactToastId,
+        });
+    };
+    const resetForm = () => {
+        reset();
+    };
+    
+
+    const sendEmail = (formData) => {
+        
+        emailjs.send(
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
+            formData,
+            process.env.REACT_APP_USER_ID
+        ).then(
+            (result) => {
+                console.log(result.text);
+                resetForm();
+                showToast();
+            },
+            (error) => {
+                console.log(error.text);
+            }
+        );
+    };
 
     return (
         <div className="container p-0 md-px-0">
-            <Col className="">
-                {/* <div className="contactForm"> */}
-                <form className="Contact" onSubmit={handleSubmit}>
-                    <Row className='p-2'>
-                        <FormGroup className="col-md-4 mb-3 py-1">
-                            <Input
-                                className="contactInput form-control-lg px-1 pr-1 "
+            <div className="">
+                <form method='POST' className="Contact" onSubmit={handleSubmit(sendEmail)}>
+                    <div className='row py-0 px-2'>
+                        <div className="form-group col-md-4 mb-3 py-1">
+                            <input
+                                className=" form-control contact-input px-1 pr-1 "
                                 htmlFor="name"
                                 aria-label="name"
                                 id="name"
                                 name="name"
                                 type="text"
-                                value={values.name}
-                                onChange={handleChange}
+                                
+                                {...register('name', {
+                                    required: {
+                                        value: true,
+                                        message: 'Name is required.'
+                                    },
+                                    pattern: {
+                                        value: /^[a-zA-Z ]*$/,
+                                        message: 'Name must be letters only.'
+                                    },
+                                    minLength: {
+                                        value: 5,
+                                        message: 'Name must be at least 5 characters.'
+                                    },
+                                    maxLength: {
+                                        value: 50,
+                                        message: 'Name must be less than 50 characters.'
+                                    },
+                                })}
                                 placeholder="Name"
-                                //   minLength="5"
-                                //   maxLength="50"
                                 autoComplete="off"
                             />
-                            <FormFeedback>{errors.name && <p> {errors.name} </p>}</FormFeedback>
-                        </FormGroup>
-                        <FormGroup className="col-md-4 mb-3 py-1">
-                            <Input
-                                className="contactInput form-control-lg px-1 pr-1 shadow-none" 
+                            {errors.name && <p className='mb-0 p-1 text-danger'>{errors.name.message}</p>}
+                        </div>
+                        <div className="form-group col-md-4 mb-3 py-1">
+                            <input
+                                className=" form-control contact-input px-1 pr-1" 
                                 htmlFor="email"
                                 aria-label="email"
                                 id="email"
                                 name="email"
                                 type="email"
-                                value={values.email}
-                                onChange={handleChange}
+                                
+                                {...register('email', {
+                                    required: true,
+                                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+                                })}
                                 placeholder="Email"
-                                // minLength="5"
-                                // maxLength="50"
                                 autoComplete="off"
                             />
-                            <FormFeedback>{errors.email && <p> {errors.email} </p>}</FormFeedback>
-                        </FormGroup>
-                        <FormGroup className="col-md-4 mb-3 py-1">
-                            <Input
-                                className="contactInput form-control-lg px-1 pr-1 shadow-none" 
+                            {errors.email && <p className='mb-0 p-1 text-danger'>Enter a valid email address.</p>}
+                        </div>
+                        <div className="form-group col-md-4 mb-3 py-1">
+                            <input
+                                className="form-control contact-input px-1 pr-1" 
                                 htmlFor='subject'
                                 aria-label="subject"
                                 name="subject"
                                 id="subject"
                                 type="text"
-                                value={values.subject}
-                                onChange={handleChange}
-                                // minLength="5"
-                                // maxLength="50"
+                                {...register('subject', {
+                                    required: {
+                                        value: true,
+                                        message: 'Subject is required.'
+                                    },
+                                    minLength: {
+                                        value: 5,
+                                        message: 'Subject must be at least 5 characters.'
+                                    },
+                                    maxLength: {
+                                        value: 25,
+                                        message: 'Subject must be less than 25 characters.'
+                                    }
+                                })}
                                 autoComplete="off"
                                 placeholder="Subject"
                             />
-                            {errors.subject && <p> {errors.subject} </p>}
-                        </FormGroup>
-                        <FormGroup className="col-md-12 mb-3 py-1">
+                            {errors.subject  && <p className='mb-0 p-1 text-danger'>{errors.subject.message}</p>}
+                        </div>
+                        <div className="form-group col-md-12 mb-3 py-1">
                             <textarea
-                                className="form-control mb-1 px-1 pr-1 textBg shadow-none"
+                                className="form-control contact-input mb-1 px-1 pr-1 textBg "
                                 htmlFor="message"
                                 aria-label="message"
                                 type="textarea"  
                                 id="message" 
                                 name="message"
                                 rows="5"
-                                value={values.message}
-                                onChange={handleChange}
                                 placeholder="Message"
-                                minLength="5"
-                                maxLength="500"
-                                // placeholder="Write your message here..."
+                                {...register('message', {
+                                    required: {
+                                        value: true,
+                                        message: 'Message is required.'
+                                    },
+                                    minLength: {
+                                        value: 10,
+                                        message: 'Message must be at least 5 characters.'
+                                    },
+                                    maxLength: {
+                                        value: 250,
+                                        message: 'Message must be less than 500 characters.'
+                                    }
+
+                                })}
                             />
-                            <FormFeedback>{errors.message && <p> {errors.message} </p>}</FormFeedback>
-                        </FormGroup>
-                        <FormGroup className="d-flex justify-content-end py-1">
+                            {errors.message && <p className='mb-0 p-1 text-danger'>Please enter a message longer than 10 characters</p>}
+                        </div>
+                        <div className="form-group d-flex justify-content-end py-1">
                             <button  
                                 className="text-light sendBtn" 
                                 type="submit"
-                                onClick={handleClick}
                             >
                                 Submit
                             </button>
@@ -98,22 +165,12 @@ export default function ContactInfo({ submitForm }) {
                                 transition={Zoom} 
                                 autoClose={5000} 
                                 hideProgressBar={true}
-                                // bodyClassName='quickToast'
-                                toastClassName='quickToast' 
-                                // className='bg-none'
-                                // style={{
-                                //     backgroundColor: 'none'
-                                // }}
-                                // toastClassName: applied on the toast wrapper
-                                // bodyClassName: applied on the toast body
-                                // progressClassName: applied on the progress bar
-                                // style: inline style applied to the container
+                                toastClassName='quickToast'
                             />
-                        </FormGroup>
-                    </Row>
+                        </div>
+                    </div>
                 </form>
-                {/* </div> */}
-            </Col>
+            </div>
         </div>
     );
 }

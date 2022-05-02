@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 import Socials from "../components/Socials";
 import mailImg from '../images/mail.svg';
 import phoneImg from '../images/phone.svg';
+import pinImg from '../images/location.svg';
 
 const ContactInfo = () => {
     return (
@@ -28,7 +29,15 @@ const ContactInfo = () => {
                         <a role="button" className="p-1 mb-md-1 contactText text-decoration-none" href="tel:+19084005335" >(908) 400-5335</a> 
                     </Col>
                 </Row>
-                <Socials />
+                <Row className="">
+                    <Col className="d-flex my-1">
+                        <p className="p-0 px-1 mb-0">
+                            <img src={pinImg} alt="location" /> 
+                        </p>
+                        <p className='p-1'> Las Vegas Metropolitan Area</p>
+                    </Col>
+                </Row>
+                {/* <Socials /> */}
             </Col>
         </>
     );
