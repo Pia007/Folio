@@ -146,9 +146,10 @@ nav {
     
     outline: none;
 }
-.abtBtn {
+/* .abtBtn {
     border: none;
-}
+} */
+
 
 .card-title {
     font-weight: 500;
@@ -346,6 +347,9 @@ footer {
     .sub-text {
         font-size: 3.7em;
         
+    }
+    .eduCol {
+        border-left: 2px solid var(--color-primary);
     }
 }
 @media screen and (min-width: 1200px) {

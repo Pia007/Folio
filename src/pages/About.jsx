@@ -3,6 +3,7 @@ import { SEO } from '../components/SEO';
 import PageTitle from '../components/PageTitle';
 import { Row, Col } from "reactstrap";
 import Info from '../components/Info';
+import Education from "../components/Education";
 
 // import { Button } from "reactstrap";
 
@@ -26,6 +27,14 @@ const About = () => {
                 <Row className="row-content">
                     <Info />
                 </Row>
+                <Row className="row-content">
+                    {/* <Education /> */}
+                </Row>
+                {/* <Row className="row-content">
+                    <Col className="col-content">
+                        <Education />
+                    </Col>
+                </Row> */}
                 {/* <Row className="row-content">
                     <Col>
                         <button className="btn btn-primary">
