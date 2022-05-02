@@ -72,7 +72,7 @@ const Info = () => {
     const [ content, setContent ] = useState('aboutMe');
 
     return (
-        <div className='container row formHolder'>
+        <div className='container formHolder'>
             
             <Row className="justify-content-between p-2">
                 <Col md={4} className="text-center ">

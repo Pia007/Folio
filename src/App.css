@@ -193,6 +193,7 @@ nav {
 .title {
     /* padding: 20px 0; */
     text-shadow: transparent 0 0 0.5em;
+    text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
 }
 
 .contactInput,
@@ -227,8 +228,8 @@ input:not(:placeholder-shown) {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.04);
     /* backdrop-filter: blur(5px); */
-    box-shadow: 9px 9px 18px #140b2d,
-        9px -9px 18px #201147;
+    box-shadow: -7px 7px 8px #160c31,
+        7px -7px 8px #1e1043;
 }
 .list-group-item {
     background: transparent;
@@ -341,6 +342,10 @@ footer {
         font-size: 3.2em;
         
     }
+    .social-ul li a {
+        box-shadow: 9px 9px 18px #140b2d,
+            9px -9px 18px #201147;
+    }
 }
 @media screen and (min-width: 992px) {
     .intro-text, 
@@ -350,6 +355,9 @@ footer {
     }
     .eduCol {
         border-left: 2px solid var(--color-primary);
+    }
+    .skillCol {
+        border-left: 2px solid var(--color-info);
     }
 }
 @media screen and (min-width: 1200px) {

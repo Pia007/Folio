@@ -45,7 +45,7 @@ function Skills(props) {
                         </div>
                     </Col>
                 </Col>
-                <Col xs={12} lg={6} className='my-3 eduCol'>
+                <Col xs={12} lg={6} className='my-3 skillCol'>
                     <EduHeader type='Backend' />
                     <Col xs={12} className='d-flex flex-column justify-content-around my-3'>
                         <div className='d-flex justify-content-around'>

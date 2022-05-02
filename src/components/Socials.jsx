@@ -6,10 +6,10 @@ import polyworkIcon from '../images/polywork.svg';
 const Socials = () => {
     return (
         <>
-            <Row className="p-0 my-2">
+            <Row className="p-0 my-2 d-md-none">
                 <Col className="p-0 mb-0">
-                    <Col className="d-flex d-inline-flex justify-content-between list-unstyled mb-0 py-1 shadow-none social-ul">
-                        <ListGroupItem className="p-0 social-holder">
+                    <Col className="d-flex d-inline-flex  justify-content-between list-unstyled mb-0 py-1 shadow-none social-ul">
+                        <ListGroupItem className="my-md-1 p-0 social-holder">
                             <a 
                                 className="btn btn-outline-white social-link align-content-center p-0 social" 
                                 title="LinkedIn" 
@@ -20,7 +20,7 @@ const Socials = () => {
                                 <i className="fa fa-linkedin fa-2x my-1 py-1 linkedin"/>
                             </a>
                         </ListGroupItem>
-                        <ListGroupItem className="p-0">
+                        <ListGroupItem className="my-md-1 p-0">
                             <a 
                                 className="btn btn-outline-white social-link align-content-center p-0 social" 
                                 title="GitHub" 
@@ -31,7 +31,7 @@ const Socials = () => {
                                 <i className="fa fa-github fa-2x my-1 py-1 github"/>
                             </a>
                         </ListGroupItem>
-                        <ListGroupItem className="p-0">
+                        <ListGroupItem className="my-md-1 p-0">
                             <a 
                                 className="btn social-link align-content-center p-0 social" 
                                 title="Polywork" 
@@ -47,7 +47,7 @@ const Socials = () => {
                                 />
                             </a>
                         </ListGroupItem>
-                        <ListGroupItem className="p-0">
+                        <ListGroupItem className="my-md-1 p-0">
                             <a 
                                 className="container btn social-link align-content-center p-0 social" 
                                 title="Twitter" 

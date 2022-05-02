@@ -4,7 +4,7 @@ import { Row } from "reactstrap";
 function PageTitle({ regText, colorText }) {
     return (
         <Row className="" >
-            <h1 className="title text-center py-4">{regText}<span className="text-primary"> {colorText}</span></h1>
+            <h1 className=" text-center py-4"><span className='title'>{regText}</span><span className="text-primary"> {colorText}</span></h1>
         </Row>
     );
 }

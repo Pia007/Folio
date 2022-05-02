@@ -5,9 +5,9 @@ import { Intro } from '../components/Intro';
 
 const Home = () => {
     return (
-        <div className='container' style={{overflowX: 'hidden'}}>
+        <div className='container' style={{overflowX: 'hidden', width: '90vw'}}>
             <SEO title='Landing Page | Pia Torain' description="Landing page of Pia Torain's portfolio website" />
-            <div >
+            <div className='px-3 px-md-2'>
                 <Intro/>
             </div>
         </div>

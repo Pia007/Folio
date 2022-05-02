@@ -1,23 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import { SEO } from '../components/SEO';
 import PageTitle from '../components/PageTitle';
-import { Row, Col } from "reactstrap";
+import { Row } from "reactstrap";
 import Info from '../components/Info';
-import Education from "../components/Education";
-
-// import { Button } from "reactstrap";
-
-// Testing this just to do a commiit
 
 const About = () => {
-    let navigate = useNavigate();
-
-    const handleContactClick = () => {
-        navigate("/contact");
-    }
-    const handlePortfolioClick = () => {
-        navigate("/portfolio");
-    }
 
     return (
         <div className='container'>
@@ -27,31 +13,6 @@ const About = () => {
                 <Row className="row-content">
                     <Info />
                 </Row>
-                <Row className="row-content">
-                    {/* <Education /> */}
-                </Row>
-                {/* <Row className="row-content">
-                    <Col className="col-content">
-                        <Education />
-                    </Col>
-                </Row> */}
-                {/* <Row className="row-content">
-                    <Col>
-                        <button className="btn btn-primary">
-                            Resume
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn btn-primary" onClick={()=> handleContactClick()}>
-                            Contact
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn btn-primary" onClick={()=> handlePortfolioClick()}>
-                            Portfolio
-                        </button>
-                    </Col>
-                </Row> */}
             </div>
             
         </div>

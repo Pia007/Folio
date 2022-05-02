@@ -14,8 +14,8 @@ export const Header = () => {
 
     return (
         <React.Fragment>
-            <Navbar className="navbar navbar-expand-lg p-1 d-flex justify-content-end sticky-top text-light myNav" style={{zIndex: '5'}}>
-                <div className="container justify-content-between">
+            <Navbar className="navbar navbar-expand-lg p-1 d-flex justify-content-between sticky-top text-light myNav" style={{zIndex: '5'}}>
+                {/* <div className="container justify-content-between w-100"> */}
                         <div className='d-flex'>
                             <NavLink tag='link' to="/" 
                                 onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
@@ -53,7 +53,7 @@ export const Header = () => {
                             </NavItem>
                         </Nav>
                     </Collapse>
-                </div>
+                {/* </div> */}
             </Navbar>
         </React.Fragment>
     );
