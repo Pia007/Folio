@@ -47,7 +47,7 @@ export default function ContactInfo({ submitForm }) {
             <div className="">
                 <form method='POST' className="Contact" onSubmit={handleSubmit(sendEmail)}>
                     <div className='row py-0 px-2'>
-                        <div className="form-group col-md-4 mb-3 py-1">
+                        <div className="form-group col-md-4 mb-1 mb-md-3 py-1">
                             <input
                                 className=" form-control contact-input px-1 pr-1 "
                                 htmlFor="name"
@@ -66,8 +66,8 @@ export default function ContactInfo({ submitForm }) {
                                         message: 'Name must be letters only.'
                                     },
                                     minLength: {
-                                        value: 5,
-                                        message: 'Name must be at least 5 characters.'
+                                        value: 3,
+                                        message: 'Name must be at least 3 characters.'
                                     },
                                     maxLength: {
                                         value: 50,
@@ -79,7 +79,7 @@ export default function ContactInfo({ submitForm }) {
                             />
                             {errors.name && <p className='mb-0 p-1 text-danger'>{errors.name.message}</p>}
                         </div>
-                        <div className="form-group col-md-4 mb-3 py-1">
+                        <div className="form-group col-md-4 mb-1 mb-md-3 py-1">
                             <input
                                 className=" form-control contact-input px-1 pr-1" 
                                 htmlFor="email"
@@ -97,7 +97,7 @@ export default function ContactInfo({ submitForm }) {
                             />
                             {errors.email && <p className='mb-0 p-1 text-danger'>Enter a valid email address.</p>}
                         </div>
-                        <div className="form-group col-md-4 mb-3 py-1">
+                        <div className="form-group col-md-4 mb-1 mb-md-3 py-1">
                             <input
                                 className="form-control contact-input px-1 pr-1" 
                                 htmlFor='subject'
@@ -124,7 +124,7 @@ export default function ContactInfo({ submitForm }) {
                             />
                             {errors.subject  && <p className='mb-0 p-1 text-danger'>{errors.subject.message}</p>}
                         </div>
-                        <div className="form-group col-md-12 mb-3 py-1">
+                        <div className="form-group col-md-12 mb-1 mb-md-3 py-1">
                             <textarea
                                 className="form-control contact-input mb-1 px-1 pr-1 textBg "
                                 htmlFor="message"

@@ -2,19 +2,20 @@ import { useState } from 'react';
 import { Row, Col, ButtonGroup } from "reactstrap";
 import Skills from "../components/Icons";
 import myPic from '../images/female1.png';
-import { Accordion } from '../components/Accordion';
+// import { Accordion } from '../components/Accordion';
 import Education from './Education';
+import Experience from './Experience';
 
 
-const RenderAbout = () => {
-    return (
-        <div className='m-2' >
-            <p className="my-auto my-lg-5" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates dolore minus expedita eos, modi quaerat harum placeat quos deserunt aperiam nobis perspiciatis et, incidunt totam rem corrupti beatae enim voluptate. Maxime quidem vero enim neque perspiciatis nihil aperiam necessitatibus impedit omnis doloremque esse, adipisci sequi architecto, veritatis, illo veniam molestias natus. Sapiente tempora provident facere voluptate porro quas ipsum.
-            </p>    
-        </div>
-    )
-}
+// const RenderAbout = () => {
+//     return (
+//         <div className='m-2' >
+//             <p className="my-auto my-lg-5" >
+//                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates dolore minus expedita eos, modi quaerat harum placeat quos deserunt aperiam nobis perspiciatis et, incidunt totam rem corrupti beatae enim voluptate. Maxime quidem vero enim neque perspiciatis nihil aperiam necessitatibus impedit omnis doloremque esse, adipisci sequi architecto, veritatis, illo veniam molestias natus. Sapiente tempora provident facere voluptate porro quas ipsum.
+//             </p>    
+//         </div>
+//     )
+// }
 const RenderEducation = () => {
     return (
         <>
@@ -25,47 +26,52 @@ const RenderEducation = () => {
 
 const RenderSkills = () => {
     return (
-        <div className="text-center p-2">
+        <>
             <Skills />
-        </div>
+        </>
     );
 }
 
-
-const RenderTraining = () => {
+const RenderExperience = () => {
     return (
-        <div className="p-2">
-            <Accordion 
-                name='Nucamp Coding Bootcamp'
-                description='Full Stack Web Development Certificate -  April 2022'
-                titleHolder='p-0 d-flex justify-content-between'
-            /> 
-            <Accordion 
-                name='Reskill Americans'
-                description=' Frontend Web Developer Certificate - October 2021'
-                titleHolder='p-0 d-flex justify-content-between'
-            /> 
-            <Accordion 
-                name= 'Drew University'
-                description='Bachelor of Arts in Biochemistry & Molecular Biology - 2009'
-                titleHolder='p-0 d-flex justify-content-between'
-            /> 
-        </div>
+        <>
+            <Experience />
+        </>
     );
 }
 
 
+// const RenderTraining = () => {
+//     return (
+//         <div className="p-2">
+//             <Accordion 
+//                 name='Nucamp Coding Bootcamp'
+//                 description='Full Stack Web Development Certificate -  April 2022'
+//                 titleHolder='p-0 d-flex justify-content-between'
+//             /> 
+//             <Accordion 
+//                 name='Reskill Americans'
+//                 description=' Frontend Web Developer Certificate - October 2021'
+//                 titleHolder='p-0 d-flex justify-content-between'
+//             /> 
+//             <Accordion 
+//                 name= 'Drew University'
+//                 description='Bachelor of Arts in Biochemistry & Molecular Biology - 2009'
+//                 titleHolder='p-0 d-flex justify-content-between'
+//             /> 
+//         </div>
+//     );
+// }
 
-
-const RenderOther = () => {
-    return (
-        <div className="text-center p-2">
-            <p className="my-auto my-lg-5" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates dolore minus expedita eos, modi quaerat harum placeat quos deserunt aperiam nobis perspiciatis et, incidunt totam rem corrupti beatae enim voluptate. Maxime quidem vero enim neque perspiciatis nihil aperiam necessitatibus impedit omnis doloremque esse, adipisci sequi architecto, veritatis, illo veniam molestias natus. Sapiente tempora provident facere voluptate porro quas ipsum.
-            </p>
-        </div>
-    );
-}
+// const RenderOther = () => {
+//     return (
+//         <div className="text-center p-2">
+//             <p className="my-auto my-lg-5" >
+//                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates dolore minus expedita eos, modi quaerat harum placeat quos deserunt aperiam nobis perspiciatis et, incidunt totam rem corrupti beatae enim voluptate. Maxime quidem vero enim neque perspiciatis nihil aperiam necessitatibus impedit omnis doloremque esse, adipisci sequi architecto, veritatis, illo veniam molestias natus. Sapiente tempora provident facere voluptate porro quas ipsum.
+//             </p>
+//         </div>
+//     );
+// }
 
 
 const Info = () => {
@@ -108,7 +114,7 @@ const Info = () => {
                         
                         <button onClick={() => { setContent('education') }} className='btn btn-outline-primary p-1 abtBtn' style={{borderRadius: '0'}}>Education</button>
                         <button onClick={() => { setContent('mySkills') }} className='btn btn-outline-info p-1 abtBtn'>Skills</button>
-                        <button onClick={() => { setContent('otherExperiences') }} className='btn btn-outline-success p-1 abtBtn' style={{borderRadius: '0'}}>Other </button>
+                        <button onClick={() => { setContent('experiences') }} className='btn btn-outline-success p-1 abtBtn' style={{borderRadius: '0'}}>Experience</button>
                     </ButtonGroup>
                 </Col>
 
@@ -124,7 +130,7 @@ const Info = () => {
                             (content === 'mySkills') ? <RenderSkills /> : null 
                         }
                         {
-                            (content === 'otherExperiences') ? <RenderOther /> : null 
+                            (content === 'experiences') ? <RenderExperience /> : null 
                         }
                         {/* {
                             (content === 'funFacts') ? <RenderFunFacts /> : null 

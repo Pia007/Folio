@@ -150,6 +150,15 @@ nav {
     border: none;
 } */
 
+/* SKILSS */
+.skill-one {
+    width: 70px;
+    height: 70px;
+}
+.skill-two {
+    width: 80px;
+    height: 70px;
+}
 
 .card-title {
     font-weight: 500;
@@ -221,8 +230,8 @@ input:not(:placeholder-shown) {
 
 .social-ul li a {
     border-radius: 50%;
-    height: 65px;
-    width: 65px;
+    height: 50px;
+    width: 50px;
     margin: 0 .5rem;
     background: none;
     border-radius: 50%;

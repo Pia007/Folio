@@ -22,7 +22,7 @@ class Main extends Component {
                         <Route path='/contact' element={<Contact />} />
                         {/* <Redirect to='/' /> */}
                     </Routes>
-                    <EmailLink />
+                    {/* <EmailLink /> */}
                 </div>
             </div>
         );
