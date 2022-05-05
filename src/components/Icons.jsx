@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import { SkillItem } from './Items';
 import htmlLogo from '../images/h5.svg';
 import cssLogo from '../images/css3.svg';
@@ -10,7 +10,7 @@ import nodeLogo from '../images/node.png';
 import reduxLogo from '../images/red.svg';
 import rnLogo from '../images/rn.png';
 import mongoLogo from '../images/mongodb.svg';
-import expressLogo from '../images/express2.png';
+import expressLogo from '../images/express.png';
 import sassLogo from '../images/sass.png';
 import vsLogo from '../images/vsc.png';
 import jqLogo from '../images/jq.png';
