@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Row, Col, ButtonGroup } from "reactstrap";
-import Skills from "../components/Icons";
+import Skills from "../components/Skills";
 import myPic from '../images/female1.png';
 // import { Accordion } from '../components/Accordion';
 import Education from './Education';
