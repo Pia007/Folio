@@ -134,6 +134,23 @@ nav {
     text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
 } */
 /* About */
+.info-header {
+    /* font-size: 1.75em; */
+    color: var(--color-alt-primary);
+    margin-bottom: 1em;
+}
+.aboutIntro {
+    /* font-size: 1.45em; */
+    color: var(--color-alt-primary);
+    margin-bottom: 1em;
+    /* text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary); */
+}
+/* SKILLS */
+.skill-text {
+    color: var(--color-alt-primary);
+    font-weight: 400;
+    /* margin-bottom: 1em; */
+}
 .accordion-icon {
     transition: 0.2s ease-in-out;
     transform-origin: center;
@@ -223,8 +240,9 @@ input:not(:placeholder-shown) {
     background:  none!important;
 }
 
-.contactText {
-    font-size: 18px;
+.contact-text {
+    font-size: 1.2em;
+    color: var(--color-alt-primary);
 }
 
 
