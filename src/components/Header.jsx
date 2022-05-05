@@ -42,7 +42,7 @@ export const Header = () => {
                             <NavItem>
                                 <NavLink tag='link' onClick={togNav} className="nav-link" to="/portfolio"> 
                                     <span className='text-primary'>P</span>
-                                    ortfolio
+                                    rojects
                                 </NavLink>
                             </NavItem>
                             <NavItem>
