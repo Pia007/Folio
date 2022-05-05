@@ -46,7 +46,7 @@ export const Header = () => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={togNav} className="nav-link"  to="contact"> 
+                                <NavLink tag='link' onClick={togNav} className="nav-link"  to="/contact"> 
                                     <span className='text-primary'>C</span>
                                     ontact
                                 </NavLink>
