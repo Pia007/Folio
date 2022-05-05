@@ -99,9 +99,9 @@ export const ExpItem = ({ role, company, date, name, textOne, textTwo, textThree
 export const SkillItem = ({ logo, name, logoStyle }) => {
     return (
         <>
-            <Col xs={6} sm={4} md={3} lg={2} className='text-center mb-2'>
+            <Col xs={6} sm={4} md={3} lg={2} className='text-center mb-3'>
                 <img src={logo} alt='html-5' className={logoStyle}/>
-                <p className='skill-text m-1'>{name}</p>
+                <h5 className='skill-text m-1'>{name}</h5>
             </Col>
         </>
     )

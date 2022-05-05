@@ -27,7 +27,7 @@ import yarnLogo from '../images/yarn.png';
 function Skills(props) {
     return (
         <div className='p-0 px-0'>
-            <div className='text-center'><h2>Skills</h2></div>
+            <div className='text-center'><h2 className='text-center info-header'>My Toolbox</h2></div>
             <Row className='my-3 p-0 row-content'>
                 <SkillItem 
                     name='HTML5' 
