@@ -107,7 +107,7 @@ nav {
     font-size: 2.5em;
     color: var(--color-alt-primary);
     margin-bottom: 1em;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
 }
 .sub-text {
     font-size: 2.5em;
@@ -173,6 +173,7 @@ nav {
 }
 .p-card {
     background: transparent;
+    border: 2px solid var(--color-primary);
 }
   
 .row-content {
@@ -181,7 +182,8 @@ nav {
     min-height: 200px;
 }
 .formHolder {
-    border-radius: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--color-primary);
     /* background: rgba(255, 255, 255, 0.1); */
     background: none;
     /* backdrop-filter: blur(12px); */
@@ -203,6 +205,9 @@ nav {
     /* padding: 20px 0; */
     text-shadow: transparent 0 0 0.5em;
     text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
+    color: var(--color-alt-primary);
+    /* margin-bottom: 1em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .contactInput,
