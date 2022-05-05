@@ -61,8 +61,8 @@ export const Intro = () => {
                         <h2 className='m-0 font-weight-bold intro-text'>
                            Hi, I'm Pia.
                         </h2>
-                        <h3 className='m-0 mt-2 sub-text text-primary'>Junior software developer.</h3>
-                        <p className='mt-2 text'>I love the challenge of building beautiful, responsive, accessible web apps.<br/>
+                        <h3 className='m-0 mt-0 sub-text text-primary'>Junior software developer.</h3>
+                        <p className='mt-0 text'>I love the challenge of building beautiful, responsive, accessible web apps.<br/>
                             {/* and all of the ups and downs that come along with it! */}
                             {/* Currently, I am looking for new <span className='text-primary'>challenges</span> and <span className='text-primary'>opportunities</span> to promote growth and development in <br/>
                             building beautiful and intuitive applications.<br/> */}
