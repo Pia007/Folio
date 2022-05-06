@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { Row, Col } from "reactstrap";
 import myPic from '../images/female1.png';
+import download from '../images/download.svg';
+import view from '../images/view.svg';
 
 const Info = () => {
 
@@ -17,10 +19,21 @@ const Info = () => {
                         />
                     </Col>
                     <Col className='my-2'>
-                        <button className="btn btn-primary">
-                            <span>Resume </span>
-                            <i className='fa fa-download '/>
-                        </button>
+                    <div className='mx-1 my-0'><p className='text my-1'>Resume/CV: </p></div>
+                            <div className='d-flex justify-content-center'>
+                            
+                            
+                            <div className='mx-1'>
+                                <button className="btn btn-outline-primary p-1 resBtn">
+                                    <img src={view} alt='view resume'/>
+                                </button>
+                            </div >
+                            <div className='mx-1'>
+                                <button className="btn btn-outline-primary p-1 resBtn">
+                                    <img src={download} alt='download-resume'/>
+                                </button>
+                            </div>
+                        </div>
                     </Col>
                 </Col>          
                 <Col md={8} className=" mt-md-0 p-2 ">
@@ -36,7 +49,7 @@ const Info = () => {
                         </p> 
                         <p className='mb-2 text'>
                             Being creative, learning, engaging and solving problems make me happy. Currently, I am seeking a position as a Junior Software Developer. 
-                            If you think that I can help solve a problem or you just want to say, "Hi", feel free to contact me.  
+                            If you think that I can help solve a problem, or you just want to say, "Hi", feel free to contact me.  
                         </p> 
                         <NavLink tag='link' className="nav-link text-primary mx-0 p-0"  to="/contact"> 
                             <u><em><h5>Get in Touch!</h5></em></u>
