@@ -3,13 +3,15 @@ export const PROJECTS = [
         id: 0,
         title: "Host a Healthcare Hero",
         image: "/assets/images/hero.png",
+        type: "Capstone Project",
+        role: "Frontend Developer & Designer", 
         stack: { 
             one: "React",
             two: "Redux", 
             three: "Bootstrap" 
         },
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        challenges: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        description:" A depiction of a non-profit organization that aims to provide free health, wellness and personal care services to healthcare workers.",
+        challenges: "Some key challenges involved conditional rendering, leveraging global versus local state management and enhancing user experience. All of which were overcome by consulting documentation and patience.",
         live: "https://hostahealtcarehero.netlify.app/",
         repo: "https://github.com/Pia007/Hero"
     },
@@ -17,6 +19,8 @@ export const PROJECTS = [
         id: 1,
         title: "JavaScript Algorithms",
         image: "/assets/images/algos.png",
+        type: "Personal Project",
+        role: "Frontend Developer & Designer", 
         stack: { 
             one: "HTML",
             two: "CSS", 
@@ -31,6 +35,8 @@ export const PROJECTS = [
         id: 2,
         title: "Social Media App One",
         image: "/assets/images/sma-one.png",
+        type: "Capstone Project",
+        role: "Frontend Developer - Authenication", 
         stack: { 
             one: "HTML",
             two: "CSS", 
@@ -45,6 +51,8 @@ export const PROJECTS = [
         id: 3,
         title: "Jubilee",
         image: "/assets/images/jubilee.png",
+        type: "Personal Project",
+        role: "Frontend Developer & Designer", 
         stack: { 
             one: "HTML",
             two: "CSS", 
