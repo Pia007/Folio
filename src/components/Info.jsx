@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Row, Col } from "reactstrap";
+import { Row, Col, Modal, ModalHeader, ModalBody} from "reactstrap";
+import Resume from './Resume';
 import myPic from '../images/female1.png';
 import download from '../images/download.svg';
 import view from '../images/view.svg';
 
 const Info = () => {
+    const [modal, setModal] = useState(false);
+    const toggleModal = () => setModal(!modal);
 
     return (
         <div className='container '>
@@ -21,10 +25,8 @@ const Info = () => {
                     <Col className='my-2'>
                     <div className='mx-1 my-0'><p className='text my-1'>Resume/CV: </p></div>
                             <div className='d-flex justify-content-center'>
-                            
-                            
                             <div className='mx-1'>
-                                <button className="btn btn-outline-primary p-1 resBtn">
+                                <button className="btn btn-outline-primary p-1 resBtn" onClick={toggleModal}>
                                     <img src={view} alt='view resume'/>
                                 </button>
                             </div >
@@ -35,7 +37,15 @@ const Info = () => {
                             </div>
                         </div>
                     </Col>
-                </Col>          
+                </Col>
+
+                <Modal size='lg' centered scrollable isOpen={modal} toggle={toggleModal} className='modal-info' style={{borderRadius: '10px'}}>
+                    <ModalHeader toggle={toggleModal}></ModalHeader>
+                    <ModalBody>
+                        <Resume />
+                    </ModalBody>
+                </Modal>
+
                 <Col md={8} className=" mt-md-0 p-2 ">
                     <div className='m-2' >
                         <h3 className='aboutIntro'>A curiously-creative Frontend Developer.</h3>
@@ -44,8 +54,9 @@ const Info = () => {
                             I really sweat the small stuff because it matters to be aware of people and their needs.
                         </p> 
                         <p className='mb-2 text'>
-                            I have a BA in Biochemistry and Molecular Biology from <span className='text-primary'>Drew University</span>, a Certificate in Fullstack Web Development from <span className='text-primary'>
-                            Nucamp Coding Bootcamp</span>, and a Frontend Web Developer Certificate from <span className='text-primary'>Reskill Americans</span>.
+                            I have a Certificate in Fullstack Web and Mobile Development from <span className='text-primary'>
+                            Nucamp Coding Bootcamp</span>, a Frontend Web Developer Certificate from <span className='text-primary'>Reskill Americans</span>, 
+                            an AS in Chemistry from <span className='text-primary'>Union County College</span> and a BA in Biochemistry and Molecular Biology from <span className='text-primary'>Drew University</span>.
                         </p> 
                         <p className='mb-2 text'>
                             Being creative, learning, engaging and solving problems make me happy. Currently, I am seeking a position as a Junior Software Developer. 

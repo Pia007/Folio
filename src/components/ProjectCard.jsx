@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Card, CardTitle, CardImg, CarImgOverlay, CardBody, Modal, ModalHeader, ModalBody, ModalFooter, CardImgOverlay } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, Modal, ModalBody, ModalFooter } from 'reactstrap';
 import close from '../images/close.svg';
 import unlock from '../images/unlock.svg';
 
