@@ -3,14 +3,15 @@ export const PROJECTS = [
         id: 0,
         title: "Host a Healthcare Hero",
         image: "/assets/images/hero.png",
-        type: "Capstone Project",
+        type: "Capstone Project - Solo",
         role: "Frontend Developer & Designer", 
         stack: { 
             one: "React",
             two: "Redux", 
-            three: "Bootstrap" 
+            three: "Bootstrap",
+            four: "Yarn", 
         },
-        description:" A depiction of a non-profit organization that aims to provide free health, wellness and personal care services to healthcare workers.",
+        description:"A depiction of a non-profit organization that aims to provide free health, wellness and personal care services to healthcare workers.",
         challenges: "Some key challenges involved conditional rendering, leveraging global versus local state management and enhancing user experience. All of which were overcome by consulting documentation and patience.",
         live: "https://hostahealtcarehero.netlify.app/",
         repo: "https://github.com/Pia007/Hero"
@@ -26,8 +27,8 @@ export const PROJECTS = [
             two: "CSS", 
             three: "JavaScript" 
         },
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        challenges: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",   
+        description:"An interactive collection of JavaScript algorithms and data structures that are useful for learning and practicing coding.",
+        challenges: "Designing each dashboard to have its own uniqueness and functionlity was challenging. I implemented CSS variables and consulted documentation to help me solve problems.",   
         live: "https://www.js-algorithms.com/",
         repo: "https://github.com/Pia007/Javascript-Algos"
     },
@@ -35,15 +36,15 @@ export const PROJECTS = [
         id: 2,
         title: "Social Media App One",
         image: "/assets/images/sma-one.png",
-        type: "Capstone Project",
-        role: "Frontend Developer - Authenication", 
+        type: "Capstone Project - Team 1",
+        role: "Frontend Developer - Authentication", 
         stack: { 
             one: "HTML",
             two: "CSS", 
             three: "JavaScript" 
         },
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        challenges: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
+        description:"A social media app that allows users to create, edit, and delete posts. Users can also like and comment on posts.",
+        challenges: "I was tasked with implementing the authentication pages, which were modals/pop-ups, based on the design. I had to learn how to use vanilla JavaScript to create functional modals and process user inputs. Both of which were very challenging. I consulted with project mentors, teammates and documentation to overcome these challenges.",
         // live: "",
         repo: "https://github.com/reskillamericans/SMA-Team-1"
     },
@@ -58,8 +59,8 @@ export const PROJECTS = [
             two: "CSS", 
             three: "JavaScript" 
         },
-        description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",
-        challenges: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur, numquam odit distinctio consequatur unde illum qui deleniti nisi nihil!",   
+        description:" This was my first personal project. I wanted to learn about the history of Juneteenth. I decided to create a simple application that would outline the history of the day.",
+        challenges: "I had difficulty in using CSS to create a simple layout. At the time it was hard but it really spearheaded my learning.",   
         live: "https://pia007.github.io/Jubilee/",
         repo: "https://github.com/Pia007/Jubilee"
     },

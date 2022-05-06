@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Col, Card, CardTitle, CardImg, CardBody, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Col, Card, CardTitle, CardImg, CarImgOverlay, CardBody, Modal, ModalHeader, ModalBody, ModalFooter, CardImgOverlay } from 'reactstrap';
 import close from '../images/close.svg';
+import unlock from '../images/unlock.svg';
 
 const StackItem = ({ stack }) => {
     return (
@@ -14,8 +15,12 @@ const ProjectCard = ({ project }) => {
     
     return (
         <React.Fragment>
-            <Card className="p-card shadow-none p-2" onClick={toggleModal}>
+            <Card className="p-card shadow-none p-2 bg-primary" onClick={toggleModal}>
                 <CardImg top className="cd-img" width="100%" src={project.image} alt={project.title} />
+                <CardImgOverlay className='p-0 w-100 middle'>
+                    <div className='w-100 my-2 my-sm-3 my-md-2 my-lg-2 my-xl-4 text-center'><img src={unlock} alt='view modal' className='m-auto'/></div>
+                    
+                </CardImgOverlay>
                 {/* <CardBody className="p-1 card-body">
                     <a href={project.live} target='_blank' alt={project.title} rel='noreferrer'>
                         <CardTitle className="text-primary mb-2">{project.title}</CardTitle>
@@ -32,7 +37,7 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <ModalBody className='shadow-none'>
                     <div className='mb-2'>
-                        <img className='img-fluid modalImg' src={project.image} alt={project.title} style={{borderRadius: '10px'}}/>
+                        <img className='img-fluid modalImg border border-primary' src={project.image} alt={project.title} style={{borderRadius: '10px'}}/>
                     </div>
                     <h4 className='mb-1' style={{fontWeight: '400'}}>{project.type}</h4>
                     <h5 className='mb-1' style={{fontWeight: '400'}}>{project.role}</h5>

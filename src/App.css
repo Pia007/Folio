@@ -138,6 +138,10 @@ nav {
     margin-bottom: 1em;
     /* text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary); */
 }
+.resBtn {
+    box-shadow:  10px 10px 20px #130a2a,
+        -10px -10px 20px #21124a;
+}
 .resBtn:hover,
 .resBtn:focus,
 .resBtn:active {
@@ -189,11 +193,9 @@ nav {
 
 .modal-content {
     /* border: 1px solid rgba(233, 233, 232, .5); */
-    border: 1px solid rgba(233, 233, 232, 0.404);
     background: var(--bg-new);
     border: 1px solid var(--color-primary);
     outline: none;
-    color: white;
     text-shadow: -1px 0 var(--color-primary), -1px 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
 }
 .modalTitle {
@@ -204,8 +206,10 @@ nav {
     outline: none;
     border-top: 1px solid var(--color-primary);
     border-bottom: 1px solid var(--color-primary);
-    
 }
+/* .modalImg {
+    border: 2px solid var(--color-alt-primary);
+} */
 .btnClose {
     background: none;
     border: none;
@@ -218,18 +222,40 @@ nav {
 .modal-link {
     text-shadow: -1px 0 var(--color-primary), -1px 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
 }
-
-.card-img-overlay  {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+.modal-link:hover,
+.modal-link:focus,
+.modal-link:active {
+    color: var(--color-standard);
+}
+.p-card {
+    background: var(--color-standard);
+    border: 2px solid var(--color-primary);
 }
 .cd-img {
     border-radius: 8px;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
-.p-card {
-    background: transparent;
-    border: 2px solid var(--color-primary);
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
+.p-card:hover {
+    background: var(--bg-new);
+}
+.p-card:hover .cd-img{
+    opacity: 0;
+}
+.p-card:hover .middle {
+    opacity: 1;
+}
+
 
 /* CONTACT */
 .formHolder {
@@ -350,7 +376,7 @@ input:not(:placeholder-shown) {
     outline: none;
     -webkit-transition: all 1s ease;
     transition: all .45s ease;
-    font-size: 105%;
+    /* font-size: 105%; */
 }
 
 
