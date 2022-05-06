@@ -1,6 +1,7 @@
 :root {
     --bg-darkly: #d9e3f1;
     --bg-new: #1a0e3a;
+    --bg-modal: #130144;
     --bs-gradient: linear-gradient(to right, #5460b5, #44adad);
     --bb-gradient: linear-gradient(to right, #58819b, #9d6ed4, #1c7a7a);
     /* --bb-gradient: linear-gradient(to right, #586d9b, #9d6ed4, #1c7a7a); */
@@ -83,7 +84,7 @@ nav {
 .nav-link {
     font-size: 1.1em;
     font-weight: 600 ;
-    color: white ;
+    color: var(--color-alt-primary);
     margin: 0 8px;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -97,6 +98,13 @@ nav {
 .myNav {
     background: var(--bg-new);
 }
+
+.row-content {
+    padding: 50px 0;
+    /* border-bottom: 1px ridge; */
+    min-height: 200px;
+}
+
 /* LANDING PAGE */
 .pre-text {
     font-size: 1em;
@@ -117,23 +125,8 @@ nav {
     font-size: 1.1em;
     color: var(--color-standard);
 }
-/* .intro-header {
-    margin: 30px 0;
-} */
-/* .typed-header {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--color-success);
-    margin-bottom: 1rem;
-} */
-/* Typed text */
-/* .typed-text {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--color-indigo);
-    text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
-} */
-/* About */
+
+/* ABOUT */
 .info-header {
     /* font-size: 1.75em; */
     color: var(--color-alt-primary);
@@ -145,6 +138,13 @@ nav {
     margin-bottom: 1em;
     /* text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary); */
 }
+.resBtn:hover,
+.resBtn:focus,
+.resBtn:active {
+    background: none;
+    opacity: .5;
+}
+
 /* SKILLS */
 .skill-text {
     color: var(--color-alt-primary);
@@ -163,11 +163,6 @@ nav {
     
     outline: none;
 }
-/* .abtBtn {
-    border: none;
-} */
-
-/* SKILSS */
 .skill-one {
     width: 70px;
     height: 70px;
@@ -177,10 +172,53 @@ nav {
     height: 70px;
 }
 
-.card-title {
-    font-weight: 500;
-    font-size: 1.25rem;
+/* PROJECTS */
+.project-text {
+    color: var(--color-alt-primary);
+    text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
 }
+/* .modal {
+    backdrop-filter: none;
+    opacity: 100%;
+} */
+/* .modal-backdrop {
+    background-color: #000000;
+    backdrop-filter: #000000;
+    opacity: 1;
+} */
+
+.modal-content {
+    /* border: 1px solid rgba(233, 233, 232, .5); */
+    border: 1px solid rgba(233, 233, 232, 0.404);
+    background: var(--bg-new);
+    border: 1px solid var(--color-primary);
+    outline: none;
+    color: white;
+    text-shadow: -1px 0 var(--color-primary), -1px 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
+}
+.modalTitle {
+    font-weight: 500;
+}
+.modal-body {
+    border: none;
+    outline: none;
+    border-top: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    
+}
+.btnClose {
+    background: none;
+    border: none;
+    opacity: 1;  
+}
+.btnClose:hover {
+    opacity: 0.5;
+    background: none;
+}
+.modal-link {
+    text-shadow: -1px 0 var(--color-primary), -1px 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
+}
+
 .card-img-overlay  {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -192,12 +230,8 @@ nav {
     background: transparent;
     border: 2px solid var(--color-primary);
 }
-  
-.row-content {
-    padding: 50px 0;
-    /* border-bottom: 1px ridge; */
-    min-height: 200px;
-}
+
+/* CONTACT */
 .formHolder {
     border-radius: 10px;
     border: 2px solid var(--color-primary);
@@ -210,14 +244,11 @@ nav {
 .form {
     background: none;
 }
-
 .contactMe:hover {
     background: var(--color-success);
     transition: .2s ease-in-out;
     border: 1px solid var(--colo-success);
 }
-
-/* Contact */
 .title {
     /* padding: 20px 0; */
     text-shadow: transparent 0 0 0.5em;
@@ -226,7 +257,6 @@ nav {
     /* margin-bottom: 1em;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
-
 .contactInput,
 .contactInput:focus {
     border-radius: 5px;
@@ -240,16 +270,16 @@ input:not(:placeholder-shown) {
     background:  none!important;
 }
 
-.contact-text {
+.contact-text,
+.contact-text-link {
     font-size: 1.2em;
     color: var(--color-alt-primary);
 }
-
-
-.social-ul {
-    background: transparent;
-    
+.contact-text-link:hover {
+    color: var(--color-primary);
 }
+
+/* SOCIALS */
 
 .social-ul li a {
     border-radius: 50%;
@@ -266,9 +296,7 @@ input:not(:placeholder-shown) {
 .list-group-item {
     background: transparent;
 }
-#social-list {
-    background: transparent;
-} 
+
 .social-link {
     fill: white ;
     
@@ -325,25 +353,7 @@ input:not(:placeholder-shown) {
     font-size: 105%;
 }
 
-/* Projects */
-.modal-backdrop {
-    /* background-color: transparent; */
-    backdrop-filter: blur(10px);
-}
-.modal-info {
-    color: var(--bg-new);
-}
 
-.modal-content {
-    /* border: 1px solid rgba(233, 233, 232, .5); */
-    border: 1px solid rgba(233, 233, 232, 0.404);
-}
-/* .modalImg {
-    background: var(--color-primary);
-    box-shadow: inset 1px 1px rgba(255, 255, 255, 20%), 
-    inset -1px -1px rgba(255, 255, 255, 10%), 
-    1px 3px 24px -1px rgba(0, 0, 0, 15%);
-} */
 
 footer {
     /* position: absolute; */
