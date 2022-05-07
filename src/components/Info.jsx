@@ -1,14 +1,10 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Row, Col, Modal, ModalHeader, ModalBody} from "reactstrap";
-import Resume from './Resume';
+import { NavLink, Link } from 'react-router-dom';
+import { Row, Col } from "reactstrap";
 import myPic from '../images/female1.png';
 import download from '../images/download.svg';
 import view from '../images/view.svg';
 
 const Info = () => {
-    const [modal, setModal] = useState(false);
-    const toggleModal = () => setModal(!modal);
 
     return (
         <div className='container '>
@@ -26,25 +22,20 @@ const Info = () => {
                     <div className='mx-1 my-0'><p className='text my-1'>Resume/CV: </p></div>
                             <div className='d-flex justify-content-center'>
                             <div className='mx-1'>
-                                <button className="btn btn-outline-primary p-1 resBtn" onClick={toggleModal}>
+                                <Link className="btn btn-outline-primary p-1 resBtn" to='/resume'>
                                     <img src={view} alt='view resume'/>
-                                </button>
+                                </Link>
                             </div >
                             <div className='mx-1'>
                                 <button className="btn btn-outline-primary p-1 resBtn">
-                                    <img src={download} alt='download-resume'/>
+                                    <a href='resume.pdf' download='resume.pdf' alt='download resume'>
+                                        <img src={download} alt='download-resume'/>
+                                    </a>
                                 </button>
                             </div>
                         </div>
                     </Col>
                 </Col>
-
-                <Modal size='lg' centered scrollable isOpen={modal} toggle={toggleModal} className='modal-info' style={{borderRadius: '10px'}}>
-                    <ModalHeader toggle={toggleModal}></ModalHeader>
-                    <ModalBody>
-                        <Resume />
-                    </ModalBody>
-                </Modal>
 
                 <Col md={8} className=" mt-md-0 p-2 ">
                     <div className='m-2' >

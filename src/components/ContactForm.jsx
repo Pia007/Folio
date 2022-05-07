@@ -14,7 +14,7 @@ export default function ContactInfo({ submitForm }) {
 
     const showToast = () => {
         toast.success(`Thanks for reaching out! I will get back to you shortly.`, {
-            position: toast.POSITION.BOTTOM_CENTER,
+            position: toast.POSITION.TOP_CENTER,
             toastId: contactToastId,
         });
     };
