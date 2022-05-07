@@ -22,7 +22,7 @@ export const Header = () => {
                                     <img src={myLogo}  alt="logo" className="text-primary mt-1" />
                             </NavLink>
                         </div>
-                    <NavbarToggler onClick={openNav} className="align-self-center justify-content-end">
+                    <NavbarToggler onClick={openNav} className="align-self-center justify-content-end px-0">
                         <img src={menu}  alt='menu' className="text-success"/> 
                     </NavbarToggler>
                     <Collapse isOpen={navigation} navbar className="justify-content-end">
