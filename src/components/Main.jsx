@@ -4,6 +4,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Header from './Header';
 import Projects from '../pages/Projects';
+import Resume from './Resume';
 import { Routes, Route } from 'react-router-dom';
 
 const Main = () => {
@@ -17,6 +18,7 @@ const Main = () => {
                     <Route path='/about' element={<About />} />
                     <Route path='/projects' element={<Projects />}/>
                     <Route path='/contact' element={<Contact />} />
+                    <Route path='/resume' element={<Resume />} />
                 </Routes>
             </div>
         </div>
