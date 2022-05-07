@@ -11,6 +11,17 @@ const SinglePage = (props) => {
         setNumPages(1);
     }
 
+    const changePage = (offset) => {
+        setPageNumber(previousPageNumber => pageNumber + offset);
+    }
+
+    const previousPage = () => {
+        changePage(-1);
+    }
+
+    const nextPage = () => {
+        changePage(1);
+    }
 
     const { pdf } = props;
 
@@ -25,6 +36,17 @@ const SinglePage = (props) => {
             >
                 <Page className='PDFPage ' pageNumber={pageNumber} renderTextLayer={false} renderInteractiveForms={false}/>
             </Document>
+            <div className='d-none'>
+                <p>
+                    Page {pageNumber || (numPages ? 1: "--")} of {numPages || "--"} 
+                </p>
+                <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
+                    Previous
+                </button>
+                <button type="button" disabled={pageNumber >= numPages} onClick={nextPage}>
+                    Next
+                </button>
+            </div>
         </div>
     );
 }
