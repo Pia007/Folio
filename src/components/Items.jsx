@@ -1,14 +1,12 @@
 import React from 'react'
-import { Row, Col, ListGroupItem } from 'reactstrap';
-import caretImg from '../images/caret-right.svg';
-import point from '../images/point.svg';
-import bullet from '../images/pointFilled.svg';
+import { Col, ListGroupItem } from 'reactstrap';
 
+// SOCIAL MEDIA ICONS
 export const SocialLink = ({ title, link, alt, icon, img, src, alt2 }) => {
     return (
-        <ListGroupItem className="my-md-1 p-0 social-holder">
+        <ListGroupItem className='my-md-1 p-0 social-holder'>
             <a  
-                className="btn social-link align-content-center p-0 social" 
+                className='btn social-link align-content-center p-0 social' 
                 title={title} 
                 target='_blank' 
                 rel='noreferrer' 
@@ -21,11 +19,12 @@ export const SocialLink = ({ title, link, alt, icon, img, src, alt2 }) => {
     )
 }
 
+// SOCIAL MEDIA ICONS
 export const SocialIcon = ({ title, link, alt, icon, img, src }) => {
     return (
-        <ListGroupItem className="my-md-1 p-0 social-holder">
+        <ListGroupItem className='my-md-1 p-0 social-holder'>
             <a  
-                className="btn social-link align-content-center p-0 social" 
+                className='btn social-link align-content-center p-0 social' 
                 title={title} 
                 target='_blank' 
                 rel='noreferrer'    
@@ -34,7 +33,7 @@ export const SocialIcon = ({ title, link, alt, icon, img, src }) => {
                 <img 
                     src={src} 
                     alt={alt} 
-                    className="img-fluid my-2" 
+                    className='img-fluid my-2' 
                     style={{width: '1rem', height: '1rem'}}
                 />
             </a>
@@ -43,22 +42,15 @@ export const SocialIcon = ({ title, link, alt, icon, img, src }) => {
     )
 }
 
-export const EduHeader = ({ type }) => {
-    return (
-        <>
-            <h3 className='text-lg-center'>{ type }</h3>
-        </>
-    )
-}
-
+// SKILL LOGOS
 export const SkillItem = ({ logo, name, logoStyle }) => {
     return (
-        <>
+        <React.Fragment>
             <Col xs={6} sm={4} md={3} lg={2} className='text-center mb-3'>
                 <img src={logo} alt='html-5' className={logoStyle}/>
-                <h5 className='skill-text m-1'>{name}</h5>
+                <p className='text m-1'>{name}</p>
             </Col>
-        </>
+        </React.Fragment>
     )
 }
 

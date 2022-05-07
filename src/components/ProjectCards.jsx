@@ -1,3 +1,4 @@
+import React from 'react';
 import { PROJECTS } from '../shared/projects';
 import ProjectCard from './ProjectCard';
 
@@ -7,18 +8,18 @@ const ProjectCards = () => {
 
     const projectList = projects.map(project => {
         return (
-            <div key={project.id} className="col-md-6 m-0 p-2">
+            <div key={project.id} className='col-md-6 m-0 p-2'>
                 <ProjectCard project={project} />
             </div>
         );
     });
     return (
-        <>
-            <div className="row">
+        <React.Fragment>
+            <div className='row'>
                 {projectList}
             </div>
             
-        </>
+        </React.Fragment>
     )
 }
 

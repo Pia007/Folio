@@ -1,5 +1,5 @@
-import emailjs from "emailjs-com";
-import { useForm } from "react-hook-form";
+import emailjs from 'emailjs-com';
+import { useForm } from 'react-hook-form';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 
 const contactToastId = 'contact-toast-id';
@@ -12,6 +12,7 @@ export default function ContactInfo({ submitForm }) {
         formState: { errors } 
     } = useForm();
 
+    // TOAST NOTIFICATION
     const showToast = () => {
         toast.success(`Thanks for reaching out! I will get back to you shortly.`, {
             position: toast.POSITION.TOP_CENTER,
@@ -22,9 +23,8 @@ export default function ContactInfo({ submitForm }) {
         reset();
     };
     
-
+    // EMAILJS
     const sendEmail = (formData) => {
-        
         emailjs.send(
             process.env.REACT_APP_SERVICE_ID,
             process.env.REACT_APP_TEMPLATE_ID,
@@ -43,18 +43,19 @@ export default function ContactInfo({ submitForm }) {
     };
 
     return (
-        <div className="container p-0 md-px-0">
-            <div className="">
-                <form method='POST' className="Contact" onSubmit={handleSubmit(sendEmail)}>
+        <div className='container p-0 md-px-0'>
+            <div>
+                {/* FORM */}
+                <form method='POST' className='Contact' onSubmit={handleSubmit(sendEmail)}>
                     <div className='row py-0 px-2'>
-                        <div className="form-group col-md-4 mb-1 mb-md-3 py-1">
+                        <div className='form-group col-md-4 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <input
-                                className=" form-control contact-input px-1 pr-1 "
-                                htmlFor="name"
-                                aria-label="name"
-                                id="name"
-                                name="name"
-                                type="text"
+                                className=' form-control contact-input px-1 pr-1 '
+                                htmlFor='name'
+                                aria-label='name'
+                                id='name'
+                                name='name'
+                                type='text'
                                 
                                 {...register('name', {
                                     required: {
@@ -74,37 +75,37 @@ export default function ContactInfo({ submitForm }) {
                                         message: 'Name must be less than 50 characters.'
                                     },
                                 })}
-                                placeholder="Name"
-                                autoComplete="off"
+                                placeholder='Name'
+                                autoComplete='off'
                             />
                             {errors.name && <p className='mb-0 p-1 text-danger'>{errors.name.message}</p>}
                         </div>
-                        <div className="form-group col-md-4 mb-1 mb-md-3 py-1">
+                        <div className='form-group col-md-4 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <input
-                                className=" form-control contact-input px-1 pr-1" 
-                                htmlFor="email"
-                                aria-label="email"
-                                id="email"
-                                name="email"
-                                type="email"
+                                className=' form-control contact-input px-1 pr-1' 
+                                htmlFor='email'
+                                aria-label='email'
+                                id='email'
+                                name='email'
+                                type='email'
                                 
                                 {...register('email', {
                                     required: true,
                                     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
                                 })}
-                                placeholder="Email"
-                                autoComplete="off"
+                                placeholder='Email'
+                                autoComplete='off'
                             />
                             {errors.email && <p className='mb-0 p-1 text-danger'>Enter a valid email address.</p>}
                         </div>
-                        <div className="form-group col-md-4 mb-1 mb-md-3 py-1">
+                        <div className='form-group col-md-4 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <input
-                                className="form-control contact-input px-1 pr-1" 
+                                className='form-control contact-input px-1 pr-1' 
                                 htmlFor='subject'
-                                aria-label="subject"
-                                name="subject"
-                                id="subject"
-                                type="text"
+                                aria-label='subject'
+                                name='subject'
+                                id='subject'
+                                type='text'
                                 {...register('subject', {
                                     required: {
                                         value: true,
@@ -119,21 +120,21 @@ export default function ContactInfo({ submitForm }) {
                                         message: 'Subject must be less than 25 characters.'
                                     }
                                 })}
-                                autoComplete="off"
-                                placeholder="Subject"
+                                autoComplete='off'
+                                placeholder='Subject'
                             />
                             {errors.subject  && <p className='mb-0 p-1 text-danger'>{errors.subject.message}</p>}
                         </div>
-                        <div className="form-group col-md-12 mb-1 mb-md-3 py-1">
+                        <div className='form-group col-md-12 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <textarea
-                                className="form-control contact-input mb-1 px-1 pr-1 textBg "
-                                htmlFor="message"
-                                aria-label="message"
-                                type="textarea"  
-                                id="message" 
-                                name="message"
-                                rows="5"
-                                placeholder="Message"
+                                className='form-control contact-input mb-1 px-1 pr-1 textBg '
+                                htmlFor='message'
+                                aria-label='message'
+                                type='textarea'  
+                                id='message' 
+                                name='message'
+                                rows='5'
+                                placeholder='Message'
                                 {...register('message', {
                                     required: {
                                         value: true,
@@ -152,15 +153,16 @@ export default function ContactInfo({ submitForm }) {
                             />
                             {errors.message && <p className='mb-0 p-1 text-danger'>Please enter a message longer than 10 characters</p>}
                         </div>
-                        <div className="form-group d-flex justify-content-end py-1">
+                        <div className='form-group d-flex justify-content-end px-0 px-md-1 py-1'>
                             <button  
-                                className="text-light sendBtn" 
-                                type="submit"
+                                className=' sendBtn' 
+                                type='submit'
                             >
                                 Submit
                             </button>
+                            {/* SUBMISSION RESPONSE */}
                             <ToastContainer 
-                                position="top-right"
+                                position='top-right'
                                 theme='dark' 
                                 transition={Zoom} 
                                 autoClose={5000} 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Row } from 'reactstrap';
 import { SkillItem } from './Items';
 import htmlLogo from '../images/h5.svg';
@@ -22,7 +21,6 @@ import npmLogo from '../images/npm.png';
 import restLogo from '../images/rest.svg';
 import yarnLogo from '../images/yarn.png';
 
-// import gitLogo from '../images/git-icon.png';
 
 function Skills(props) {
     return (

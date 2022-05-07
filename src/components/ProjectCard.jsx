@@ -15,19 +15,17 @@ const ProjectCard = ({ project }) => {
     
     return (
         <React.Fragment>
-            <Card className="p-card shadow-none p-2 bg-primary" onClick={toggleModal}>
-                <CardImg top className="cd-img" width="100%" src={project.image} alt={project.title} />
+            {/* PROJECT CARD */}
+            <Card className='p-card shadow-none p-1 bg-primary' onClick={toggleModal}>
+                <CardImg top className='cd-img' width='100%' src={project.image} alt={project.title} />
                 <CardImgOverlay className='p-0 w-100 middle'>
-                    <div className='w-100 my-2 my-sm-3 my-md-2 my-lg-2 my-xl-4 text-center'><img src={unlock} alt='view modal' className='m-auto'/></div>
-                    
+                    <div className='w-100 my-2 my-sm-3 my-md-2 my-lg-2 my-xl-4 text-center'>
+                        <img src={unlock} alt='view modal' className='m-auto'/>
+                    </div>
                 </CardImgOverlay>
-                {/* <CardBody className="p-1 card-body">
-                    <a href={project.live} target='_blank' alt={project.title} rel='noreferrer'>
-                        <CardTitle className="text-primary mb-2">{project.title}</CardTitle>
-                    </a>
-                </CardBody> */}
             </Card>
 
+            {/* PROJECT MODAL */}
             <Modal size='lg' centered scrollable isOpen={modal} toggle={toggleModal} className='modal-info' style={{borderRadius: '10px'}}>
                 <div onClick={toggleModal} className='modal-header d-flex p-3' >
                     <h3 className='mb-0 p-auto modalTitle'>{project.title}</h3>
@@ -58,8 +56,7 @@ const ProjectCard = ({ project }) => {
                             target='_blank'
                             rel='noreferrer'
                         >
-                            {/* Live  */}
-                            <i className="fa fa-external-link fa-2x modal-link" />
+                            <i className='fa fa-external-link fa-2x modal-link' />
                         </a>
                     }
                     <a className='p-1 text-decoration-none'
@@ -68,8 +65,7 @@ const ProjectCard = ({ project }) => {
                         target='_blank'
                         rel='noreferrer'
                     >
-                        <i className="fa fa-github fa-2x modal-link" />
-                        {/* Code */}
+                        <i className='fa fa-github fa-2x modal-link' />
                     </a>
                 </ModalFooter>
             </Modal>

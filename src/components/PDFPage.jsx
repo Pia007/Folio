@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Document, pdfjs, Page } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const SinglePage = (props) => {
+// RENDER RESUME PDF
+const PDFPage = (props) => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -26,24 +27,24 @@ const SinglePage = (props) => {
     const { pdf } = props;
 
     return (
-        <div className='w-100 '>
+        <div className='w-100'>
             <Document
                 file={pdf}
-                options={{ workerSrc: "/pdf.worker.js" }}
+                options={{ workerSrc: '/pdf.worker.js' }}
                 onLoadSuccess={onDocumentLoadSuccess}
-                className='PDFDocument '
+                className='resume-pdf'
 
             >
-                <Page className='PDFPage ' pageNumber={pageNumber} renderTextLayer={false} renderInteractiveForms={false}/>
+                <Page className='PDFPage' pageNumber={pageNumber} renderTextLayer={false} renderInteractiveForms={false}/>
             </Document>
             <div className='d-none'>
                 <p>
-                    Page {pageNumber || (numPages ? 1: "--")} of {numPages || "--"} 
+                    Page {pageNumber || (numPages ? 1: '--')} of {numPages || '--'} 
                 </p>
-                <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
+                <button type='button' disabled={pageNumber <= 1} onClick={previousPage}>
                     Previous
                 </button>
-                <button type="button" disabled={pageNumber >= numPages} onClick={nextPage}>
+                <button type='button' disabled={pageNumber >= numPages} onClick={nextPage}>
                     Next
                 </button>
             </div>
@@ -51,4 +52,4 @@ const SinglePage = (props) => {
     );
 }
 
-export default SinglePage
+export default PDFPage;
