@@ -207,9 +207,16 @@ nav {
     border-top: 1px solid var(--color-primary);
     border-bottom: 1px solid var(--color-primary);
 }
+.reModal {
+    color: white;
+    text-shadow: none;
+}
 /* .modalImg {
     border: 2px solid var(--color-alt-primary);
 } */
+.react-pdf__Page__canvas {
+    background: var(--bg-new);
+}
 .btnClose {
     background: none;
     border: none;
@@ -391,7 +398,42 @@ footer {
     /* position: fixed; */
 }
 
+#ResumeContainer {
+    margin:auto;
+    width: 65%;
+    /*border: yellow solid 3px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.PDFDocument {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PDFPage {
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    /*border: red solid 3px;*/
+}
+
+.PDFPageOne {
+    margin-bottom: 25px;
+}
+
+.PDFPage > canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+.react-pdf__Page__annotations,
+.annotationsLayer {
+    display: none;
+}
+.react-pdf__Page__canvas {
+    width: 100%;
+    height: 100%;
+}
 
 @media screen and (min-width: 576px) {
     
