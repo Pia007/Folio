@@ -155,7 +155,7 @@ export default function ContactInfo({ submitForm }) {
                         </div>
                         <div className='form-group d-flex justify-content-end px-0 px-md-1 py-1'>
                             <button  
-                                className=' sendBtn' 
+                                className='sendBtn' 
                                 type='submit'
                             >
                                 Submit

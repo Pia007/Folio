@@ -56,8 +56,8 @@ const Info = () => {
                             Being creative, learning, engaging and thinking outside the box to solve problems really makes me happy. Currently, I am seeking a position as a Junior Software Developer. 
                             If you think that I can help solve a problem, or, you just want to say, 'Hi', feel free to contact me!  
                         </p> 
-                        <NavLink tag='link' className='nav-link text-primary mx-0 p-0'  to='/contact'> 
-                            <u><em><h3 style={{ fontWeight: '500'}}>Get in Touch!</h3></em></u>
+                        <NavLink tag='link' className='nav-link touch-link mx-0 p-0'  to='/contact'> 
+                            <u><em><h3>Get in Touch!</h3></em></u>
                         </NavLink>
                     </div>
                 </Col>

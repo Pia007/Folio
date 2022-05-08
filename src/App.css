@@ -1,20 +1,23 @@
 :root {
 
     --muli: 'Muli', sans-serif;
-    --bg-new: #1a0e3a;
-    --color-primary: #e83283;
-    --color-secondary: #f17cb1e7;
-    --color-alt-primary: #f5dce6;
-    --color-standard: #e0b7c9;
+    --roboto: 'Roboto', sans-serif;
+    --bg-color: #1a0e3a;
+    --color-secondary: #a08ed1;
+    --color-alt-primary: #89878f2c;
+    --color-primary: #d1c7f1;
+    --trim-primary-color: #e83283;
+    --trim-color: #f17cb1e7;
+    --trim-alt-primary: #f5dce6;
     --color-success: #41da7a;
     --color-info: #39cbfb;
     --twitter: #1da1f2;
     --linkedin: #0077b5;
     --github: white;
-    --shadow-text: -1px 0 var(--color-primary), 
-        0 1px var(--color-primary), 
-        1px 0 var(--color-primary), 
-        0 -1px var(--color-primary);
+    --shadow-text: -1px 0 var(--trim-primary-color), 
+        0 1px var(--trim-primary-color), 
+        1px 0 var(--trim-primary-color), 
+        0 -1px var(--trim-primary-color);
 }
 
 * {
@@ -24,13 +27,12 @@
 }
 html,
 body {
-    background: var(--bg-new);
-    /* background: black; */
+    background: var(--bg-color);
     height: 100vh;
     width: 100%;
-    font-family: "Open Sans", sans-serif;
     font-family: var(--muli);
     font-size: 1em;
+    color: var(--color-primary);
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -43,14 +45,10 @@ body {
     padding: 50px 0;
     min-height: 200px;
 }
-.title {
-    text-shadow: var(--shadow-text);
-    color: var(--color-alt-primary);
-}
 .quickToast {
     border: none;
     border: 1px solid var(--color-primary); 
-    background: var(--bg-new);
+    background: var(--bg-color);
     backdrop-filter: none;
     color: var(--color-success);
 }
@@ -70,69 +68,69 @@ nav {
     background: none
 }
 .myNav {
-    background: var(--bg-new);
+    background: var(--bg-color);
 }
 .nav-link {
-    /* font-family: var(--titillium-web); */
     font-size: 1.1em;
-    font-weight: 600 ;
-    color: var(--color-alt-primary);
+    font-weight: 500;
     margin: 0 8px;
+    color: var(--color-primary);
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-    color: var(--color-primary);
+    color: var(--trim-primary-color);
 }
 
 /* LANDING PAGE */
 .pre-text {
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 1.1em;
     margin-bottom: 1em;
+    margin-left: .25em;
 }
 .intro-text {
     font-size: 2.5em;
-    color: var(--color-alt-primary);
     margin-bottom: 1em;
-    text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
 }
 .sub-text {
     font-size: 2.5em;
-    color: var(--color-standard);
+    color: var(--color-secondary);
     font-weight: 800;
 }
 .text {
     font-size: 1.1em;
-    color: var(--color-standard);
-    font-weight: 600;
+    color: var(--color-secondary);
 }
 
 /* ABOUT */
 .info-header {
-    color: var(--color-alt-primary);
     margin-bottom: 1em;
-    text-shadow: var(--shadow-text);
 }
 .about-intro {
-    color: var(--color-alt-primary);
     margin-bottom: 1em;
-    text-shadow: var(--shadow-text);
     font-weight: 500;
 }
 .resBtn {
-    color: var(--color-alt-primary);
+    color: var(--trim-primary-color);
     box-shadow:  10px 10px 20px #130a2a,
         -10px -10px 20px #21124a;
 }
+.resBtn:hover,
+.resBtn:focus,
+.resBtn:active {
+    color: white;
+    background: linear-gradient(145deg, #f8368c, #d12d76);
+    outline: none;
+    opacity: 75%;
+}
+.touch-link {
+    color: var(--color-primary);
+}
 
 /* SKILLS */
-.skill-text {
-    color: var(--color-standard);
-    font-weight: 400;
-}
+
 .skill-one {
     width: 70px;
     height: 70px;
@@ -144,12 +142,9 @@ nav {
 
 /* PROJECTS */
 /* Cards */
-.project-text {
-    color: var(--color-alt-primary);
-    text-shadow: var(--shadow-text);
-}
+
 .p-card {
-    background: var(--color-standard);
+    background: var(--color-secondary);
     border: 2px solid var(--color-primary);
 }
 .cd-img {
@@ -168,21 +163,22 @@ nav {
     text-align: center;
 }
 .p-card:hover {
-    background: var(--bg-new);
+    background: var(--color-alt-primary);
+    background: rgba(255, 255, 255, 0.04);
 }
 .p-card:hover .cd-img{
-    opacity: 0;
+    opacity: .25;
+    background: rgba(255, 255, 255, 0.04);
 }
 .p-card:hover .middle {
-    opacity: 1;
+    opacity: 50%;
 }
 
 /* Modals */
 .modal-content {
-    background: var(--bg-new);
-    border: 1px solid var(--color-primary);
+    background: var(--bg-color);
+    border: 1px solid var(--trim-primary-color);
     outline: none;
-    text-shadow: var(--shadow-text);
 }
 .modalTitle {
     font-weight: 500;
@@ -190,10 +186,16 @@ nav {
 .modal-body {
     border: none;
     outline: none;
-    border-top: 1px solid var(--color-primary);
-    border-bottom: 1px solid var(--color-primary);
+    border-top: 1px solid var(--trim-primary-color);
+    border-bottom: 1px solid var(--trim-primary-color);
+    /* color: var(--color-primary); */
+}
+.modal-description {
+    color: var(--color-secondary);
 }
 .btnClose {
+    color: var(color-secondary);
+    font-weight: 600;
     background: none;
     border: none;
     opacity: 1;  
@@ -204,17 +206,18 @@ nav {
 }
 .modal-link {
     text-shadow: var(--shadow-text);
+    color: var(--color-secondary);
 }
 .modal-link:hover,
 .modal-link:focus,
 .modal-link:active {
-    color: var(--color-secondary);
+    color: var(--trim-color);
 }
 
 /* CONTACT */
 .form-holder {
     border-radius: 10px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--trim-primary-color);
     background: none;
     box-shadow: 9px 9px 16px #160c32,
     -9px -9px 16px #1e1042;
@@ -222,55 +225,54 @@ nav {
 .form {
     background: none;
 }
+.form-control::-webkit-input-placeholder {
+    /* color: var(--color-primary); */
+    font-size: 1.05em;
+}
 
 input:not(:placeholder-shown) {
     background:  none!important;
 }
 .contact-input {
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--trim-primary-color);
     outline: none;
     box-shadow: 10px 10px 25px #130a2a,
         -10px -10px 25px #21124a;
 }
 .contact-input:focus {
     border-radius: 5px;
-    outline: 1px solid var(--color-primary);
+    outline: 1px solid var(--trim-primary-color);
 }
 .form-control:valid {
-    color: var(--color-alt-primary)!important;
+    color: var(--trim-alt-primary)!important;
 }
 .contact-text,
 .contact-text-link {
     font-size: 1.2em;
-    color: var(--color-standard);
+    color: var(--color-secondary);
 }
 .contact-text-link:hover {
-    color: var(--color-primary);
+    color: var(--trim-primary-color);
 }
 .sendBtn {
     width: 98.5px;
     height: 50px;
+    color: var(--color-primary);
     padding: 12px 24px;
-    color: var(--color-alt-primary);
     border-radius: 8px;
-    border: 1px solid var(--color-primary);
-    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--trim-primary-color);
+    background: var(--bg-color);
     box-shadow:  10px 10px 20px #130a2a,
         -10px -10px 20px #21124a;
 }
 
 .sendBtn:hover,
 .sendBtn:focus,
-.sendBtn:active,
-.resBtn:hover,
-.resBtn:focus,
-.resBtn:active {
+.sendBtn:active {
     color: white;
     background: linear-gradient(145deg, #f8368c, #d12d76);
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--trim-primary-color);
     outline: none;
-    -webkit-transition: all 1s ease;
-    transition: all .45s ease;
 }
 
 /* SOCIALS */
@@ -295,7 +297,7 @@ input:not(:placeholder-shown) {
     background: transparent;
 }
 .social:hover {
-    background: var(--color-primary);
+    background: var(--trim-primary-color);
     box-shadow: 7px 7px 14px #130a2a,
         -7px -7px 14px #21124a;
     -webkit-transition: all 1s ease;
@@ -313,7 +315,7 @@ input:not(:placeholder-shown) {
 
 /* CV */
 .react-pdf__Page__canvas {
-    background: var(--bg-new);
+    background: var(--bg-color);
 }
 
 .resume-pdf {
@@ -341,7 +343,7 @@ input:not(:placeholder-shown) {
 }
 
 .footer-text {
-    color: var(--color-primary);
+    color: var(--trim-primary-color);
     font-weight: 500;
 }
 
@@ -360,7 +362,7 @@ input:not(:placeholder-shown) {
 @media screen and (min-width: 768px) {
     .intro-text, 
     .sub-text {
-        font-size: 3.2em;
+        font-size: 3.6em;
         
     }
     .social-ul li a {
@@ -371,20 +373,14 @@ input:not(:placeholder-shown) {
 @media screen and (min-width: 992px) {
     .intro-text, 
     .sub-text {
-        font-size: 3.7em;
+        font-size: 4.3em;
         
-    }
-    .eduCol {
-        border-left: 2px solid var(--color-primary);
-    }
-    .skillCol {
-        border-left: 2px solid var(--color-info);
     }
 }
 @media screen and (min-width: 1200px) {
     .intro-text, 
     .sub-text {
-        font-size: 4.0em;
+        font-size: 5em;
         
     }
 }

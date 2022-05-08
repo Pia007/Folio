@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
     return (
         <React.Fragment>
             {/* PROJECT CARD */}
-            <Card className='p-card shadow-none p-1 bg-primary' onClick={toggleModal}>
+            <Card className='p-card shadow-none p-1 p-lg-2' onClick={toggleModal}>
                 <CardImg top className='cd-img' width='100%' src={project.image} alt={project.title} />
                 <CardImgOverlay className='p-0 w-100 middle'>
                     <div className='w-100 my-2 my-sm-3 my-md-2 my-lg-2 my-xl-4 text-center'>
@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
             <Modal size='lg' centered scrollable isOpen={modal} toggle={toggleModal} className='modal-info' style={{borderRadius: '10px'}}>
                 <div onClick={toggleModal} className='modal-header d-flex p-3' >
                     <h3 className='mb-0 p-auto modalTitle'>{project.title}</h3>
-                    <button className='btn btn-lg btn-primary p-0 btnClose' onClick={toggleModal}>
+                    <button className='btn btn-lg p-0 btnClose' onClick={toggleModal}>
                         <img src={close} alt='close' className='img-fluid mb-1 close' style={{width: '1rem', height: '1rem'}}/>
                     </button>
                 </div>
@@ -37,8 +37,8 @@ const ProjectCard = ({ project }) => {
                     <div className='mb-2'>
                         <img className='img-fluid modalImg border border-primary' src={project.image} alt={project.title} style={{borderRadius: '10px'}}/>
                     </div>
-                    <h4 className='mb-1 modal-test' style={{fontWeight: '400'}}>{project.type}</h4>
-                    <h5 className='mb-1 modal-test-one' style={{fontWeight: '400'}}>{project.role}</h5>
+                    <h4 className='mb-1' style={{fontWeight: '400'}}>{project.type}</h4>
+                    <h5 className='mb-1' style={{fontWeight: '400'}}>{project.role}</h5>
                     <div className='my-3 mx-0  d-flex'>
                         {project.stack.one && <StackItem stack={project.stack.one}/>}
                         {project.stack.two && <StackItem stack={project.stack.two}/>}
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
                         {project.stack.four && <StackItem stack={project.stack.four}/>}
                     </div>
                     <p className='modal-description'>{project.description}</p>
-                    <p className='modal-description-two'>Challenges: {project.challenges}</p>
+                    <p className='modal-description'>Challenges: {project.challenges}</p>
                 </ModalBody>
                 <ModalFooter className='p-2' >
                     {project.live && 

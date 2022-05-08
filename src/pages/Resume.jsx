@@ -10,11 +10,11 @@ const Resume = () => {
             <PageTitle regText='RESUME'/>
             <div className='mx-1'>
                 <div className='p-2 text-center'>
-                    <button className='btn btn-outline-primary p-1 resBtn'>
-                        <a href='resume.pdf' download='resume.pdf' alt='download resume' className='text-decoration-none'>
-                            <span >Download </span>
+                    {/* <button className='btn btn-outline-primary p-1 resBtn'> */}
+                        <a href='resume.pdf' download='resume.pdf' alt='download resume' className='btn btn-outline-primary text-decoration-none  resBtn'>
+                            Download
                         </a>
-                    </button>
+                    {/* </button> */}
                 </div>
             </div>
             <PDFPage renderMode='none' pdf={resume}/>

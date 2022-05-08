@@ -31,26 +31,26 @@ export const Header = () => {
                     <Nav navbar className='ms-auto text-center text-light '>
                         <NavItem>
                             <NavLink tag='link' onClick={togNav} className='nav-link' to='/'> 
-                                <span className='text-primary'>H</span>
-                                ome
+                                <span className='text-primary span-link'>H</span>
+                                <span>ome</span>
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink tag='link' onClick={togNav} className='nav-link' to='/about'> 
                                 <span className='text-primary'>A</span>
-                                bout
+                                <span>bout</span>
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink tag='link' onClick={togNav} className='nav-link' to='/projects'> 
                                 <span className='text-primary'>P</span>
-                                rojects
+                                <span>rojects</span>
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink tag='link' onClick={togNav} className='nav-link'  to='/contact'> 
                                 <span className='text-primary'>C</span>
-                                ontact
+                                <span>ontact</span>
                             </NavLink>
                         </NavItem>
                     </Nav>
