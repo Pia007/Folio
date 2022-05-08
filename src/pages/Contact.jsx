@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <div className='container'>
             <PageTitle regText="LET'S" colorText='CHAT'/>
-            <div className='container mt-3 p-2 formHolder'>
+            <div className='container mt-3 p-2 form-holder'>
                 <Row className=''>
                     <Col lg={4} className='mb-2 mb-lg-0'>
                         <ContactInfo/>

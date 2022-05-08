@@ -99,7 +99,7 @@ function Skills(props) {
                     logoStyle='skill-one'
                 />
                 <SkillItem
-                    name='W3'
+                    name='W3C'
                     logo={w3Logo}
                     logoStyle='skill-two'
                 />

@@ -37,16 +37,16 @@ const ProjectCard = ({ project }) => {
                     <div className='mb-2'>
                         <img className='img-fluid modalImg border border-primary' src={project.image} alt={project.title} style={{borderRadius: '10px'}}/>
                     </div>
-                    <h4 className='mb-1' style={{fontWeight: '400'}}>{project.type}</h4>
-                    <h5 className='mb-1' style={{fontWeight: '400'}}>{project.role}</h5>
+                    <h4 className='mb-1 modal-test' style={{fontWeight: '400'}}>{project.type}</h4>
+                    <h5 className='mb-1 modal-test-one' style={{fontWeight: '400'}}>{project.role}</h5>
                     <div className='my-3 mx-0  d-flex'>
                         {project.stack.one && <StackItem stack={project.stack.one}/>}
                         {project.stack.two && <StackItem stack={project.stack.two}/>}
                         {project.stack.three && <StackItem stack={project.stack.three}/>}
                         {project.stack.four && <StackItem stack={project.stack.four}/>}
                     </div>
-                    <p className=''>{project.description}</p>
-                    <p className=''>Challenges: {project.challenges}</p>
+                    <p className='modal-description'>{project.description}</p>
+                    <p className='modal-description-two'>Challenges: {project.challenges}</p>
                 </ModalBody>
                 <ModalFooter className='p-2' >
                     {project.live && 

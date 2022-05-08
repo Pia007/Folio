@@ -25,6 +25,7 @@
     "react-typed": "^1.2.0",
     "reactstrap": "^9.0.2",
     "tsparticles": "^1.27.0",
+    "typeface-muli": "^1.1.13",
     "web-vitals": "^2.1.3"
   },
   "scripts": {

@@ -56,7 +56,7 @@ export const Intro = () => {
             <div >
                 <div className='mt-3 d-flex justify-content-center align-content-center' style={{maxWidth: '95%', height: '85vh', margin: 'auto'}}>
                     <div className='border-0 align-self-center p-auto '>
-                        <h1 className='m-0 font-weight-bold intro-text'>
+                        <h1 className='m-0 intro-text'>
                             Hi, I'm Pia.
                         </h1>
                         <h2 className='m-0 mt-0 sub-text text-primary'>Junior Software Developer</h2>

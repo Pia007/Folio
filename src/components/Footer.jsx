@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div className='w-100' style={{ position: 'fixed', bottom: '0', fontSize:'.875em'}}>
-            <p className='text-center text-primary'>Designed and Built by Pia Torain</p>
+            <p className='text-center footer-text'>Designed and Built by Pia Torain</p>
         </div>
     )
 }

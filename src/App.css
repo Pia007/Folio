@@ -1,8 +1,11 @@
 :root {
+
+    --muli: 'Muli', sans-serif;
     --bg-new: #1a0e3a;
     --color-primary: #e83283;
+    --color-secondary: #f17cb1e7;
     --color-alt-primary: #f5dce6;
-    --color-standard: #dbb3c5;
+    --color-standard: #e0b7c9;
     --color-success: #41da7a;
     --color-info: #39cbfb;
     --twitter: #1da1f2;
@@ -13,6 +16,7 @@
         1px 0 var(--color-primary), 
         0 -1px var(--color-primary);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +25,11 @@
 html,
 body {
     background: var(--bg-new);
+    /* background: black; */
     height: 100vh;
     width: 100%;
     font-family: "Open Sans", sans-serif;
+    font-family: var(--muli);
     font-size: 1em;
     line-height: 1.5;
     margin: 0;
@@ -67,6 +73,7 @@ nav {
     background: var(--bg-new);
 }
 .nav-link {
+    /* font-family: var(--titillium-web); */
     font-size: 1.1em;
     font-weight: 600 ;
     color: var(--color-alt-primary);
@@ -95,11 +102,12 @@ nav {
 .sub-text {
     font-size: 2.5em;
     color: var(--color-standard);
+    font-weight: 800;
 }
 .text {
     font-size: 1.1em;
     color: var(--color-standard);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 /* ABOUT */
@@ -108,7 +116,7 @@ nav {
     margin-bottom: 1em;
     text-shadow: var(--shadow-text);
 }
-.aboutIntro {
+.about-intro {
     color: var(--color-alt-primary);
     margin-bottom: 1em;
     text-shadow: var(--shadow-text);
@@ -119,8 +127,6 @@ nav {
     box-shadow:  10px 10px 20px #130a2a,
         -10px -10px 20px #21124a;
 }
-
-
 
 /* SKILLS */
 .skill-text {
@@ -202,13 +208,13 @@ nav {
 .modal-link:hover,
 .modal-link:focus,
 .modal-link:active {
-    color: var(--color-standard);
+    color: var(--color-secondary);
 }
 
 /* CONTACT */
-.formHolder {
+.form-holder {
     border-radius: 10px;
-    border: 2px solid var(--color-primary);
+    border: 1px solid var(--color-primary);
     background: none;
     box-shadow: 9px 9px 16px #160c32,
     -9px -9px 16px #1e1042;
@@ -236,7 +242,7 @@ input:not(:placeholder-shown) {
 .contact-text,
 .contact-text-link {
     font-size: 1.2em;
-    color: var(--color-alt-primary);
+    color: var(--color-standard);
 }
 .contact-text-link:hover {
     color: var(--color-primary);
@@ -334,6 +340,10 @@ input:not(:placeholder-shown) {
     height: 100%;
 }
 
+.footer-text {
+    color: var(--color-primary);
+    font-weight: 500;
+}
 
 /* BREAKPOINTS */
 @media screen and (min-width: 576px) {

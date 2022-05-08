@@ -42,7 +42,7 @@ const Info = () => {
                 {/* ABOUT  */}
                 <Col md={8} className='mt-md-0 p-2'>
                     <div className='m-2' >
-                        <h2 className='aboutIntro'>A curiously-creative Frontend Developer.</h2>
+                        <h2 className='about-intro'>A curiously-creative Frontend Developer.</h2>
                         <p className='mb-2 text'>
                             I'm passionate about solving problems in a human-centric way. I combine my loves for art, science, technology and mindfulness meditation to create beautiful, useful solutions and write clean accessible code. 
                             I really sweat the small stuff because it matters to be aware of people and their needs.

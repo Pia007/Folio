@@ -5,6 +5,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import '../node_modules/bootswatch/dist/quartz/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'typeface-muli';
 import App from './App';
 
 
