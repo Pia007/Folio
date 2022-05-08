@@ -40,7 +40,7 @@ const Info = () => {
                 </Col>
 
                 {/* ABOUT  */}
-                <Col md={8} className='mt-md-0 p-2'>
+                <Col md={8} className='mt-md-0 px-0 p-md-2'>
                     <div className='m-2' >
                         <h2 className='about-intro'>A curiously-creative Frontend Developer.</h2>
                         <p className='mb-2 text'>
