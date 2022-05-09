@@ -10,7 +10,7 @@ const Info = () => {
 
     return (
         <div className='container'>
-            <Row className='justify-content-between p-2 mt-3'>
+            <Row className='justify-content-between p-2 mt-lg-3'>
                 <Col md={4} className='text-center p-2'>
                     {/* IMAGE */}
                     <Col className='p-1'>
