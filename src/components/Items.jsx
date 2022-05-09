@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, ListGroupItem } from 'reactstrap';
+import Fade from 'react-reveal/Fade';
 
 // SOCIAL MEDIA ICONS
 export const SocialLink = ({ title, link, alt, icon, img, src, alt2 }) => {
@@ -37,7 +38,6 @@ export const SocialIcon = ({ title, link, alt, icon, img, src }) => {
                     style={{width: '1rem', height: '1rem'}}
                 />
             </a>
-        
         </ListGroupItem>
     )
 }
@@ -46,12 +46,17 @@ export const SocialIcon = ({ title, link, alt, icon, img, src }) => {
 export const SkillItem = ({ logo, name, logoStyle }) => {
     return (
         <React.Fragment>
-            <Col xs={6} sm={4} md={3} lg={2} className='text-center mb-3'>
-                <img src={logo} alt='html-5' className={logoStyle}/>
-                <p className='text m-1'>{name}</p>
-            </Col>
+                <Col xs={6} sm={4} md={3} lg={2} className='text-center mb-3'>
+                    <Fade bottom delay={800}>
+                        <img src={logo} alt='html-5' className={logoStyle}/>
+                        <p className='text m-1'>{name}</p>
+                    </Fade>
+                </Col>
         </React.Fragment>
-    )
+    );
 }
+
+
+
 
 

@@ -3,6 +3,7 @@ import { Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import myLogo from '../images/ptlogo.svg'
 import menu from '../images/menu.svg';
+import { Fade, Zoom } from 'react-reveal';
 
 
 export const Header = () => {
@@ -12,47 +13,66 @@ export const Header = () => {
         (navigation ? setNavigation(!navigation) : setNavigation(navigation))
     }
 
+    const MenuItem = ({ to, firstLetter, linkEnd }) => {
+        return (
+            <NavItem>
+                <NavLink tag='link' onClick={togNav} className='nav-link' to={to}> 
+                    <span className='text-primary'>{firstLetter}</span>
+                    <span>{linkEnd}</span>
+                </NavLink>
+            </NavItem>
+        )
+    }
+
     return (
         <React.Fragment>
             <Navbar className='navbar navbar-expand-lg p-1 d-flex justify-content-between sticky-top text-light myNav' style={{zIndex: '5'}}>
                 {/* LOGO */}
                 <div className='d-flex'>
-                    <NavLink tag='link' to='/' 
-                        onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
-                            <img src={myLogo}  alt='logo' className='text-primary mt-1' />
-                    </NavLink>
+                    <Zoom>
+                        <NavLink tag='link' to='/' 
+                            onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
+                                <img src={myLogo}  alt='logo' className='text-primary mt-1' />
+                        </NavLink>
+                    </Zoom>
                 </div>
                 {/* MENU  */}
-                <NavbarToggler onClick={openNav} className='align-self-center justify-content-end px-0'>
-                    <img src={menu}  alt='menu' className='text-success'/> 
-                </NavbarToggler>
+                <Zoom>
+                    <NavbarToggler onClick={openNav} className='align-self-center justify-content-end px-0'>
+                        <img src={menu}  alt='menu' className='text-success'/> 
+                    </NavbarToggler>
+                </Zoom>
                 {/* NAVIGATION */}
                 <Collapse isOpen={navigation} navbar className='justify-content-end'>
                     <Nav navbar className='ms-auto text-center text-light '>
-                        <NavItem>
-                            <NavLink tag='link' onClick={togNav} className='nav-link' to='/'> 
-                                <span className='text-primary span-link'>H</span>
-                                <span>ome</span>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink tag='link' onClick={togNav} className='nav-link' to='/about'> 
-                                <span className='text-primary'>A</span>
-                                <span>bout</span>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink tag='link' onClick={togNav} className='nav-link' to='/projects'> 
-                                <span className='text-primary'>P</span>
-                                <span>rojects</span>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink tag='link' onClick={togNav} className='nav-link'  to='/contact'> 
-                                <span className='text-primary'>C</span>
-                                <span>ontact</span>
-                            </NavLink>
-                        </NavItem>
+                        <Fade top >
+                            <MenuItem 
+                                to='/'
+                                firstLetter='H'
+                                linkEnd='ome'
+                            />
+                        </Fade>
+                        <Fade top delay={200}>
+                            <MenuItem 
+                                to='/about'
+                                firstLetter='A' 
+                                linkEnd='bout'
+                            />
+                        </Fade>
+                        <Fade top delay={400}>
+                            <MenuItem 
+                                to='/projects'
+                                firstLetter='P'
+                                linkEnd='rojects'
+                            />
+                        </Fade>
+                        <Fade top delay={600}>
+                            <MenuItem 
+                                to='/contact'
+                                firstLetter='C'
+                                linkEnd='ontact'
+                            />
+                        </Fade>
                     </Nav>
                 </Collapse>
             </Navbar>

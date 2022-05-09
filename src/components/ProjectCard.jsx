@@ -15,7 +15,6 @@ const ProjectCard = ({ project }) => {
     
     return (
         <React.Fragment>
-            {/* PROJECT CARD */}
             <Card className='p-card shadow-none p-1 p-lg-2' onClick={toggleModal}>
                 <CardImg top className='cd-img' width='100%' src={project.image} alt={project.title} />
                 <CardImgOverlay className='p-0 w-100 middle'>
@@ -29,7 +28,7 @@ const ProjectCard = ({ project }) => {
             <Modal size='lg' centered scrollable isOpen={modal} toggle={toggleModal} className='modal-info' style={{borderRadius: '10px'}}>
                 <div onClick={toggleModal} className='modal-header d-flex p-3' >
                     <h3 className='mb-0 p-auto modalTitle'>{project.title}</h3>
-                    <button className='btn btn-lg p-0 btnClose' onClick={toggleModal}>
+                    <button className='p-0 btnClose' onClick={toggleModal}>
                         <img src={close} alt='close' className='img-fluid mb-1 close' style={{width: '1rem', height: '1rem'}}/>
                     </button>
                 </div>

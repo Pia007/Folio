@@ -2,11 +2,12 @@ import React from 'react';
 import { SocialLink, SocialIcon } from './Items';
 import { Row, Col } from 'reactstrap';
 import polyworkIcon from '../images/polywork.svg';
+import  Zoom  from 'react-reveal/Zoom';
 
 // SOCIAL MEDIA
 export const Socials = () => {
     return (
-        <>
+        <React.Fragment>
             <SocialLink
                 title='LinkedIn'
                 link='https://www.linkedin.com/in/pia-torain-dev/'
@@ -31,7 +32,7 @@ export const Socials = () => {
                 link='https://www.polywork.com/feenixrizn'
                 alt='polywork'
             />
-        </>
+        </React.Fragment>
     )
 }
 
@@ -53,11 +54,13 @@ export const SocialRow = () => {
 // SOCIAL MEDIA COLUMN
 export const SocialColumn = () => {
     return ( 
-        <div className='d-none d-md-block w-15% d-flex align-content-end position-fixed' style={{ width:'10%', bottom: '10px', left: '0'}}>
+        <div className='d-none d-md-block d-flex align-content-end position-fixed' style={{ width:'5%', bottom: '10px', left: '0'}}>
             <Col className='p-0 mb-0 d-flex justify-content-start align-content-end sticky-bottom'>
-                <ul className='d-flex d-inline-flex flex-column justify-content-end list-unstyled mb-0 py-1 shadow-none social-ul'>
-                    <Socials/>
-                </ul>
+                <Zoom delay={2100}>
+                    <ul className='d-flex d-inline-flex flex-column justify-content-end list-unstyled mb-0 py-1 shadow-none social-ul'>
+                        <Socials/>
+                    </ul>
+                </Zoom>
             </Col>
         </div>
     )

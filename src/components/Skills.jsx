@@ -20,12 +20,18 @@ import githubLogo from '../images/gh.png';
 import npmLogo from '../images/npm.png';
 import restLogo from '../images/rest.svg';
 import yarnLogo from '../images/yarn.png';
+import Fade from 'react-reveal/Fade';
+
 
 
 function Skills(props) {
     return (
         <div className='p-0 px-0'>
-            <div className='text-center'><h2 className='text-center info-header'>My Toolbox</h2></div>
+            <div className='text-center'>
+                <Fade bottom delay={800}>
+                    <h2 className='text-center info-header'>My Toolbox</h2>
+                </Fade>
+            </div>
             <Row className='my-3 p-0 row-content'>
                 <SkillItem 
                     name='HTML5' 

@@ -142,7 +142,6 @@ nav {
 
 /* PROJECTS */
 /* Cards */
-
 .p-card {
     background: var(--color-secondary);
     border: 2px solid var(--color-primary);
@@ -188,19 +187,19 @@ nav {
     outline: none;
     border-top: 1px solid var(--trim-primary-color);
     border-bottom: 1px solid var(--trim-primary-color);
-    /* color: var(--color-primary); */
 }
 .modal-description {
     color: var(--color-secondary);
 }
 .btnClose {
     color: var(color-secondary);
-    font-weight: 600;
+    font-weight:500;
     background: none;
     border: none;
-    opacity: 1;  
 }
-.btnClose:hover {
+.btnClose:hover,
+.btnClose:focus,
+.btnClose:active {
     opacity: 0.5;
     background: none;
 }
@@ -226,7 +225,6 @@ nav {
     background: none;
 }
 .form-control::-webkit-input-placeholder {
-    /* color: var(--color-primary); */
     font-size: 1.05em;
 }
 

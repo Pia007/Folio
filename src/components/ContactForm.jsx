@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
+import Fade from 'react-reveal/Fade';
 
 const contactToastId = 'contact-toast-id';
 
@@ -78,7 +79,9 @@ export default function ContactInfo({ submitForm }) {
                                 placeholder='Name'
                                 autoComplete='off'
                             />
-                            {errors.name && <p className='mb-0 p-1 text-danger'>{errors.name.message}</p>}
+                            <Fade bottom>
+                                {errors.name && <p className='mb-0 p-1 text-danger'>{errors.name.message}</p>}
+                            </Fade>
                         </div>
                         <div className='form-group col-md-4 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <input
@@ -90,13 +93,21 @@ export default function ContactInfo({ submitForm }) {
                                 type='email'
                                 
                                 {...register('email', {
-                                    required: true,
-                                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+                                    required: {
+                                        value: true,
+                                        message: 'Email is required.'
+                                    },
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                        message: 'Email must be valid.'
+                                    },
                                 })}
                                 placeholder='Email'
                                 autoComplete='off'
                             />
-                            {errors.email && <p className='mb-0 p-1 text-danger'>Enter a valid email address.</p>}
+                            <Fade bottom>
+                                {errors.email && <p className='mb-0 p-1 text-danger'>{errors.email.message}</p>}
+                            </Fade>
                         </div>
                         <div className='form-group col-md-4 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <input
@@ -123,7 +134,9 @@ export default function ContactInfo({ submitForm }) {
                                 autoComplete='off'
                                 placeholder='Subject'
                             />
-                            {errors.subject  && <p className='mb-0 p-1 text-danger'>{errors.subject.message}</p>}
+                            <Fade bottom>
+                                {errors.subject  && <p className='mb-0 p-1 text-danger'>{errors.subject.message}</p>}
+                            </Fade>
                         </div>
                         <div className='form-group col-md-12 mb-1 mb-md-3 px-0 px-md-1 py-1'>
                             <textarea
@@ -151,7 +164,9 @@ export default function ContactInfo({ submitForm }) {
 
                                 })}
                             />
-                            {errors.message && <p className='mb-0 p-1 text-danger'>Please enter a message longer than 10 characters</p>}
+                            <Fade bottom>
+                                {errors.message && <p className='mb-0 p-1 text-danger'>{errors.message.message}</p>}
+                            </Fade>
                         </div>
                         <div className='form-group d-flex justify-content-end px-0 px-md-1 py-1'>
                             <button  
