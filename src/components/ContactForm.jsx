@@ -146,7 +146,7 @@ export default function ContactInfo({ submitForm }) {
                                 type='textarea'  
                                 id='message' 
                                 name='message'
-                                rows='5'
+                                rows='6'
                                 placeholder='Message'
                                 {...register('message', {
                                     required: {
