@@ -1,4 +1,8 @@
 # My Portfolio Website
+<p align="center">
+    <img src="https://img.shields.io/netlify/d0093d1d-8093-4775-8fd3-6cd2a88a27fc?style=plastic&logo=netlify" alt="netlify status" >
+</p>
+
 <a href="https://reactjs.org/" target="_blank" alt="react documentation"><img src="https://img.shields.io/badge/-React-61DBFB?style=plastic&labelColor=black&logo=react&logoColor=61DBFB"/></a>
 <a href="https://getbootstrap.com/" target="_blank" alt="bootstrap documentation"><img src="https://img.shields.io/badge/-Bootstrap-553C7B?style=plastic&labelColor=black&logo=bootstrap&logoColor=553C7B" /></a>
 
