@@ -146,7 +146,7 @@ export default function ContactInfo({ submitForm }) {
                                 type='textarea'  
                                 id='message' 
                                 name='message'
-                                rows='6'
+                                rows='7'
                                 placeholder='Message'
                                 {...register('message', {
                                     required: {
@@ -158,10 +158,9 @@ export default function ContactInfo({ submitForm }) {
                                         message: 'Message must be at least 5 characters.'
                                     },
                                     maxLength: {
-                                        value: 250,
+                                        value: 500,
                                         message: 'Message must be less than 500 characters.'
                                     }
-
                                 })}
                             />
                             <Fade bottom>

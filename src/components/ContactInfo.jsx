@@ -39,7 +39,7 @@ const ContactInfo = () => {
                 </Row>
                 <Row>
                     <Col className='d-flex'>
-                        <p className='p-0 px-1 mb-0'>
+                        <p className='p-1 px-1 mb-0'>
                             <img src={pinImg} alt='location'/> 
                         </p>
                         <p className='p-1 contact-text'> Las Vegas Metropolitan Area</p>
