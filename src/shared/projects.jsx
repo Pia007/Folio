@@ -27,7 +27,7 @@ export const PROJECTS = [
             two: "CSS", 
             three: "JavaScript" 
         },
-        description:"As a new developer, grasping Javascript is sometimes frightening. As, I was learning and still am learning, I thought it would great to create and share an interactive collection of JavaScript algorithms that is useful for learning and practicing agorithms.",
+        description:"As a new developer, grasping Javascript is sometimes frightening. As, I was learning and still am learning, I thought it would great to create and share an interactive collection of JavaScript algorithms that is useful for learning and practicing algorithms.",
         challenges: "Designing each dashboard to have its own uniqueness and functionlity was challenging. I used CSS variables and JavaScript documentation.",   
         live: "https://www.js-algorithms.com/",
         repo: "https://github.com/Pia007/Javascript-Algos"
@@ -44,7 +44,7 @@ export const PROJECTS = [
             three: "JavaScript" 
         },
         description:"This project was an internship at Reskill Americans. The project team was tasked with designing and building a full stack social media web application.",
-        challenges: "I was responsible for with implementing the authentication pages, which were modals/pop-ups,. I had to learn how to interpret the design and use vanilla JavaScript to create functional modals and process user inputs. Both of which were very challenging, at the time. Interacting with the design team was extremely helpful. And, collaborating with other team memebrs, consulting mentors and documentation helped me to complete the tasks.",
+        challenges: "I was responsible for with implementing the authentication pages, which were modals/pop-ups. I had to learn how to interpret the design and use vanilla JavaScript to create functional modals and process user inputs. Both of which were very challenging, at the time. Interacting with the design team was extremely helpful. And, collaborating with other team members, consulting mentors and documentation helped me to complete the tasks.",
         repo: "https://github.com/reskillamericans/SMA-Team-1"
     },
     {
