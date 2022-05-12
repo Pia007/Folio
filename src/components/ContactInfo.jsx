@@ -26,7 +26,7 @@ const ContactInfo = () => {
                         <p className='p-1 sm-py-0 mb-0'>
                             <img src={phoneImg} alt='phone'/> 
                         </p>
-                        <a role='button' className='p-1 mb-md-1 contact-text-link text-decoration-none' href='tel:+19084005335' >(908) 400-5335</a> 
+                        <a role='button' className='p-1 mb-md-1 contact-text-link text-decoration-none' href='tel:+17025187611' >(702) 518-7611</a> 
                     </Col>
                 </Row>
                 <Row>
@@ -34,7 +34,7 @@ const ContactInfo = () => {
                         <p className='p-1 sm-py-0 mb-0'>
                             <img src={smsImg} alt='phone'/> 
                         </p>
-                        <a role='button' className='p-1 mb-md-1 contact-text-link text-decoration-none' href='sms:+19084005335' >Text Me</a> 
+                        <a role='button' className='p-1 mb-md-1 contact-text-link text-decoration-none' href='sms:+17025187611' >Text Me</a> 
                     </Col>
                 </Row>
                 <Row>
