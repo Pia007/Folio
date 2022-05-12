@@ -45,28 +45,28 @@ export const Header = () => {
                 {/* NAVIGATION */}
                 <Collapse isOpen={navigation} navbar className='justify-content-end'>
                     <Nav navbar className='ms-auto text-center text-light '>
-                        <Fade top >
+                        <Fade  >
                             <MenuItem 
                                 to='/'
                                 firstLetter='H'
                                 linkEnd='ome'
                             />
                         </Fade>
-                        <Fade top delay={200}>
+                        <Fade delay={300}>
                             <MenuItem 
                                 to='/about'
                                 firstLetter='A' 
                                 linkEnd='bout'
                             />
                         </Fade>
-                        <Fade top delay={400}>
+                        <Fade  delay={600}>
                             <MenuItem 
                                 to='/projects'
                                 firstLetter='P'
                                 linkEnd='rojects'
                             />
                         </Fade>
-                        <Fade top delay={600}>
+                        <Fade  delay={900}>
                             <MenuItem 
                                 to='/contact'
                                 firstLetter='C'
