@@ -39,6 +39,26 @@ body {
     /* prevent shift right on modal load */
     padding-right: 0px !important; 
     position: relative!important;
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+    
+}
+body::-webkit-scrollbar {
+    width: .4em;
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary) var(--color-primary);
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 1px solid var(--trim-primary-color);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--trim-primary-color);
 }
 
 .row-content {
