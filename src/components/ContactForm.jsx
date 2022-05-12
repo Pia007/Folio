@@ -154,7 +154,7 @@ export default function ContactInfo({ submitForm }) {
                                         message: 'Message is required.'
                                     },
                                     minLength: {
-                                        value: 10,
+                                        value: 5,
                                         message: 'Message must be at least 5 characters.'
                                     },
                                     maxLength: {
