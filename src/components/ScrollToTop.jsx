@@ -1,14 +1,15 @@
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router';
+import WithRouter from './WithRouter';
 
 // ensure that the scroll is always at the top of the page
 const ScrollToTop = ({ children }) => {
     const location = useLocation();
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0, {behavior: 'smooth'});
-    }, [location.pathname]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
 
     return children;
 };
 
-export default ScrollToTop;
+export default WithRouter(ScrollToTop);

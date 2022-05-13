@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
     return (
-        <div className='container' style={{height: '100vh'}}>
+        <div className='container' style={{height: 'auto'}}>
             <SEO title='Contact | Pia Torain' description='description' content='Contact Pia Torain, Fullstack Web Developer'/>
             <PageTitle regText="LET'S" colorText='CHAT'/>
             <div className='container mt-3 p-2 form-holder'>
