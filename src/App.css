@@ -40,21 +40,21 @@ body {
     padding-right: 0px !important; 
     position: relative!important;
 }
-html {
+.main {
     scrollbar-width: thin;
     scrollbar-color: var(--color-secondary) var(--color-primary);
 }
-body::-webkit-scrollbar {
+.main::-webkit-scrollbar {
     width: .5em;
 }
-body::-webkit-scrollbar-track {
+.main::-webkit-scrollbar-track {
     border-radius: 10px;
 }
-body::-webkit-scrollbar-thumb {
+.main::-webkit-scrollbar-thumb {
     border-radius: 6px;
     border: 1px solid var(--trim-primary-color);
 }
-body::-webkit-scrollbar-thumb:hover {
+.main::-webkit-scrollbar-thumb:hover {
     background: var(--trim-primary-color);
 }
 

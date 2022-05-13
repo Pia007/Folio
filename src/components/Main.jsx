@@ -18,21 +18,21 @@ const Main = () => {
 
     return (
         <div style={{ height: 'calc(1024 - 110 )' }}>
-            <Header/>
-            <div className='d-flex main' style={{width: 'calc(100%-10%'}}>
-                <SocialColumn/>
-                <ScrollToTop>
-                    <Routes>
-                        <Route path='/' element={<Home/>}/>
-                        <Route path='/about' element={<About />}/>
-                        <Route path='/projects' element={<Projects/>}/>
-                        <Route path='/contact' element={<Contact/>}/>
-                        <Route path='/resume' element={<Resume/>}/>
-                    </Routes>
-                </ScrollToTop>
-                <DesignColumn/>
-            </div>
-            <RenderFooter/>
+            <ScrollToTop>
+                <Header/>
+                <div className='d-flex main' style={{width: 'calc(100%-10%'}}>
+                    <SocialColumn/>
+                        <Routes>
+                            <Route path='/' element={<Home/>}/>
+                            <Route path='/about' element={<About />}/>
+                            <Route path='/projects' element={<Projects/>}/>
+                            <Route path='/contact' element={<Contact/>}/>
+                            <Route path='/resume' element={<Resume/>}/>
+                        </Routes>
+                    <DesignColumn/>
+                </div>
+                <RenderFooter/>
+            </ScrollToTop>
         </div>
     );
     
