@@ -18,10 +18,10 @@ const Main = () => {
 
     return (
         <div style={{ height: 'calc(1024 - 110 )' }}>
-            <ScrollToTop>
-                <Header/>
-                <div className='d-flex main' style={{width: 'calc(100%-10%'}}>
-                    <SocialColumn/>
+            <Header/>
+            <div className='d-flex main' style={{width: 'calc(100%-10%'}}>
+                <SocialColumn/>
+                    <ScrollToTop>
                         <Routes>
                             <Route path='/' element={<Home/>}/>
                             <Route path='/about' element={<About />}/>
@@ -29,10 +29,10 @@ const Main = () => {
                             <Route path='/contact' element={<Contact/>}/>
                             <Route path='/resume' element={<Resume/>}/>
                         </Routes>
-                    <DesignColumn/>
-                </div>
-                <RenderFooter/>
-            </ScrollToTop>
+                    </ScrollToTop>
+                <DesignColumn/>
+            </div>
+            <RenderFooter/>
         </div>
     );
     

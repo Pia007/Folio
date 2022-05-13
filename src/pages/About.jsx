@@ -18,7 +18,6 @@ const About = () => {
                     <Skills/>
                 </Row>
             </div>
-            
         </div>
     )
 }
