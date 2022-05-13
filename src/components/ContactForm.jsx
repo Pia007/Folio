@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
+import { Row } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
 const contactToastId = 'contact-toast-id';
@@ -45,7 +46,7 @@ export default function ContactInfo({ submitForm }) {
 
     return (
         <div className='container p-0 md-px-0'>
-            <div>
+            <Row>
                 {/* FORM */}
                 <form method='POST' className='Contact' onSubmit={handleSubmit(sendEmail)}>
                     <div className='row py-0 px-2'>
@@ -186,7 +187,7 @@ export default function ContactInfo({ submitForm }) {
                         </div>
                     </div>
                 </form>
-            </div>
+            </Row>
         </div>
     );
 }
