@@ -6,19 +6,17 @@ import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
     return (
-        <div className='container'>
+        <div className='container' style={{height: '100vh'}}>
             <SEO title='Contact | Pia Torain' description='description' content='Contact Pia Torain, Fullstack Web Developer'/>
             <PageTitle regText="LET'S" colorText='CHAT'/>
             <div className='container mt-3 p-2 form-holder'>
                 <Row>
-                    {/* <Col> */}
-                        <Col lg={4} className='mb-2 mb-lg-0'>
-                            <ContactInfo/>
-                        </Col>
-                        <Col lg={8} >
-                            <ContactForm/> 
-                        </Col>
-                    {/* </Col> */}
+                    <Col lg={4} className='mb-2 mb-lg-0'>
+                        <ContactInfo/>
+                    </Col>
+                    <Col lg={8} >
+                        <ContactForm/> 
+                    </Col>
                 </Row>
             </div>
         </div>
