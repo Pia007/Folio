@@ -5,7 +5,7 @@ export const Intro = () => {
     
     return (
         <div >
-            <div className='d-flex justify-content-center align-content-center' style={{maxWidth: '95%', height: '85vh', margin: 'auto'}}>
+            <div className='d-flex justify-content-center align-content-center' style={{maxWidth: '95%', height: 'auto', margin: 'auto'}}>
                 <div className='border-0 align-self-center p-auto '>
                     <Fade bottom delay={1000}>
                         <h1 className='pre-text text-primary'>Hi, my name is </h1>

@@ -44,7 +44,7 @@ export const Header = () => {
                 </Zoom>
                 {/* NAVIGATION */}
                 <Collapse isOpen={navigation} navbar className='justify-content-end'>
-                    <Nav navbar className='ms-auto text-center text-light '>
+                    <Nav navbar className='ml-auto text-center text-light '>
                         <Fade  >
                             <MenuItem 
                                 to='/'

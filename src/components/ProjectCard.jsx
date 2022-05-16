@@ -44,6 +44,12 @@ const ProjectCard = ({ project }) => {
                         {project.stack.three && <StackItem stack={project.stack.three}/>}
                         {project.stack.four && <StackItem stack={project.stack.four}/>}
                     </div>
+                    <div className='my-3 mx-0  d-flex'>
+                        {project.stack.five && <StackItem stack={project.stack.five}/>} 
+                        {project.stack.six && <StackItem stack={project.stack.six}/>}
+                        {project.stack.seven && <StackItem stack={project.stack.seven}/>}
+                        {project.stack.eight && <StackItem stack={project.stack.eight}/>}
+                    </div>
                     <p className='modal-description'>{project.description}</p>
                     <p className='modal-description'>Challenges: {project.challenges}</p>
                 </ModalBody>
