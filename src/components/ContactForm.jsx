@@ -25,10 +25,10 @@ export default function ContactInfo({ submitForm }) {
         reset();
     };
     
-    // EMAILJS
+    // send email
     const sendEmail = (formData) => {
         emailjs.send(
-            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_SERVICE_ID,  // updated on 5/23
             process.env.REACT_APP_TEMPLATE_ID,
             formData,
             process.env.REACT_APP_USER_ID
